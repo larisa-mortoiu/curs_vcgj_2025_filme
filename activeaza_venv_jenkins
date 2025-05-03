@@ -1,0 +1,20 @@
+echo "Trying to create the venv in the folder: .venv"
+python3 -m venv .venv
+echo "Activating virtual environment"
+# source ../venv/bin/activate
+. .venv/bin/activate
+echo "Installing the dependencies"
+
+# pachete instalate individual:
+#pip install flask
+#pip install flask-bootstrap
+#pip install pytest
+#pip install pylint
+
+# sau prin intermediul fisierului de requirements
+pip install -r quickrequirements.txt
+
+# Packetele principale din quickrequirements depinde de mai multe
+# pachete care sunt automat instalate de pip.
+# Este suficient sa instalam pachetele din quickreqeuirements.
+
