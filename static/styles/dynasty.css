@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+
+.poster {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.details {
+    margin-bottom: 20px;
+}
+
+.btn-group a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-group a:hover {
+    background-color: #555;
+}
+
+a.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a.back:hover {
+    background-color: #ccc;
+}

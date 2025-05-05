@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage - Movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bine ați venit pe site-ul nostru de filme și seriale!</h1>
+        <h2>Aici puteți găsi detalii despre orice film sau serial, cu un simplu click.</h2>
+        <div class="film-card">
+            <a href="{{ url_for('dynasty') }}">
+                <img src="{{ url_for('static', filename='images/dynasty_poster.jpg') }}" alt="Poster Film"
+                    class="film-poster">
+            </a>
+            <h2>Dynasty</h2>
+            <p>Lupta pentru putere, secretele și scandalurile unei familii bogate într-o lume modernă.</p>
+        </div>
+    </div>
+</body>
+
+</html>

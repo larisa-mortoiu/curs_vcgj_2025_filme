@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cast - Dynasty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Distribuție</h2>
+        {{cast|safe}}
+
+        <a href="{{ url_for('dynasty') }}" class="back">Înapoi la film</a>
+    </div>
+</body>
+
+</html>
