@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from livereload import Server
+import app.lib.descriere as descriere_film
+import app.lib.cast as cast_film 
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -16,11 +18,13 @@ def film():
 
 @app.route('/How-to-lose-a-guy-in-10-days-descriere')
 def film_descriere():
-    return render_template("descriere.html")
+    descriere=descriere_film.get_descriere()
+    return render_template("descriere.html", descriere=descriere)
 
 @app.route('/How-to-lose-a-guy-in-10-days-cast')
 def film_cast():
-    return render_template("cast.html")
+    cast=cast_film.get_cast()
+    return render_template("cast.html",cast=cast)
 
 if __name__ == '__main__':
     server = Server(app.wsgi_app)
