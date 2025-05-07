@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from livereload import Server
+import app.lib.descriere as descriere_st
+import app.lib.distributie as distributie_st
 
 
 app = Flask(__name__)
@@ -15,11 +17,13 @@ def serial_home():
     return render_template('serial_home.html')
 @app.route('/descriere')
 def descriere():
-    return render_template('descriere.html')
+    descriere=descriere_st.get_descriere()
+    return render_template('descriere.html', descriere=descriere)
 
 @app.route('/distributie')
 def distributie():
-    return render_template('distributie.html')
+    distributie=distributie_st.get_distributie()
+    return render_template('distributie.html', distributie=distributie)
 
 
 

@@ -1,1 +1,11 @@
-print ("buna seara")
+def get_descriere():
+        descriere="""<p>
+        „Stranger Things” este un serial american de tip science-fiction, horror și dramă, creat de frații Matt și Ross Duffer, lansat în 2016 pe platforma Netflix. Acțiunea are loc în anii ’80, în orășelul fictiv Hawkins, Indiana, unde dispariția misterioasă a unui băiat, Will Byers, dezvăluie o lume ascunsă de experimente guvernamentale secrete, forțe supranaturale și o fetiță cu puteri telekinetice, cunoscută sub numele de Eleven.
+
+        Pe măsură ce serialul avansează, grupul de prieteni format din Mike, Dustin, Lucas și Will, împreună cu Eleven, se confruntă cu pericole dintr-o dimensiune paralelă numită The Upside Down. În spatele acestor evenimente stau experimentele laboratorului Hawkins, dar și creaturi monstruoase precum Demogorgonul, Mind Flayer și Vecna. Fiecare sezon introduce noi personaje, povești emoționante și elemente clasice din cultura pop a anilor '80, muzică retro și suspans autentic.
+        
+        Serialul este recunoscut pentru omagiul adus filmelor lui Steven Spielberg, romanelor lui Stephen King, și pentru atmosfera nostalgic-retro combinată cu teme întunecate și personaje profund conturate.
+        
+            </p>"""
+
+        return descriere

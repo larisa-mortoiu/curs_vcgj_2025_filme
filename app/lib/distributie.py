@@ -1,0 +1,60 @@
+def get_distributie():
+    distributie= """ <div class="grid">
+    <div class="card">
+      <h2>Eleven</h2>
+      <p class="actor">Millie Bobby Brown</p>
+      <p>Actriță britanică, cunoscută pentru rolul ei central în Stranger Things. A jucat și în filme precum "Enola Holmes" și "Godzilla".</p>
+    </div>
+    <div class="card">
+      <h2>Mike Wheeler</h2>
+      <p class="actor">Finn Wolfhard</p>
+      <p>Actor și muzician canadian. A apărut în "IT" și este membru al trupei The Aubreys.</p>
+    </div>
+    <div class="card">
+      <h2>Will Byers</h2>
+      <p class="actor">Noah Schnapp</p>
+      <p>Cunoscut pentru rolul său sensibil din Stranger Things, dar și pentru dublajul lui Charlie Brown în "The Peanuts Movie".</p>
+    </div>
+    <div class="card">
+      <h2>Max Mayfield</h2>
+      <p class="actor">Sadie Sink</p>
+      <p>Actriță americană, remarcabilă în Stranger Things și în drama "The Whale".</p>
+    </div>
+    <div class="card">
+      <h2>Lucas Sinclair</h2>
+      <p class="actor">Caleb McLaughlin</p>
+      <p>A debutat în teatru, apoi a jucat în Stranger Things și alte producții Netflix.</p>
+    </div>
+    <div class="card">
+      <h2>Dustin Henderson</h2>
+      <p class="actor">Gaten Matarazzo</p>
+      <p>Actor și cântăreț. A apărut pe Broadway și este cunoscut pentru umorul și carisma lui în Stranger Things.</p>
+    </div>
+    <div class="card">
+      <h2>Steve Harrington</h2>
+      <p class="actor">Joe Keery</p>
+      <p>Actor și muzician, parte din trupa Djo. A devenit un favorit al fanilor datorită evoluției personajului său.</p>
+    </div>
+    <div class="card">
+      <h2>Jim Hopper</h2>
+      <p class="actor">David Harbour</p>
+      <p>Actor versatil, a jucat în "Black Widow" și pe Broadway. A primit nominalizări pentru rolul său din Stranger Things.</p>
+    </div>
+    <div class="card">
+      <h2>Joyce Byers</h2>
+      <p class="actor">Winona Ryder</p>
+      <p>Actriță legendară din filme precum "Beetlejuice", "Heathers", "Edward Scissorhands".</p>
+    </div>
+    <div class="card">
+      <h2>Nancy Wheeler</h2>
+      <p class="actor">Natalia Dyer</p>
+      <p>Actriță americană, apreciată pentru rolul jurnalistei curajoase din Stranger Things.</p>
+    </div>
+    <div class="card">
+      <h2>Robin Buckley</h2>
+      <p class="actor">Maya Hawke</p>
+      <p>Fiica actorilor Uma Thurman și Ethan Hawke. A jucat și în "Do Revenge" și "Fear Street".</p>
+    </div>
+  </div>"""
+    
+    return distributie
