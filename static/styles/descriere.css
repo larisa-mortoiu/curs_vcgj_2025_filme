@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/bg.jpg") no-repeat center center/cover;
+  font-family: "Arial", sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: brightness(0.6);
+}
+
+.info-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+.info-box p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.descriere-text {
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px 30px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.back-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(229, 9, 20, 0.8);
+}
