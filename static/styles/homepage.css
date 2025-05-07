@@ -1,8 +1,24 @@
+h1 {
+    font-family: "Courgette", cursive;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-family: "Alata", sans-serif;
+}
+
+p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+    background: #f2efe6;
+    background: linear-gradient(0deg, rgba(242, 239, 230, 1) 0%, rgba(242, 223, 179, 1) 41%, rgba(109, 192, 194, 1) 100%);
 }
 
 .container {
@@ -11,16 +27,16 @@ body {
     margin: 20px auto;
     margin-bottom: 0px;
     padding: 5px 20px;
-    background: #fff;
+    background: #ffd8ab;
+    background: radial-gradient(circle, rgba(255, 216, 171, 0.6) 11%, rgba(255, 234, 210, 0.6) 31%, rgba(255, 255, 255, 0.6) 64%);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .film-card img {
-    width: auto;
-    height: 100%;
-    max-width: 300px;
+    height: 95%;
+    max-width: 290px;
     border-radius: 8px;
     margin-bottom: 15px;
 }

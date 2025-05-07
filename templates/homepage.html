@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>HomePage - Movies</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
 <body>
     <div class="container">
-        <h1>Bine ați venit pe site-ul nostru de filme și seriale!</h1>
+        <h1>Bine ati venit pe site-ul nostru de filme și seriale!</h1>
         <h2>Aici puteți găsi detalii despre orice film sau serial, cu un simplu click.</h2>
         <div class="film-card">
             <a href="{{ url_for('dynasty') }}">
                 <img src="{{ url_for('static', filename='images/dynasty_poster.jpg') }}" alt="Poster Film"
                     class="film-poster">
             </a>
-            <h2>Dynasty</h2>
+            <h2 style="margin-top: 0px;">Dynasty</h2>
             <p>Lupta pentru putere, secretele și scandalurile unei familii bogate într-o lume modernă.</p>
         </div>
     </div>

@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Cast - Dynasty</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h2>Distribuție</h2>
+    <div class="container" style="width: 70vw; position: relative; transform: translate(0, 0); top:0; left: 0;">
+        <h1>Distributie</h1>
         {{cast|safe}}
 
-        <a href="{{ url_for('dynasty') }}" class="back">Înapoi la film</a>
+        <div style="font-family: 'Alata', sans-serif; font-size: 1.4em;">
+            <a href="{{ url_for('dynasty') }}" class="back">Înapoi la film</a>
+        </div>
     </div>
 </body>
 
