@@ -1,0 +1,94 @@
+body {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+    background: url('./images/descriere_img.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #f7c500;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.film-detail-page {
+    flex: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.film-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.film-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
+.detailed-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.additional-info {
+    margin-top: 30px;
+}
+
+.additional-info p {
+    font-size: 1rem;
+}
+
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn {
+    background: #f7c500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #e6b100;
+}
+
+footer {
+    background: #f7c500;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}

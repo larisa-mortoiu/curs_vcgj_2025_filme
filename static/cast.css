@@ -1,0 +1,113 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    background: url('./images/cast.webp') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+header {
+    background: #f7c500;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 100px 20px 20px; 
+    overflow-y: auto; 
+}
+
+.film-detail-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cast-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.cast-member {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cast-member h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cast-member p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn {
+    background: #f7c500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #e6b100;
+}
+
+footer {
+    background: #f7c500;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

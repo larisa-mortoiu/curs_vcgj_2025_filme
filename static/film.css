@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'PT Serif', serif;
+    background: url('./images/descriere\ film.jpg') center center/cover no-repeat;
+    background-size: cover; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #f7c500;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.film-container {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.film-image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.short-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: #f7c500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'PT Serif', serif;
+    width: 180px; 
+}
+
+.btn:hover {
+    background: #e6b100;
+}
+
+footer {
+    background: #f7c500;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}

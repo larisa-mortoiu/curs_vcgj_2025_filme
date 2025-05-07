@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Lose a Guy in 10 Days - Detalii</title>
+    <link rel="stylesheet" href="../static/film.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><span class="logo-text">MovieHub</span></h1>
+    </header>
+
+    <main class="main-content">
+        <section class="film-container">
+        
+            <h2>How to Lose a Guy in 10 Days</h2>
+            <p class="short-description">Un film fresh și amuzant despre iubire și provocări neașteptate.</p>
+
+            <div class="button-group">
+                <button class="btn" onclick="window.location.href='/How-to-lose-a-guy-in-10-days-descriere'">Descriere Film</button>
+                <button class="btn" onclick="window.location.href='/How-to-lose-a-guy-in-10-days-cast'">Cast</button>
+                <button class="btn" onclick="window.location.href='/'">Înapoi la pagina principală</button>
+            </div>
+
+            <section id="descriere" class="hidden-section">
+                <p>Andie Anderson trebuie să scrie un articol despre cum să pierzi un bărbat în 10 zile, iar Ben Barry pariază că poate cuceri o femeie în același timp. O comedie romantică clasică!</p>
+            </section>
+
+            <section id="cast" class="hidden-section">
+                <p><strong>Gen:</strong> Comedie romantică</p>
+                <p><strong>Regizor:</strong> Donald Petrie</p>
+                <p><strong>Actori principali:</strong> Kate Hudson, Matthew McConaughey</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 MovieHub. Toate drepturile rezervate.
+    </footer>
+
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
