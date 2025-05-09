@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gentlemen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/the_gentlemen.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Gentlemen</h1>
+        <div class="container-info">
+            <section>
+                <img src="{{ url_for('static', filename='images/gentlemen_main_img.jpg') }}" alt="Poster" class="poster">
+            </section>
+            <div class="info">
+                <div class="details">
+                    <p><strong>An: </strong>2024</p>
+                    <p><strong>Sezoane: </strong>1</p>
+                    <p><strong>Gen: </strong>Dramă, Crimă, Comedie neagră</p>
+                    <p><strong>Regizori: </strong>Guy Ritchie, Matthew Read</p>
+
+                </div>
+
+                <div class="btn-group">
+                    <a href="{{ url_for('show_gentlemen_description') }}">Descriere</a>
+                    <a href="{{ url_for('show_gentlemen_cast') }}">Distribuție</a>
+                </div>
+                <div style="font-family: 'Alata', sans-serif; font-size: 1.4em;">
+                    <a href="{{ url_for('index') }}" class="back">Înapoi la pagina principală</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

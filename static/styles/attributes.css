@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/static/images/dynasty_bkg.jpg');
+    background-size: cover;
+    align-content: center;
+    padding: 30px;
+}
+
+h1 {
+    font-family: "Courgette", cursive;
+    font-size: 3em;
+    margin-bottom: 0px;
+
+}
+
+p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: auto;
+    margin: auto auto;
+    padding: 20px 60px 30px;
+    background: rgba(254, 237, 214, 0.66);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+a.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a.back:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: #FAEBD7;
+    background-size: cover;
+    align-content: center;
+}
+
+p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+}
+
+h1 {
+    font-family: "Courgette", cursive;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: auto;
+    margin: auto auto;
+    padding: 15px 20px;
+    background: rgba(254, 237, 214, 0.66);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-info {
+    display: flex;
+}
+
+.info {
+    flex-grow: 0;
+    align-content: center;
+}
+
+.container-info section {
+    flex-basis: 50%;
+}
+
+.poster {
+    width: 65%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    margin-bottom: 20px;
+    margin-top: -75px;
+}
+
+.btn-group a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Alata", sans-serif;
+    font-size: 1.4em;
+}
+
+.btn-group a:hover {
+    background-color: #555;
+}
+
+a.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a.back:hover {
+    background-color: #ccc;
+}
