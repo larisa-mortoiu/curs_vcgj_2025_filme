@@ -14,7 +14,17 @@
 <body>
     <div class="container" style="width: 70vw; position: relative; transform: translate(0, 0); top:0; left: 0;">
         <h1>Distributie</h1>
-        {{cast|safe}}
+        
+         <div class="cast-list">
+            {% for member in cast %}
+                <div class="cast-member">
+                    <img src="{{ url_for('static', filename='images/' + member['photo']) }}" alt="{{ member['name'] }}" class="cast-photo">
+                    <h3>{{ member['name'] }}</h3>
+                    <p><strong>Personaj:</strong> {{ member['character'] }}</p>
+                    <p>{{ member['description'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
 
         <div style="font-family: 'Alata', sans-serif; font-size: 1.4em;">
             <a href="{{ url_for('gentlemen') }}" class="back">Înapoi la film</a>
@@ -23,3 +33,4 @@
 </body>
 
 </html>
+

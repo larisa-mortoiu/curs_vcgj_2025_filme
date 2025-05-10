@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <h1>Descriere</h1>
-        <p>{{description}}</p>
+        <p>{{description | safe}}</p>
 
         <div style="font-family: 'Alata', sans-serif; font-size: 1.4em;">
             <a href="{{ url_for('gentlemen') }}" class="back">Înapoi la film</a>

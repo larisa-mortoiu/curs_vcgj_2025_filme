@@ -1,0 +1,8 @@
+def get_description():
+    
+    description = (
+                    "The Gentlemen este un serial britanic elegant de comedie polițistă, creat de Guy Ritchie, bazat pe filmul său din 2019 cu același nume. Povestea îl urmărește pe Eddie Horniman, un tânăr aristocrat care moștenește pe neașteptate vasta moșie a familiei sale - doar pentru a descoperi că aceasta se află în centrul unui puternic imperiu subteran al canabisului. Pe măsură ce Eddie se implică în lumea interlopă a criminalității, trebuie să-i păcălească pe gangsteri, să navigheze în alianțe periculoase și să protejeze moștenirea familiei sale. Cu umor ascuțit, umor negru și răsturnări de situație rapide, serialul oferă o perspectivă nouă asupra crimei și clasei în Marea Britanie modernă. <br>"
+                    "<p>Echilibrând eleganța aristocrației cu brutalitatea crimei organizate, „The Gentlemen” explorează modul în care puterea se schimbă într-o lume în care loialitatea este rară, iar supraviețuirea necesită viclenie. Pe măsură ce Eddie explorează mai adânc, este forțat să decidă cât de departe este dispus să meargă - și cine este dispus să devină - pentru a menține controlul asupra unui imperiu pe care nu l-a cerut niciodată. Susținut de o distribuție carismatică, o regie elegantă și flerul caracteristic lui Ritchie, serialul este atât palpitant, cât și extrem de distractiv.</p>"
+    )
+
+    return description

@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/static/images/dynasty_bkg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-size: cover;
     align-content: center;
     padding: 30px;
@@ -53,4 +53,31 @@ a.back {
 
 a.back:hover {
     background-color: #ccc;
+}
+
+.cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cast-member {
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.cast-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h3 {
+    font-family: 'Alata', sans-serif;
+    font-size: 1.2em;
 }
