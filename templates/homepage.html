@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="homepage-container">
+        <div class="text-zone">
+            <h1>Bine ați venit pe site-ul nostru de filme și seriale!</h1>
+            <h2>Descoperă detaliile din spatele ecranului.</h2>
+        </div>
+      <div class="film-card">
+  <a href="{{ url_for('prestige') }}" class="btn-prestige">The Prestige</a>
+  <p class="film-description">
+    Doi iluzioniști talentați ajung rivali. Dorința de a fi cel mai bun îi duce spre decizii periculoase.
+  </p>
+</div>
+    </div>
+</body>
+</html>
