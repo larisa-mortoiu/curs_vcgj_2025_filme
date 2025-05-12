@@ -18,12 +18,12 @@ def gentlemen():
 @app.route('/gentlemen/description', methods=['GET'])
 def show_gentlemen_description():
     description = gentlemen_description.get_description()
-    return render_template('description.html', description = description)
+    return render_template('gentlemen_description.html', description = description)
 
 @app.route('/gentlemen/cast', methods=['GET'])
 def show_gentlemen_cast():
     cast = gentlemen_cast.get_cast()
-    return render_template('cast.html', cast = cast)
+    return render_template('gentlemen_cast.html', cast = cast)
 
 
 if __name__ == '__main__':
