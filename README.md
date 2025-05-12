@@ -1,6 +1,6 @@
 # Curs_vcgj_2025_filme
 
-# [Mortoiu Larisa Maria](#mortoiu-larisa-maria)
+[# Mortoiu Larisa Maria](#mortoiu-larisa-maria)
 
 
 -----------------------------------------------
