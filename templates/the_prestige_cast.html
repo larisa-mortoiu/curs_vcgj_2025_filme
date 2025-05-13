@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Distribuția - The Prestige</title>
+  <title>The Prestige - Actori</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/the_prestige_cast.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
@@ -20,6 +20,13 @@
       {% endfor %}
     </div>
   </div>
+
+  <!-- Buton Înapoi -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ url_for('prestige') }}" class="btn-back">← Înapoi la homepage</a>
+  </div>
+
   <div class="author"></div>
 </body>
 </html>
+
