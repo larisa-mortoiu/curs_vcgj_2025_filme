@@ -19,10 +19,10 @@
       </p>
 
       <div class="info-footer">
-        <div class="tags">
-          <span class="tag">Thriller psihologic</span>
-          <span class="tag">Dramă</span>
-        </div>
+  <div class="tags">
+    <a href="{{ url_for('the_prestige_description') }}" class="tag">Descriere</a>
+    <a href="{{ url_for('the_prestige_cast') }}" class="tag">Actori</a>
+  </div>
 
         <div class="rating-box">
           <div class="meta-data">
@@ -39,6 +39,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Buton Înapoi -->
+  <div class="back-wrapper">
+    <a href="{{ url_for('index') }}" class="tag">← Înapoi la homepage</a>
   </div>
 </body>
 </html>
