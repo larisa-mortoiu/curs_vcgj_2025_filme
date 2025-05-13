@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/descriere_cars.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="movie_card">
+      <div class="movie_img">
+        <img src="{{ url_for('static', filename='images/descriere_fulger.png') }}">
+      </div>
+
+      <div class="bg-text">Cars</div>
+      <div class="movie">
+        <div class="movie_rating">7.3<i>/</i> 10 <span>IMDb</span></div>
+        <h3 class="movie_title">Cars</h3>
+
+        <div class="movie_info">
+          <span><i class="far fa-clock"></i> 1h 56min</span>
+          <span><i class="fas fa-film"></i> Animation, Adventure, Racing, Family</span>
+          <span><i class="far fa-calendar"></i> 2006</span>
+        </div>
+
+        <button class="movie_button">
+          <i class="fas fa-play"></i>
+          Cast
+        </button>
+
+        <div class="movie_text">
+          <p>
+            Pe drumul către cea mai importantă cursă din viața sa, un tânăr și arogant bolid de curse ajunge din greșeală într-un orășel uitat de lume și descoperă că a câștiga nu este totul în viață.
+
+            În timp ce călătorește spre California pentru a disputa finala Cupei Piston împotriva lui The King și Chick Hicks, faimosul Fulger McQueen accidentează din greșeală drumul din micul oraș Radiator Springs și este condamnat să-l repare. Fulger McQueen este nevoit să muncească din greu și ajunge să descopere prietenia și dragostea în rândul localnicilor simpli, schimbându-și valorile în timpul șederii și devenind astfel un adevărat câștigător.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

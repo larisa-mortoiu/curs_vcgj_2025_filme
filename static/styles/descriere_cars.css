@@ -1,0 +1,151 @@
+$yellow: #FDC559;
+$grey: #6A6965;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(#070707, #363636);
+	font-family: 'Poppins', sans-serif;
+	color: #FFFFFF;
+}
+
+.container {
+	max-width: 1030px;
+	width: 100%;
+	min-height: 100%;
+	margin: auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.movie_card {
+	background-color: #11100B;
+	width: 700px;
+	height: 500px;
+	position: relative;
+	border-radius: 5%;
+  overflow: hidden;
+}
+
+.bg-text {
+	position: absolute;
+	top: 0;
+	left: 3%;
+  z-index: 0;
+	font-size: 120px;
+	font-weight: 900;
+	text-transform: uppercase;
+	opacity: 2%;
+}
+
+.movie {
+	width: 50%;
+	height: 70%;
+	position: absolute;
+	top: 95px;
+	right: 65px;
+  
+  &_img {
+    width: 50%;
+	  height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+	&_rating {
+		margin-bottom: -15px;
+		font-weight: 700;
+		color: $yellow;
+
+		span {
+			background-color: $yellow;
+			margin-left: 3px;
+			padding: 1px 5px;
+			font-size: 14px;
+			color: #19130D;
+			border-radius: 5px;
+		}
+	}
+
+	&_title {
+		font-size: 70px;
+		text-transform: uppercase;
+	}
+
+	&_info {
+		width: 80%;
+		margin-top: -15px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 10px;
+		color: $grey;
+	}
+
+	&_button {
+		background: none;
+		margin-top: 20px;
+		padding: 12px 22px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		border: 1px solid $grey;
+		border-radius: 30px;
+		color: #FFFFFF;
+		cursor: pointer;
+		transition: ease-out .3s;
+
+		i {
+			color: $yellow;
+			margin-right: 5px;
+		}
+
+		&:hover {
+			border-color: $yellow;
+			box-shadow: 1px 1px 10px rgba($yellow, .5);
+		}
+    
+    &:focus {
+      outline: none;
+    }
+	}
+
+	&_text {
+		margin-top: 20px;
+
+		p {
+			font-size: 11px;
+			color: $grey;
+		}
+	}
+
+	&_link {
+		font-size: 12px;
+		color: $grey;
+		text-decoration: none;
+		border-bottom: 1px solid $grey;
+		transition: ease-out .3s;
+
+		&:hover {
+			color: $yellow;
+			border-color: $yellow;
+		}
+	}
+}

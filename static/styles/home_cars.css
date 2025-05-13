@@ -171,7 +171,7 @@ body{
     margin-top: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.cars2008 {
+.cars2006 {
     display: inline-block;
     padding: 12px 24px;
     font-size: 18px;
@@ -184,7 +184,7 @@ body{
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.cars2008:hover {
+.cars2006:hover {
     background-color: darkred;
     transform: scale(1.05);
 }
