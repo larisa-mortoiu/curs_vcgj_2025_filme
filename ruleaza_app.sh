@@ -1,4 +1,3 @@
 #!/bin/bash
 export FLASK_APP=filme
-# flask run -p 5011 --debug --reload
-python3 filme.py
+flask run -p 5011 --debug --reload

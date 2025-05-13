@@ -1,5 +1,4 @@
 from flask import Flask, render_template, url_for
-from livereload import Server
 import app.lib.dynasty_description as description_dy
 import app.lib.dynasty_cast as cast_dy
 
@@ -27,5 +26,4 @@ def dynasty_cast():
 
 
 if __name__ == '__main__':
-    server = Server(app.wsgi_app)
-    server.serve(port=5011, debug=True)
+    app.run(debug=True)
