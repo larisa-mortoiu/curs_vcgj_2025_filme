@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>The Prestige - Actori</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/the_prestige_cast.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="characters">
+    <div class="characters__group">
+      {% for actor in lista %}
+        <div class="characters__item characters__item-xavros" title="{{ actor }}">
+          <div class="characters__thumb">
+            <img src="{{ url_for('static', filename='images/' + actor|lower|replace(' ', '_') + '.jpg') }}" alt="{{ actor }}" loading="lazy">
+          </div>
+          <div class="characters__overlay"></div>
+          <div class="characters__details">{{ actor }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Buton Înapoi -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ url_for('prestige') }}" class="btn-back">← Înapoi la homepage</a>
+  </div>
+
+  <div class="author"></div>
+</body>
+</html>
+
