@@ -1,0 +1,25 @@
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars 2006</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/cars_2006.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="page-title">Mai multe despre filmul Cars (2006)</h1>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W_H7_tDHFE8?si=kuLqfbokIWHlm5mV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="button-group">
+            <a href="/descriere" class="red-button">Descriere</a>
+            <a href="/cast" class="red-button">Cast</a>
+        </div>
+    </div>
+</body>
+</html>

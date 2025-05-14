@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Distribuție Cars</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/cast_cars.css') }}">
+</head>
+<body>
+
+  <section class="grid-container one-three">
+    {% for image in actor_images %}
+      <div>
+        <img src="{{ url_for('static', filename='images/' ~ image) }}" alt="actor" class="actor-img">
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="actor-list">
+    <h2>Actorii principali</h2>
+    <ul>
+      {% for name in actor_names %}
+        <li>{{ name }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</body>
+</html>
+

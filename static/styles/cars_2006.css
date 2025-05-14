@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #2e2e2e, #b0b0b0); /* degrade gri închis -> deschis */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.red-button {
+    padding: 12px 24px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.red-button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
