@@ -18,6 +18,8 @@ p {
 body {
     font-family: Arial, sans-serif;
     background: #f2efe6;
+    height: 100vh;
+    background-repeat: no-repeat;
     background: linear-gradient(0deg, rgba(242, 239, 230, 1) 0%, rgba(242, 223, 179, 1) 41%, rgba(109, 192, 194, 1) 100%);
 }
 
