@@ -1,54 +1,59 @@
 pipeline {
-    agent none
+    agent any
+
+    environment {
+        VENV_DIR = ".venv"
+        ACTIVATE = ". .venv/bin/activate"
+    }
 
     stages {
-        stage('Build') {
-            agent any
+        stage('Clone repo') {
             steps {
-                echo 'Building...'
+                git branch: 'dev_Dina_Alexandra',
+                    url: 'https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git'
+            }
+        }
+
+        stage('Set up virtual environment') {
+            steps {
                 sh '''
-                    pwd;
-                    ls -l;
-                    chmod +x ./activeaza_venv.sh
-                    source ./activeaza_venv.sh
+                    python3 -m venv ${VENV_DIR}
+                    . ${VENV_DIR}/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
                 '''
             }
         }
 
-        stage('pylint - calitate cod') {
-            agent any
+        stage('Code Quality - pylint') {
             steps {
                 sh '''
-                    source ./activeaza_venv.sh
-                    echo '\n\nVerificare lib/*.py cu pylint\n';
-                    pylint --exit-zero lib/*.py;
+                    . ${VENV_DIR}/bin/activate
+                    echo ' Verificare cod din app/lib/ cu pylint'
+                    pylint --exit-zero app/lib/*.py || true
 
-                    echo '\n\nVerificare tests/*.py cu pylint';
-                    pylint --exit-zero tests/*.py;
+                    echo ' Verificare teste din app/tests/ cu pylint'
+                    pylint --exit-zero app/tests/*.py || true
 
-                    echo '\n\nVerificare sysinfo.py cu pylint';
-                    pylint --exit-zero sysinfo.py;
+                    echo ' Verificare filme.py cu pylint'
+                    pylint --exit-zero filme.py || true
                 '''
             }
         }
 
-        stage('Unit Testing cu pytest') {
-            agent any
+        stage('Run Tests - pytest') {
             steps {
-                echo 'Unit testing with Pytest...'
                 sh '''
-                    source ./activeaza_venv.sh
-                    pytest;
+                    . ${VENV_DIR}/bin/activate
+                    pytest app/tests
                 '''
             }
         }
 
         stage('Deploy') {
-            agent any
             steps {
-                echo 'IN lucru ! ...'
+                echo 'Etapa de deploy – în lucru...'
             }
         }
     }
 }
-
