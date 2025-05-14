@@ -80,7 +80,8 @@ Structura aplicației este organizată astfel:
   - `quickrequirements` – lista cu pachetele necesare;
 
   - `ruleaza_app`, `activeaza_venv`, `activeaza_venv_jenkins` – scripturi de pornire și configurare a mediului virtual.
-!!!!!!!!!!!!!!!!!!!!!!!SCREENSHOT structura-proiect!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+![structura-proiect](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/structura-proiect.png)
 
 # Configurare si instalare
 
@@ -114,26 +115,26 @@ Pentru activarea virtual environment, în folder-ul 'curs_vcgj_2025_filme' trebu
 
 2. `ruleaza_app` - Scriptul trebuie rulat doar după activarea venv-ului. Acesta rulează aplicația, pornind server-ul pe IP: 127.0.0.1 și port:5011. Se poate accesa din browser pe link-ul: http://127.0.0.1:5011 (sau http://localhost:5011/)
 
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT config-venv!!!!!!!!!!!!!!!!!!!!!!!
+![config-venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/config-venv.png)
 
 
 # Prezentare interfata web
 
 ## Pagină principală (Homepage)
 Afișează o listă cu filmele disponibile, cu link-uri către pagina detaliată a fiecărui film/serial.
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT!!!!!!!!!!!!!!!!!!!!!!!
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-homepage.png)
 
 ## Pagină film
 Conține câteva informații despre film/serial și link-urile spre paginile de descriere și distribuție.
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT!!!!!!!!!!!!!!!!!!!!!!!
+![dynasty](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-dynasty.png)
 
 ## Pagină descriere film
 Afișează o descriere detaliată a filmului/serialului selectat.
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT!!!!!!!!!!!!!!!!!!!!!!!
+![dynasty-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-descriere.png)
 
 ## Pagină distribuție film
 Afișează informații despre actorii din film/serial și personajele pe care aceștia le portretizează.
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT!!!!!!!!!!!!!!!!!!!!!!!
+![dynasty-cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-cast.png)
 
 # Testare cu pytest
 
@@ -156,7 +157,7 @@ Cele două teste validează corectitudinea conținutului generat pentru pagini, 
 Testele sunt integrate atât în rulările locale, cât și în pipeline-urile automate (Jenkins).
 
 ## Testare locală 
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT CONSOLA PYTEST!!!!!!!!!!!!!!!!!!!!!!!
+![testare-locala](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/testare-locala.png)
 
 # Verificare statica cu pylint
 Pentru analiza statică a codului, se folosește Pylint, aplicat pe modulele principale ale aplicației: fișierele ce conțin funcțiile pentru cele două atribute din `app/lib`, fișierul principal `filme.py` și testele din `app/tests`.
@@ -226,7 +227,7 @@ docker build -t movieimage:v1 .
 ```
 Aceasta poate fi vizualizată astfel:
 
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT IMAGINE CREATA!!!!!!!!!!!!!!!!!!!!!!!
+![docker-image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/docker-image.png)
 
 ## Creare container
 Pentru a genera un container din fișierul imagine, trebuie executată comanda:
@@ -247,10 +248,10 @@ Containerele (active și oprite) pot fi vizualizate astfel:
 ```text
 docker ps -a
 ```
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT CONTAINER CREAT PE BAZA IMAGINII!!!!!!!!!!!!!!!!!!!!!!!
+![docker-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/docker-container.png)
 
 ## Rularea aplicației din container
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT APP DESCHISA IN BROWSER!!!!!!!!!!!!!!!!!!!!!!!
+![run-app-docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/run-app-docker.png)
 
 # Pipeline Jenkins
 
@@ -275,10 +276,10 @@ jenkins
 Execuția pipeline-ului este vizibilă și într-o interfață grafică prietenoasă, prin extensia Blue Ocean a Jenkins.
 
 ## Exemplu execuție pipeline Jenkins (interfață Blue Ocean)
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT DIN BLUEOCEAN!!!!!!!!!!!!!!!!!!!!!!!
+![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/jenkins-blueocean.png)
 
 # Pull Request
 Am realizat un PR din branch-ul de dezvoltare (`dev_Mortoiu_Larisa`) către branch-ul main (`main_Mortoiu_Larisa`)
-!!!!!!!!!!!!!!!!!!!!!SCREENSHOT PR!!!!!!!!!!!!!!!!!!!!!!!
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/pull-request.png)
 
 # Bibliografie
