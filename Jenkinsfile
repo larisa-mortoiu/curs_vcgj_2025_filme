@@ -1,49 +1,51 @@
 pipeline {
-    agent any
-
-    environment {
-        VENV_ACTIVATION = '. ./activeaza_venv'
-    }
+    agent none
 
     stages {
         stage('Build') {
+            agent any
             steps {
                 echo 'Building...'
                 sh '''
                     pwd;
                     ls -l;
-                    ${VENV_ACTIVATION}
+                    . ./activeaza_venv.sh
                 '''
             }
         }
 
-        stage('Calitate cod - pylint') {
+        stage('pylint - calitate cod') {
+            agent any
             steps {
-                echo 'Rulare pylint pe lib și tests'
                 sh '''
-                    ${VENV_ACTIVATION}
-                    echo '\n\nVerificare app/lib/*.py cu pylint\n'
-                    pylint --exit-zero app/lib/*.py || true
+                    . ./activeaza_venv.sh
+                    echo '\n\nVerificare lib/*.py cu pylint\n';
+                    pylint --exit-zero lib/*.py;
 
-                    echo '\n\nVerificare app/tests/*.py cu pylint\n'
-                    pylint --exit-zero app/tests/*.py || true
+                    echo '\n\nVerificare tests/*.py cu pylint';
+                    pylint --exit-zero tests/*.py;
+
+                    echo '\n\nVerificare sysinfo.py cu pylint';
+                    pylint --exit-zero sysinfo.py;
                 '''
             }
         }
 
-        stage('Testare unitară - pytest') {
+        stage('Unit Testing cu pytest') {
+            agent any
             steps {
-                echo 'Rulez testele cu pytest...'
+                echo 'Unit testing with Pytest...'
                 sh '''
-                    ${VENV_ACTIVATION}
-                    pytest app/tests/
+                    . ./activeaza_venv.sh
+                    pytest;
                 '''
             }
         }
 
         stage('Deploy') {
+            agent any
             steps {
-                echo 'În lucru...'
+                echo 'IN lucru ! ...'
             }
         }
     }
