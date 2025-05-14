@@ -283,3 +283,8 @@ Am realizat un PR din branch-ul de dezvoltare (`dev_Mortoiu_Larisa`) către bran
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/pull-request.png)
 
 # Bibliografie
+
+- [Flask Documentation](https://flask.palletsprojects.com/en/stable/)
+- [Pytest Documentation](https://docs.pytest.org/en/latest/)
+- [Docker Documentation](https://docs.docker.com/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
