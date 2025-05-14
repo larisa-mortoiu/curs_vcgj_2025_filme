@@ -1,0 +1,44 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+
+.actor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #FDC559;
+}
+
+.actor-list {
+  text-align: center;
+}
+
+.actor-list h2 {
+  color: #FDC559;
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+.actor-list ul {
+  list-style: none;
+  padding: 0;
+  font-size: 38px;
+  line-height: 2;
+}
+
