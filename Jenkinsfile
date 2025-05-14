@@ -9,7 +9,8 @@ pipeline {
                 sh '''
                     pwd;
                     ls -l;
-                    . ./activeaza_venv.sh
+        	    chmod +x ./activeaza_venv.sh
+            	    source ./activeaza_venv.sh
                 '''
             }
         }
