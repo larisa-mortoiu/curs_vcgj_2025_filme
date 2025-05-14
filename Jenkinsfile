@@ -9,8 +9,8 @@ pipeline {
                 sh '''
                     pwd;
                     ls -l;
-        	    chmod +x ./activeaza_venv.sh
-            	    source ./activeaza_venv.sh
+                    chmod +x ./activeaza_venv.sh
+                    source ./activeaza_venv.sh
                 '''
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    . ./activeaza_venv.sh
+                    source ./activeaza_venv.sh
                     echo '\n\nVerificare lib/*.py cu pylint\n';
                     pylint --exit-zero lib/*.py;
 
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo 'Unit testing with Pytest...'
                 sh '''
-                    . ./activeaza_venv.sh
+                    source ./activeaza_venv.sh
                     pytest;
                 '''
             }
