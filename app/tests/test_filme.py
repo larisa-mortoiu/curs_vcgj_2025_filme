@@ -3,24 +3,20 @@ import logging
 import sys
 import os
 
-# Activăm logarea globală
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s]  %(message)s")
 
-# Adăugăm calea la root pentru importuri
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from filme import app
 import app.lib.curious_case_description as description_c
 import app.lib.curious_case_cast as cast_c
 
-# === FIXTURE PENTRU CLIENT ===
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
     with app.test_client() as client:
         yield client
 
-# === TEST DESCRIERE ===
 def test_curious_case_description(client):
     response = client.get('/curious_case/description')
     html_description = response.data.decode()
@@ -57,7 +53,7 @@ def test_curious_case_description(client):
         logging.error("Descrierea generată nu apare corect în pagină.")
     assert description_expected in description_from_html
 
-# === TEST CAST ===
+
 def test_curious_case_cast(client):
     response = client.get('/curious_case/cast')
     html_cast = response.data.decode()
