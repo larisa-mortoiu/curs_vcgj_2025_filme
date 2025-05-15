@@ -232,7 +232,6 @@ Iar pentru a opri rularea aplicatiei:
 
 Pentru procesul de Continuous Integration (CI), aplicația folosește Jenkins. De fiecare dată când codul este actualizat, Jenkins declanșează automat o serie de pași pentru a testa și verifica aplicația, contribuind astfel la identificarea rapidă a erorilor și menținerea calității codului.
 
-## Definirea pipeline-ului
 
 Fișierul `Jenkinsfile` descrie etapele automate ale pipeline-ului de CI:
 
