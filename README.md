@@ -253,3 +253,4 @@ Pipeline-ul poate fi vizualizat într-o interfață grafică modernă și intuit
 # Pull Request
 Am realizat un PR din branch-ul de dezvoltare (`dev_Anghelina_Mara`) către branch-ul main (`main_Anghelina_Mara`)
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/PR.jpeg)
+
