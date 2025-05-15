@@ -148,7 +148,11 @@ Pentru activarea mediului virtual (`virtual environment`) în folder-ul `curs_vc
 ![configurare-venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/configurare-venv.png)
 
 # Interfața web - prezentare
-# Prezentare Interfață Web
+Pagina principală (Homepage) oferă o listă cu filmele disponibile, fiecare având un link care duce către pagina detaliată a filmului sau serialului.
+
+Pagina film afișează informații esențiale despre film/serial, inclusiv link-uri către paginile de descriere și distribuție a actorilor.
+
+Pagini detaliate: există o pagină pentru descrierea detaliată a filmului și o altă pagină dedicată distribuției, care prezintă actorii și personajele interpretate.
 
 ## Pagina Principală (Homepage)
 Această pagină afișează lista de filme disponibile. Fiecare titlu este un link care duce către pagina cu detalii specifice despre film.
