@@ -162,7 +162,7 @@ Această pagină afișează lista de filme disponibile. Fiecare titlu este un li
 ## Pagina Film
 Pagina dedicată fiecărui film oferă informații sumare și include linkuri către paginile ce conțin descrierea și distribuția.
 
-![film]https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/film.png()
+![film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/film.png)
 
 ## Pagina Descriere Film
 Aici utilizatorii pot citi o descriere detaliată despre filmul  ales.
