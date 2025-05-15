@@ -59,6 +59,7 @@ Funcționalitățile implementate:
   - `quickrequirements.txt` – lista pachetelor necesare pentru mediul virtual;  
   - Scripturi de configurare și rulare: `ruleaza_app.sh`, `activeaza_venv`, `activeaza_venv_jenkins`.
 
+```text
 curs_vcgj_2025_filme/
 ├── app/
 │ ├── lib/
@@ -84,6 +85,7 @@ curs_vcgj_2025_filme/
 ├── ruleaza_app.sh
 ├── activeaza_venv.sh
 └── activeaza_venv_jenkins.sh
+```
 
 # Instrucțiuni de instalare și configurare
 
@@ -143,7 +145,7 @@ Pentru activarea mediului virtual (`virtual environment`) în folder-ul `curs_vc
 # Pornire aplicație Flask
 . ./ruleaza_app.sh
 ```
-configurare-venv
+![configurare-venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/configurare-venv.png)
 
 # Interfața web - prezentare
 # Prezentare Interfață Web
@@ -151,22 +153,22 @@ configurare-venv
 ## Pagina Principală (Homepage)
 Această pagină afișează lista de filme disponibile. Fiecare titlu este un link care duce către pagina cu detalii specifice despre film.
 
-pagina-principala
+![pagina-principala](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/pagina-principala.png)
 
 ## Pagina Film
 Pagina dedicată fiecărui film oferă informații sumare și include linkuri către paginile ce conțin descrierea și distribuția.
 
-film
+![film]https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/film.png()
 
 ## Pagina Descriere Film
 Aici utilizatorii pot citi o descriere detaliată despre filmul  ales.
 
-descriere-film
+![descriere-film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/descriere-film.png)
 
 ## Pagina Distribuție Film
 Această pagină oferă informații despre actorii din film și rolurile pe care le interpretează.
 
-cast-film
+![cast-film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/cast-film.png)
 
 # Testare Pytest
 Pentru a asigura funcționarea corectă a aplicației, au fost dezvoltate teste unitare folosind framework-ul `pytest`. Acestea sunt definite în fișierul `test_filme.py`, aflat în directorul `app/tests/`.
@@ -183,7 +185,7 @@ Testele validează funcționalitățile cheie ale aplicației:
 
 Testele nu doar confirmă existența paginilor, ci și faptul că informațiile afișate sunt cele corecte. Ele sunt rulate atât local, cât și automat, prin pipeline-ul configurat în Jenkins.
 
-testare-locala-pytest
+![testare-locala-pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/testare-locala-pytest.png)
 
 # Analiză statică a codului cu Pylint 
 Pentru analiza statică a codului sursă, este utilizat pylint, aplicat pe modulele cheie ale aplicației: funcțiile definite în app/lib, fișierul principal filme.py, precum și testele din app/tests.
@@ -270,7 +272,7 @@ docker build -t movieimage:v3 .
 ```
 Vizualizare imagine:
 
-creare-imagine
+![creare-imagine](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/creare-imagine.png)
 
 ## Creare container:
 ```text
@@ -287,8 +289,8 @@ docker ps -a
 Execuția aplicației :
 După pornirea containerului, aplicația devine disponibilă pe adresa:
 http://localhost:8020
-![rulare-container]
-![aplicatie-din-container]
+![rulare-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/rulare-container.png)
+![aplicatie-din-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/aplicatie-din-container.png)
 
 
 # Pipeline CI/CD cu Jenkins
@@ -318,7 +320,7 @@ Comanda pentru lansarea Jenkins:
 jenkins
 ```
  Execuție vizuală în Jenkins (Blue Ocean):
- Blue-ocean
+ ![Blue-ocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/Blue-ocean.png)
 
  Pull Request
 Modificările realizate în branch-ul de dezvoltare (dev_Dumitrache_Denisa) au fost propuse pentru integrare în ramura principală (main_Dumitrache_Denisa) printr-un Pull Request (PR):
