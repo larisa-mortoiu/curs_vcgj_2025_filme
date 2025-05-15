@@ -669,10 +669,9 @@ jenkins
  Execuție vizuală în Jenkins (Blue Ocean):
  ![Blue-ocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/Blue-ocean.png)
 
- Pull Request
+# Procedura Pull Request
 Modificările realizate în branch-ul de dezvoltare (dev_Dumitrache_Denisa) au fost propuse pentru integrare în ramura principală (main_Dumitrache_Denisa) printr-un Pull Request (PR):
-
-pull-request
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/pull-request.png)
 
 # Bibliografie
 
