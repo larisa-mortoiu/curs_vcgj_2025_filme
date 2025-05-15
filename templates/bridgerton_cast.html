@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Distribuție - Bridgerton</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cast-wrapper">
+        <div class="intro-section">
+            <h1>Distribuția principală</h1>
+            <p>Serialul <strong>Bridgerton</strong> aduce la viață personaje memorabile printr-o distribuție diversă și carismatică. Fiecare actor contribuie cu stil și profunzime la atmosfera vibrantă a înaltei societăți londoneze.</p>
+        </div>
+
+        <div class="cast-grid">
+            {% for member in cast %}
+                <div class="cast-card">
+                    <div class="photo-wrapper">
+                        <img src="{{ url_for('static', filename='images/' + member['photo']) }}" alt="{{ member['name'] }}" class="cast-photo">
+                    </div>
+                    <div class="cast-info">
+                        <h3>{{ member['name'] }}</h3>
+                        <p class="character"><strong>Personaj:</strong> {{ member['character'] }}</p>
+                        <p class="desc">{{ member['description'] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="back-container">
+            <a href="{{ url_for('bridgerton') }}" class="back">⟵ Înapoi la Bridgerton</a>
+        </div>
+    </div>
+</body>
+
+</html>

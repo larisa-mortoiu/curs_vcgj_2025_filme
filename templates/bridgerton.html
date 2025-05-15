@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bridgerton</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bridgerton.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <h1 class="title">Bridgerton</h1>
+
+            <div class="content">
+                <img src="{{ url_for('static', filename='images/bridgerton_main_img.jpg') }}" alt="Poster Bridgerton" class="poster">
+
+                <div class="info-box">
+                    <p><strong>An:</strong> 2020</p>
+                    <p><strong>Sezoane:</strong> 3, sezonul 4 este în producție, iar sezoanele 5 și 6 sunt confirmate.</p>
+                    <p><strong>Gen:</strong> Dramă, Romantic, Istoric</p>
+                    <p><strong>Producători:</strong> Shonda Rhimes, Chris Van Dusen</p>
+
+                    <div class="btn-group">
+                        <a href="{{ url_for('show_bridgerton_description') }}" class="btn">Descriere</a>
+                        <a href="{{ url_for('show_bridgerton_cast') }}" class="btn">Distribuție</a>
+                    </div>
+
+                    <a href="{{ url_for('index') }}" class="back">⟵ Înapoi la pagina principală</a>
+                </div>
+            </div>
+
+            <div class="highlight-section">
+                <h2>✨ Noutăți din sezonul 3</h2>
+                <p>Sezonul 3 aduce o nouă poveste de dragoste în prim-plan și explorarea mai profundă a personajelor secundare. Colin și Penelope încep un nou capitol, în timp ce Eloise își caută locul într-o lume care nu o înțelege.</p>
+            </div>
+
+            <div class="quote-section">
+                <blockquote>
+                    „Dragostea adevărată nu ține cont de reguli, reputație sau rang. Ea există pur și simplu.”
+                </blockquote>
+            </div>
+
+            <div class="details-section">
+                <h2>Lumea Bridgerton</h2>
+                <ul>
+                    <li> Muzică clasică cu reinterpretări moderne</li>
+                    <li> Zvonuri și scrisori semnate Lady Whistledown</li>
+                    <li> Baluri fastuoase și intrigi de salon</li>
+                    <li> Jocuri de putere la curtea Reginei</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

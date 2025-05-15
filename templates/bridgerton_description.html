@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descriere - Bridgerton</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <h1 class="title">Descriere</h1>
+
+            <div class="description-box">
+                <p>{{ description | safe }}</p>
+            </div>
+
+            <div class="fact-section">
+                <h2>Știați că...?</h2>
+                <ul>
+                    <li>Serialul este inspirat din romanele lui <strong>Julia Quinn</strong>, extrem de populare.</li>
+                    <li>Decorurile și costumele sunt realizate manual, cu mătase și dantelă adevărată.</li>
+                    <li>Fiecare sezon are o coloană sonoră orchestrală reinterpretată din muzică pop modernă.</li>
+                </ul>
+            </div>
+
+            <div class="quote-section">
+                <blockquote>
+                    „Nimic nu e mai periculos decât o femeie care citește… și gândește.”
+                </blockquote>
+            </div>
+
+            <div class="highlight-section">
+                <h2>Atmosferă și decor</h2>
+                <p>Fiecare episod ne poartă prin grădini englezești, săli de bal impunătoare și biblioteci elegante. Bridgerton combină romantismul epocii Regency cu o abordare modernă a dialogului și intrigii sociale.</p>
+            </div>
+
+            <a href="{{ url_for('bridgerton') }}" class="back">⟵ Înapoi la Bridgerton</a>
+        </div>
+    </div>
+</body>
+
+</html>
