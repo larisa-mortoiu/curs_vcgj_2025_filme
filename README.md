@@ -1,18 +1,19 @@
 # DUMITRACHE SORANA DENISA
 
 # CUPRINS
-1. [Prezentarea generală a aplicației](#prezentarea-generala-a-aplicatiei)  
-2. [Versiuni și funcționalități disponibile](#versiuni-si-functionalitati-disponibile)  
+1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)  
+2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)  
 3. [Tehnologii utilizate](#tehnologii-utilizate)  
 4. [Structura proiectului](#structura-proiectului)  
-5. [Instrucțiuni de instalare și configurare](#instructiuni-de-instalare-si-configurare)  
-6. [Interfața web - prezentare](#interfata-web---prezentare)  
+5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)  
+6. [Interfata web - prezentare](#interfata-web---prezentare)  
 7. [Testare Pytest](#testare-pytest)  
-8. [Analiză statică a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)  
+8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)  
 9. [Containerizare cu Docker](#containerizare-cu-docker)  
-10. [Pipeline CI/CD cu Jenkins](#pipeline-cicd-cu-jenkins)  
+10. [Pipeline cicd cu Jenkins](#pipeline-cicd-cu-jenkins)  
 11. [Procedura Pull Request](#procedura-pull-request)  
-12. [Bibliografie](#bibliografie)  
+12. [Bibliografie](#bibliografie)
+
 
 # Prezentarea generală a aplicației
  Aplicația web "MovieHub" oferă o platformă simplă pentru filme și seriale, permițând utilizatorilor să exploreze detalii specifice fiecărui titlu, cum ar fi descrierea și distribuția actorilor. Interfața este construită pentru a asigura o experiență clară și ușor de folosit.
