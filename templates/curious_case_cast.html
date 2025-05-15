@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cast - The Curious Case of Benjamin Button</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="width: 70vw; position: relative; transform: translate(0, 0); top:0; left: 0;">
+        <h1>Distributie</h1>
+        
+         <div class="cast-list">
+            {% for member in cast %}
+                <div class="cast-member">
+                    <img src="{{ url_for('static', filename='images/' + member['photo']) }}" alt="{{ member['name'] }}" class="cast-photo">
+                    <h3>{{ member['name'] }}</h3>
+                    <p><strong>Personaj:</strong> {{ member['character'] }}</p>
+                    <p>{{ member['description'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="back-button-container">
+            <a href="{{ url_for('curious_case') }}" class="back">Înapoi la film</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

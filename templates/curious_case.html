@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Curious Case of Benjamin Button</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/curious_case.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Curious Case of Benjamin Button</h1>
+        <div class="container-info">
+            <section>
+                <img src="{{ url_for('static', filename='images/image.png') }}" alt="Poster" class="poster">
+            </section>
+            <div class="info">
+                <div class="details">
+                    <p><strong>An: </strong>2008</p>
+                    <p><strong>Durată: </strong>166 minute</p>
+                    <p><strong>Gen: </strong>Dramă, Fantastic, Romantic</p>
+                    <p><strong>Regizor: </strong>David Fincher</p>
+                    <p><strong>Scenariu: </strong>Eric Roth (adaptare), F. Scott Fitzgerald (nuvelă)</p>
+                    <p><strong>Muzică: </strong>Alexandre Desplat</p>
+                    <p><strong>Țara de origine: </strong>Statele Unite</p>
+
+                </div>
+
+                <div class="btn-group">
+                    <a href="{{ url_for('show_curious_case_description') }} " class = 'link-button'>Descriere</a>
+                    <a href="{{ url_for('show_curious_case_cast') }}" class = 'link-button'>Distribuție</a>
+                </div>
+                <div class="btn-group">
+                    <a href="{{ url_for('index') }}" class="back">Înapoi la pagina principală</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #111, #1d1d1d);
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Philosopher', serif;
+    font-size: 3em;
+    color: #ffcc00;
+    margin-bottom: 40px;
+}
+
+.container-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 60px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.poster {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.02);
+}
+
+.details {
+    max-width: 500px;
+    font-size: 1.1em;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.details strong {
+    color: #ffcc00;
+}
+
+
+.btn-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+a.link-button,
+a.back {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    height: 50px;
+    padding: 0 24px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
+    color: #ffcc00;
+    background-color: transparent;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.15);
+}
+
+a.link-button:hover,
+a.back:hover {
+    background-color: #ffcc00;
+    color: #111;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descriere - The Curious Case of Benjamin Button</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/attributes.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Descriere</h1>
+        <p class="tagline">„Uneori viața noastră este definită de timpul care curge... invers.”</p>
+
+        <p class="description">{{description | safe}}</p>
+
+
+        <div style="font-family: 'Alata', sans-serif; font-size: 1.4em;">
+            <a href="{{ url_for('curious_case') }}" class="back">Înapoi la film</a>
+        </div>
+    </div>
+</body>
+
+</html>
