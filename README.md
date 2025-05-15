@@ -13,7 +13,7 @@
 1. [Utilizare Docker si containerizare aplicatie](#utilizare-docker-si-containerizare-aplicatie)
 1. [Pipeline Jenkins](#pipeline-jenkins)
 1. [Pull Request](#pull-request)
-1. [Bibliografie](#bibliografie)
+
 
 # Descriere aplicatie
 
@@ -247,10 +247,9 @@ Lansarea serverului Jenkins local se face prin comanda:
     systemctl start jenkins
 ```
 Pipeline-ul poate fi vizualizat într-o interfață grafică modernă și intuitivă prin extensia Blue Ocean, care oferă o imagine de ansamblu asupra fiecărui pas executat.
-![pipeline](static/images/readme/pipeline.jpeg)
 ![pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/pipeline.jpeg)
 
 
 # Pull Request
 Am realizat un PR din branch-ul de dezvoltare (`dev_Anghelina_Mara`) către branch-ul main (`main_Anghelina_Mara`)
-![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/pipeline.jpeg)
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/PR.jpeg)
