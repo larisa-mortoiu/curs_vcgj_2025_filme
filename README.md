@@ -112,25 +112,25 @@ mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ source activeaza_venv
 (.venv) mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ . ./start_app.s
 ```
 
-![start_app](static/images/readme/start_app.jpeg)
+![start_app](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/start_app.jpeg)
 
 # Prezentare interfata web
 
 ## Pagină principală (Homepage)
 Afișează o listă cu filmele disponibile, cu link-uri către pagina detaliată a fiecărui film/serial.
-![homepage](static/images/readme/homepage_gentlemen.jpeg)
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/homepage_gentlemen.jpeg)
 
 ## Pagină film
 Această pagină oferă o privire generală asupra unui film sau serial selectat, incluzând titlul și accesul rapid către paginile dedicate descrierii și distribuției.
-![homepage](static/images/readme/gentlemen_mainpage.jpeg)
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_mainpage.jpeg)
 
 ## Pagină descriere film
 Conține detalii extinse despre conținutul filmului sau serialului, oferind utilizatorilor contextul narativ și tematica principală.
-![gentlemen-descriere](static/images/readme/gentlemen_descriere.jpeg)
+![gentlemen-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_descriere.jpeg)
 
 ## Pagină distribuție film
 Prezintă actorii principali și personajele interpretate, contribuind la o mai bună înțelegere a rolurilor și a distribuției producției.
-![gentlemen-distributie](static/images/readme/gentlemen_distributie.jpeg)
+![gentlemen-distributie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_distributie.jpeg)
 
 # Testare cu pytest
 
@@ -152,7 +152,7 @@ Cele două teste validează corectitudinea conținutului generat pentru pagini, 
 Testele sunt configurate pentru a fi rulate atât local, cât și automat, în cadrul pipeline-urilor Jenkins, oferind siguranță și stabilitate aplicației în fiecare etapă de dezvoltare.
 
 ## Testare locală 
-![local-test](static/images/readme/local_test.jpeg)
+![local-test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/local_test.jpeg)
 
 
 # Verificare statica cu pylint
@@ -216,7 +216,7 @@ Apoi, pentru a crea un container si a il rula:
 ```
 Inainte de a da start containerului, verificam daca avem atat imaginea cat si containerul:
 
-![docker-test](static/images/readme/verif_docker.jpeg)
+![docker-test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/verif_docker.jpeg)
 
 Pentru a rula aplicatia prin container com folosi urmatoarea comanda:
 ```text
@@ -248,8 +248,9 @@ Lansarea serverului Jenkins local se face prin comanda:
 ```
 Pipeline-ul poate fi vizualizat într-o interfață grafică modernă și intuitivă prin extensia Blue Ocean, care oferă o imagine de ansamblu asupra fiecărui pas executat.
 ![pipeline](static/images/readme/pipeline.jpeg)
+![pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/pipeline.jpeg)
 
 
 # Pull Request
 Am realizat un PR din branch-ul de dezvoltare (`dev_Anghelina_Mara`) către branch-ul main (`main_Anghelina_Mara`)
-![pull-request]
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/pipeline.jpeg)
