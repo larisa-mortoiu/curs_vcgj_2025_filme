@@ -6,7 +6,7 @@
 3. [Tehnologii utilizate](#tehnologii-utilizate)  
 4. [Structura proiectului](#structura-proiectului)  
 5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)  
-6. [Interfata web - prezentare](#interfata-web---prezentare)  
+6. [Interfata web prezentare](#interfata-web-prezentare)  
 7. [Testare Pytest](#testare-pytest)  
 8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)  
 9. [Containerizare cu Docker](#containerizare-cu-docker)  
