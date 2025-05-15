@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from livereload import Server
 import app.lib.descriere as descriere_film
 import app.lib.cast as cast_film 
 
@@ -27,8 +26,7 @@ def film_cast():
     return render_template("cast.html",cast=cast)
 
 if __name__ == '__main__':
-    server = Server(app.wsgi_app)
-    server.serve(port=5011, debug=True)
+    app.run(debug=True)
 
 
 
