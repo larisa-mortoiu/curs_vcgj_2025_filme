@@ -118,7 +118,7 @@ mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ source activeaza_venv
 
 ## Pagină principală (Homepage)
 Afișează o listă cu filmele disponibile, cu link-uri către pagina detaliată a fiecărui film/serial.
-![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/homepage_gentlemen.jpeg)
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/homepage.jpeg)
 
 ## Pagină film
 Această pagină oferă o privire generală asupra unui film sau serial selectat, incluzând titlul și accesul rapid către paginile dedicate descrierii și distribuției.
