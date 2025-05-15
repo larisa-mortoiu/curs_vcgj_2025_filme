@@ -62,7 +62,6 @@
 # Anghel Alexandru Dan
 (insereaza readme)
 --------------------------------------------------------------------
-# Anghelina Mara
 
 # Anghelina Mara
 -------------------------
