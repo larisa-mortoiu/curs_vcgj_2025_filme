@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone source code') {
             steps {
-                git branch: 'dev_Mirica_Elena',
+                git branch: 'main_Mirica_Elena',
                     url: 'https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git'
             }
         }
