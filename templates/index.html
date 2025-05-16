@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>The Blacklist - Acasă</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/blacklist.jpeg') }}");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            margin-top: 100px;
+            padding: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bine ai venit la pagina The Blacklist</h1>
+        <p>Explorează conținutul serialului:</p>
+        <button onclick="location.href='/descriere'">Descriere</button>
+        <button onclick="location.href='/actori'">Actori principali</button>
+        <button onclick="location.href='/trailer'">Trailer & Informații</button>
+    </div>
+</body>
+</html>
+
