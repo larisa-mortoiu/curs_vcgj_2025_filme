@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}JoJo's Bizarre Adventure - Characters{% endblock %}
+
+{% block content %}
+<section class="characters">
+    <div class="container">
+        <h2>JoJo Characters</h2>
+        <div class="character-grid">
+            {% for character in characters %}
+            <div class="character-card">
+                <h3>{{ character.name }}</h3>
+                <p>{{ character.part }}</p>
+                <a href="{{ url_for('character_details', name=character.name.lower().replace(' ', '-')) }}" class="character-link">View Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
