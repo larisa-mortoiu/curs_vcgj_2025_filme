@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Pregătire aplicație') {
+        stage('Pregatire aplicatie') {
             steps {
                 echo 'Building...'
                 sh '''
@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-        stage('Construire și creare container Docker') {
+        stage('Construire si creare container Docker') {
             steps {
                 echo "Build ID: ${BUILD_NUMBER}"
                 echo "Creare imagine docker"
