@@ -41,7 +41,13 @@ def test_actor_list_format():
 
 def test_actor_presence():
     actori = get_actori()
-    required = {"Christian Bale", "Hugh Jackman", "Michael Caine"}
+    required = {"Christian Bale",
+        "Hugh Jackman",
+        "David Bowie",
+        "Piper Perabo",
+        "Rebecca Hall",
+        "Scarlett Johansson",
+        "Michael Caine"}
     assert required.issubset(set(actori)), "Unul sau mai mulți actori esențiali lipsesc."
     logger.info("Actorii principali sunt prezenți în listă.")
 
