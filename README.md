@@ -15,7 +15,7 @@ Am dezvoltat o aplicație web în Flask, dedicată serialului **Lucifer**, care 
 - stil personalizat CSS cu temă dark și butoane interactive;
 - structură modulară `templates/`, `static/`, `filme.py`.
 
-Aplicația a fost **containerizată cu Docker** și testată automat prin **Jenkins CI**.
+Aplicația a fost **containerizată cu Docker** și testată automat prin **Jenkins**.
 
 ---
 
@@ -65,21 +65,6 @@ docker ps
    - `Docker run`
    - `docker ps`
 
-Toate etapele sunt afișate în Jenkins ca **etape verzi (succes)**.
-
----
-
-## 📸 Capturi de ecran (incluse în arhivă ZIP)
-
-| Etapă                           | Descriere                            |
-|--------------------------------|--------------------------------------|
-| `docker build`                 | Build reușit în terminal             |
-| `docker run` + `docker ps`     | Container activ, port expus         |
-| Aplicația în browser           | Pagina principală accesibilă        |
-| Jenkins CI                     | Build automat complet și reușit     |
-
-> Capturile pot fi găsite în arhiva `documentatie_Camburu_Mihail.zip` și incluse separat dacă se cere în platforma de predare.
-
 ---
 
 ## 📁 Structura proiectului
@@ -103,10 +88,6 @@ Toate etapele sunt afișate în Jenkins ca **etape verzi (succes)**.
 
 ---
 
-### 🔚 Proiect realizat cu succes, funcțional atât local cât și în mediu automatizat (CI/CD).
+### 🔚 Proiect realizat cu succes, funcțional atât local cât și în mediu automatizat.
 
 ---
-
-## 🎓 Observație finală
-
-Repo-ul GitHub cu branchul dedicat este pregătit pentru Pull Request final.
