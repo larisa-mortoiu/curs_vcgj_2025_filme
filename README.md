@@ -22,7 +22,7 @@ Aplicația le oferă utilizatorilor acces rapid la informații esențiale despre
 
 # Versiuni si functionalitati disponibile
 
-v1.0 – Versiunea inițială stabilă
+v1.0 – Versiunea actuală
 
 Afișarea informațiilor despre filmul The Prestige, selectat manual ca subiect principal al aplicației.
 
@@ -176,8 +176,152 @@ Pornește aplicația Flask, setând IP-ul și portul pentru accesarea în browse
   
   ![Description](static/images/screenshots/description1.png)
   ![Description](static/images/screenshots/description2.png)
-
+  
   ## Secțiunea de distribuție
   Afișează actorii principali împreună cu personajele pe care le interpretează.
    ![Cast](static/images/screenshots/cast.jpg)
+   
+  # Testare Pytest
+
+Pentru a valida funcționalitatea corectă a aplicației, au fost implementate teste unitare cu ajutorul framework-ului Pytest. Acestea sunt definite în fișierul test_filme.py, aflat în directorul app/tests/.
+
+Testele vizează componentele esențiale ale aplicației:
+
+Testarea descrierii filmului 
+ - Verifică dacă descrierea filmului returnată de get_descriere()
+ - Caută în textul descrierii anumite cuvinte-cheie relevante pentru tematica filmului The Prestige
+
+Testarea distribuției
+ - Evaluează formatul general al listei de actori returnată de get_actori()
+ - Confirmă prezența actorilor principali în listă
+   
+Pentru fiecare test:
+
+Se apelează funcțiile din the_prestige_description.py și the_prestige_cast.py.
+
+Se verifică tipul valorii returnate.
+
+Se confirmă prezența anumitor elemente esențiale în conținutul returnat (ex: lungimea textului descriptiv, existența unor actori cunoscuți).
+
+Testele rulează atât local (manual, cu comanda pytest), cât și automat, prin intermediul pipeline-ului Jenkins configurat în proiect. Acest lucru contribuie la menținerea unei funcționări stabile și verificabile a aplicației la fiecare modificare.
+
+## Testare locală
+
+  ![Test](static/images/screenshots/tests.png)
+
+## Testare automată
+
+Prin intermediul Jenkinsfile
+```
+stage('Run Tests - pytest') {
+          steps {
+              sh '''
+                  . ${VENV_DIR}/bin/activate
+                  pytest app/tests
+              '''
+   }
+ }
+ ```
+# Analiza statica a codului cu Pylint
+Pentru verificarea calității codului sursă, proiectul utilizează Pylint – un instrument de analiză statică ce ajută la menținerea unui stil de cod curat și coerent. Analiza este aplicată asupra fișierelor esențiale ale aplicației, precum modulele din app/lib/, fișierul principal filme.py și testele din app/tests/.
+
+Această etapă detectează automat aspecte precum:
+
+- probleme de formatare ;
+
+- denumiri improprii pentru variabile sau funcții;
+
+- cod inutil sau variabile nefolosite;
+
+- abateri de la bunele practici Python.
+
+Verificarea Pylint este integrată în procesul de integrare continuă (CI) printr-un stage dedicat în Jenkins, care rulează automat comenzile:
+
+```
+pylint --exit-zero app/lib/*.py
+pylint --exit-zero app/tests/*.py
+pylint --exit-zero filme.py
+```
+
+# Containerizare cu Docker
+
+Containerizarea este o tehnică prin care aplicația și toate dependențele ei sunt împachetate într-un mediu izolat, numit container. Acesta rulează la fel indiferent de sistemul de operare sau configurația locală, ceea ce elimină problemele de compatibilitate („merge la mine, dar nu la tine”).
+
+În acest proiect, containerizarea este realizată cu Docker și ne ajută să rulăm aplicația într-un mod predictibil, portabil și ușor de distribuit, fie local, fie într-un mediu de producție sau testare.
+
+# Configurație. Dockerfile
+
+Fișierul Dockerfile definește pașii pentru construirea imaginii:
+
+- Pornește de la o imagine `python:3.11-alpine`.
+- Creează un utilizator non-root `dina_docker`.
+- Setează directorul de lucru și copiază codul aplicației.
+- Oferă permisiuni de execuție scriptului `dockerstart.sh`.
+- Creează un mediu virtual și instalează dependențele.
+- Rulează aplicația Flask ca utilizator non-root pe portul 5011.
+
+# Containter și imagine Docker
+
+Creare imagine: 
+
+``` docker build -t movieimage:v1 .```
+
+ ![Docker](static/images/screenshots/docker-images.jpeg)
+
+Creare container:  
+
+ ```docker create --name moviecontainer -p 8020:5011 movieimage:v1```
+
+ ![Docker](static/images/screenshots/doker_commands.jpeg)
  
+ Pornire container:
+ 
+ ```docker start moviecontainer```
+ 
+ ![Docker](static/images/screenshots/docker_homepage.png)
+
+După pornirea aplicației cu `./dockerstart.sh`, aceasta va fi accesibilă în browser la adresa locală: **http://127.0.0.1:8020**.
+
+# Pipeline CI/CD cu Jenkins
+
+Jenkins este un instrument de automatizare folosit în acest proiect pentru a gestiona procesul de integrare continuă. El a fost configurat astfel încât să detecteze automat modificările din repository-ul GitHub și să execute un set de pași definiți în fișierul Jenkinsfile. Acești pași includ activarea mediului virtual, instalarea dependințelor, rularea testelor și verificarea calității codului. Prin această automatizare, Jenkins asigură că fiecare actualizare a aplicației este verificată și validată într-un mod consistent, fără intervenție manuală.
+
+#Jenkinsfile
+Fișierul Jenkinsfile definește pașii automatizați pe care Jenkins îi urmează. Acest pipeline asigură integrarea continuă, permițând dezvoltatorului să verifice rapid dacă aplicația funcționează corect după fiecare modificare. Pipeline-ul conține următoarele stagii:
+
+- Clone repo
+ Clonarea codului sursă din ramura dev_Dina_Alexandra a repository-ului GitHub pentru a pregăti aplicația pentru build.
+
+- Set up virtual environment
+ Creează un mediu virtual Python (.venv), îl activează și instalează toate pachetele necesare specificate în requirements.txt.
+
+- Code Quality - pylint
+ Verifică stilul și calitatea codului folosind pylint pe modulele aplicației (app/lib, app/tests, filme.py) fără a opri execuția dacă sunt avertismente.
+
+- Run Tests - pytest
+ Rulează testele unitare definite în app/tests folosind pytest pentru a valida funcționalitatea aplicației.
+
+- Deploy
+ Construiește o imagine Docker din aplicație și creează un container cu un port expus, pentru a putea fi rulată ulterior în izolare.
+
+Pentru a porni serverul Jenkins local, este suficient să rulezi comanda:
+
+```jenkins```
+
+Aceasta va inițializa serverul pe portul implicit (de obicei 8080), permițând accesul la interfața web Jenkins prin adresa:
+http://localhost:8080 sau http://127.0.0.1:8080
+
+
+Pipeline-ul este configurat astfel încât, la fiecare push în repository-ul GitHub, să se declanșeze automat o execuție a pipeline-ului prin intermediul agentului Jenkins. Acest comportament este asigurat prin bifarea opțiunii **GitHub hook trigger for GITScm polling**, precum și prin activarea opțiunii **Poll SCM**, care determină verificarea modificărilor în repository la fiecare 2 minute. Astfel, proiectul se actualizează constant în funcție de modificările aduse codului sursă.
+
+# Procedura Pull Request
+Modificările aduse în branch-ul de dezvoltare dev_Dina_Alexandra au fost propuse pentru a fi integrate în ramura principală main_Dina_Alexandra prin crearea unui Pull Request.
+
+ ![PR](static/images/screenshots/PR.jpeg)
+
+
+# Bibliografie
+- [Docker Documentation](https://docs.docker.com/)
+- [Git Documentation](https://git-scm.com/doc)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+- [Repo crchende/sysinfo  ](https://github.com/crchende/sysinfo)
