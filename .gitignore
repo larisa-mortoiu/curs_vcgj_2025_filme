@@ -174,3 +174,21 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+
+# Fișiere de mediu virtual și cache
+.venv/
+larisa/
+larisa-/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE config și temporare
+.DS_Store
+.env
+.idea/
+.vscode/
+*.egg-info/
