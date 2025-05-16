@@ -3,30 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HomePage - Movies</title>
+    <title>Acasă - Filme & Seriale</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Bine ați venit pe site-ul nostru de filme și seriale!</h1>
-        <h2>Aici puteți găsi detalii despre orice film sau serial, cu un simplu click.</h2>
-        
-        <div class="film-card">
-            <a href="{{ url_for('bridgerton') }}">
-                <img src="{{ url_for('static', filename='images/bridgerton_main_img.jpg') }}" alt="Poster Bridgerton"
-                    class="film-poster">
-            </a>
-            <h2 style="margin-top: 0px;">Bridgerton</h2>
-            <p>Poveste de epocă, romantism și intrigi în înalta societate londoneză.</p>
+    <div class="hero">
+        <div class="overlay">
+            <h1>Explorează Universul Cinematic</h1>
+            <p>Filme și seriale care te cuceresc. Alegerea ta, povestea ta.</p>
         </div>
     </div>
+
+    <main class="cards-container">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/cover.png') }}" alt="Bridgerton" class="poster">
+            <div class="card-content">
+                <h2>Bridgerton</h2>
+                <p>Eleganță, secrete și pasiune în înalta societate britanică.</p>
+                <a href="{{ url_for('bridgerton') }}" class="btn">Vezi detalii</a>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
