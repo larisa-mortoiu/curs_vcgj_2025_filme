@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from livereload import Server
 import app.lib.descriere as descriere_st
 import app.lib.distributie as distributie_st
 
@@ -25,20 +24,5 @@ def distributie():
     distributie=distributie_st.get_distributie()
     return render_template('distributie.html', distributie=distributie)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
-    server = Server(app.wsgi_app)
-    server.serve(port=5011, debug=True)
+   app.run(debug=True)
