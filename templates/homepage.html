@@ -11,19 +11,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alata&family=Courgette&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+</head>
 
 <body>
     <div class="container">
-        <h1>Bine ati venit pe site-ul nostru de filme și seriale!</h1>
-        <h2>Aici puteți găsi detalii despre orice film sau serial, cu un simplu click.</h2>
+        <h1>Bine ați venit pe site-ul nostru de filme și seriale!</h1>
+        <h2>Aici puteți explora povești memorabile cu un simplu click.</h2>
+
         <div class="film-card">
             <a href="{{ url_for('curious_case') }}">
-                <img src="{{ url_for('static', filename='images/image.png') }}" alt="Poster Film"
-                    class="film-poster">
+                <img src="{{ url_for('static', filename='images/image.png') }}" alt="Poster Film" class="film-poster">
             </a>
-            <h2 style="margin-top: 0px;">The Curious Case of Benjamin Button</h2>
-            <p>O călătorie prin timp... în sens invers. O poveste despre iubire, destin și efemeritate.</p>
-
+            <h2>The Curious Case of Benjamin Button</h2>
+            <p class="highlight">„O călătorie prin timp... în sens invers. O poveste despre iubire, destin și <span class='gold'>efemeritate</span>.”</p>
         </div>
     </div>
 </body>
