@@ -271,4 +271,4 @@ Etapele definite în `Jenkinsfile` sunt:
 
 ## Pull Request
 Dupa finalizarea cerintelor, am realizat un pull request de pe `dev_Constantinescu_Adelina` catre `main_Constantinescu_Adelina`.
-
+![Readme](static/images/readme.png)
