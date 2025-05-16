@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Încearcă să activezi venv-ul
-. .venv/bin/activate
-
-# Dacă nu există, îl creează și instalează requirements
-if [ $? -eq 0 ]; then
-    echo "SUCCESS: venv was activated."
+# Activează sau creează venv
+if [ -d ".venv" ]; then
+    echo "Activating existing venv..."
+    . .venv/bin/activate
 else
-    echo "FAIL: .venv not found. Creating one..."
+    echo "Creating new virtual environment..."
     python3 -m venv .venv
-    source .venv/bin/activate
-
-    echo "Installing requirements..."
-    pip install --upgrade pip
-    pip install -r requirements.txt
-
-    echo "venv created and requirements installed."
+    . .venv/bin/activate
 fi
+
+# Instalează/actualizează pachetele
+echo "Installing/Updating requirements..."
+pip install --upgrade pip
+pip install -r requirements.txt
+
