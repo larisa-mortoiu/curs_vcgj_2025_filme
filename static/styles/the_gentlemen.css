@@ -1,92 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-size: cover;
-    align-content: center;
-}
-
-p {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.4em;
+    padding: 30px;
+    margin: 0;
 }
 
 h1 {
-    font-family: "Courgette", cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 3em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    color: #2c2c2c;
 }
 
-
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    height: auto;
-    margin: auto auto;
-    padding: 15px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
     background: rgba(254, 237, 214, 0.66);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 .container-info {
     display: flex;
-}
-
-.info {
-    flex-grow: 0;
-    align-content: center;
-}
-
-.container-info section {
-    flex-basis: 50%;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .poster {
-    width: 65%;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.details {
-    margin-bottom: 20px;
-    margin-top: -75px;
+.info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.details p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn-group a {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-family: "Alata", sans-serif;
-    font-size: 1.4em;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-family: 'Merriweather', serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-group a:hover {
     background-color: #555;
+    transform: scale(1.05);
 }
 
 a.back {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
     text-decoration: none;
-    color: #333;
-    background-color: #ddd;
+    color: #fff;
+    background-color: #333;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 a.back:hover {

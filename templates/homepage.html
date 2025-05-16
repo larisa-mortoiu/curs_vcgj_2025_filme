@@ -14,8 +14,13 @@
 
 <body>
     <div class="container">
-        <h1>Bine ati venit pe site-ul nostru de filme și seriale!</h1>
-        <h2>Aici puteți găsi detalii despre orice film sau serial, cu un simplu click.</h2>
+        <h1>Movies & TV shows</h1>
+        <h2>Orice informație despre un film sau serial, la un click distanță.</h2>
+        <form method="get" class="search-form">
+            <input type="text" name="query" placeholder="Caută un film sau serial..." required>
+            <button type="submit">Caută</button>
+        </form>
+
         <div class="film-card">
             <a href="{{ url_for('gentlemen') }}">
                 <img src="{{ url_for('static', filename='images/gentlemen_main_img.jpg') }}" alt="Poster Film"

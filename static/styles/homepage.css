@@ -1,52 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-size: cover;
+    margin: 0;
+    padding: 30px;
+}
+
 h1 {
-    font-family: "Courgette", cursive;
-    font-size: 2.2em;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #2e2e2e;
 }
 
 h2 {
-    font-family: "Alata", sans-serif;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #444;
 }
 
 p {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Merriweather', serif;
     font-size: 1.2em;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f2efe6;
-    background: linear-gradient(0deg, rgba(242, 239, 230, 1) 0%, rgba(242, 223, 179, 1) 41%, rgba(109, 192, 194, 1) 100%);
+    text-align: justify;
+    text-indent: 40px;
+    margin: 0 auto;
+    max-width: 600px;
+    color: #333;
 }
 
 .container {
     max-width: 800px;
-    height: auto;
-    margin: 20px auto;
-    margin-bottom: 0px;
-    padding: 5px 20px;
-    background: #ffd8ab;
-    background: radial-gradient(circle, rgba(255, 216, 171, 0.6) 11%, rgba(255, 234, 210, 0.6) 31%, rgba(255, 255, 255, 0.6) 64%);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    padding: 25px 40px;
+    background: rgba(254, 237, 214, 0.66);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.film-card img {
-    height: 95%;
-    max-width: 290px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+.film-card {
+    margin-top: 30px;
 }
 
 .film-poster {
+    max-width: 290px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .film-poster:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.search-form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-form input[type="text"] {
+    padding: 12px 20px;
+    width: 250px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-family: 'Merriweather', serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form button {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-family: 'Merriweather', serif;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-form button:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
