@@ -680,9 +680,7 @@ Integrare continuă cu Jenkins, care rulează automat:
 
 # Structura proiectului
 
-![Structura](static/images/screenshots/structure_of_project.jpg)
-
-- app/
+![Structura](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/structure_of_project.jpg)
   
   Conține logica principală a aplicației.
    - lib/ – module Python care oferă datele pentru descriere și distribuție:
@@ -768,30 +766,30 @@ Pornește aplicația Flask, setând IP-ul și portul pentru accesarea în browse
  Se folosește doar după activarea mediului virtual. Scriptul lansează aplicația Flask pe IP-ul 127.0.0.1, portul 5011. Poți accesa aplicația din browser la:
  http://127.0.0.1:5011 sau http://localhost:5011
 
- ![Running_App](static/images/screenshots/Running_app.png)
+ ![Running_App](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/Running_app.png)
 
  # Interfata web prezentare
 
  ## Pagina principală (Homepage)
   Este punctul de start al aplicației, oferind utilizatorului o primă interacțiune și acces rapid către detalii despre filmul selectat.
   
-  ![Home_page](static/images/screenshots/homepage_image.png)
+  ![Home_page](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/homepage_image.png)
 
  ## Pagina film
  
  Oferă o prezentare sumară a filmului, cu opțiuni de navigare către pagina de descriere detaliată sau distribuție, permițând utilizatorului să aleagă ce informație dorește să exploreze mai departe.
 
-  ![Movie](static/images/screenshots/the_prestige_movie.png)
+  ![Movie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/the_prestige_movie.png)
 
   ## Secțiunea de descriere 
   Oferă o prezentare amplă a subiectului filmului, evidențiind temele și atmosfera acestuia.
   
-  ![Description](static/images/screenshots/description1.png)
-  ![Description](static/images/screenshots/description2.png)
+  ![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description1.png)
+  ![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description2.png)
   
   ## Secțiunea de distribuție
   Afișează actorii principali împreună cu personajele pe care le interpretează.
-   ![Cast](static/images/screenshots/cast.jpg)
+   ![Cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/cast.jpg)
    
   # Testare Pytest
 
@@ -819,7 +817,7 @@ Testele rulează atât local (manual, cu comanda pytest), cât și automat, prin
 
 ## Testare locală
 
-  ![Test](static/images/screenshots/tests.png)
+  ![Test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/tests.png)
 
 ## Testare automată
 
@@ -878,19 +876,19 @@ Creare imagine:
 
 ``` docker build -t movieimage:v1 .```
 
- ![Docker](static/images/screenshots/docker-images.jpeg)
+ ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker-images.jpeg)
 
 Creare container:  
 
  ```docker create --name moviecontainer -p 8020:5011 movieimage:v1```
 
- ![Docker](static/images/screenshots/doker_commands.jpeg)
+ ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/doker_commands.jpeg)
  
  Pornire container:
  
  ```docker start moviecontainer```
  
- ![Docker](static/images/screenshots/docker_homepage.png)
+ ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker_homepage.png)
 
 După pornirea aplicației cu `./dockerstart.sh`, aceasta va fi accesibilă în browser la adresa locală: **http://127.0.0.1:8020**.
 
@@ -929,7 +927,7 @@ Pipeline-ul este configurat astfel încât, la fiecare push în repository-ul Gi
 # Procedura Pull Request
 Modificările aduse în branch-ul de dezvoltare dev_Dina_Alexandra au fost propuse pentru a fi integrate în ramura principală main_Dina_Alexandra prin crearea unui Pull Request.
 
- ![PR](static/images/screenshots/PR.jpeg)
+ ![PR](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/PR.jpeg)
 
 
 # Bibliografie
