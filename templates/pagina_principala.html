@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucifer - Pagina principală</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fisier_css.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Lucifer</h1>
+
+        <div class="video-container">
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/X4bF_quwNtw"
+                    frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="buttons">
+            <a href="{{ url_for('actori') }}" class="btn">Actorii principali</a>
+            <a href="{{ url_for('descriere') }}" class="btn">Descriere film</a>
+        </div>
+    </div>
+</body>
+</html>
