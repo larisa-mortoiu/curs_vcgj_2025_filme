@@ -73,8 +73,8 @@ Acces în browser: [http://localhost:5011](http://localhost:5011)
 ## Exemple pagină web
 
 - Homepage: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
-- Characters: imagini + descrieri pentru Walter, Jesse, Skyler etc.
-- Trailers: iframe IMDb embed pentru fiecare sezon
+- Characters: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
+- Trailers: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
 
 ---
 
@@ -121,6 +121,7 @@ Aplicația include un `Jenkinsfile` care:
 
 Exemplu rulare reușită:
 Containerul rulează pe `localhost:5011`.
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
 
 ---
 
