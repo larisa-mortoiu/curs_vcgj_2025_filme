@@ -38,7 +38,7 @@ pipeline {
             steps {
                 sh '''
                     . .venv/bin/activate
-                    pytest test_filme.py
+                    pytest app/tests/test_filme.py
                 '''
             }
         }
