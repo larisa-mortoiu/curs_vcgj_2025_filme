@@ -1,74 +1,71 @@
 pipeline {
-  agent any
+    agent any
 
-  environment {
-    IMAGE_NAME = "jojo-scc-app"
-    REGISTRY   = "docker.io/kais230/${IMAGE_NAME}"
-  }
-
-  stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
-    }
-
-    stage('Unit Tests') {
-      steps {
-        sh 'pytest --maxfail=1 --disable-warnings -q'
-      }
-    }
-
-    stage('Build Docker Image') {
-      steps {
-        script {
-          // Build container tagged with the build number
-          dockerImage = docker.build("${IMAGE_NAME}:${env.BUILD_ID}")
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source…'
+                checkout scm
+            }
         }
-      }
-    }
 
-    stage('Smoke Test Container') {
-      steps {
-        script {
-          // Run a temporary container and hit the root endpoint
-          dockerImage.inside('-p 5000:5000') {
-            sh '''
-              flask run --host=0.0.0.0 &
-              sleep 5
-              curl --fail http://localhost:5000
-            '''
-          }
+        stage('Setup & Unit Tests') {
+            steps {
+                echo 'Activating venv & running pytest…'
+                sh '''
+                  # adjust path to your virtualenv activation script
+                  . ./venv/bin/activate
+                  pytest --maxfail=1 --disable-warnings -q
+                '''
+            }
         }
-      }
-    }
 
-    stage('Push to Registry') {
-      when {
-        branch 'main'
-      }
-      steps {
-        withCredentials([
-          usernamePassword(
-            credentialsId: 'dockerhub-creds',
-            usernameVariable: 'DOCKER_USER',
-            passwordVariable: 'DOCKER_PASS'
-          )
-        ]) {
-          sh '''
-            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-            docker tag ${IMAGE_NAME}:${env.BUILD_ID} ${REGISTRY}:latest
-            docker push ${REGISTRY}:latest
-          '''
+        stage('Build Docker Image') {
+            steps {
+                echo "Building Docker image: jojo-scc-app:v${BUILD_NUMBER}"
+                sh '''
+                  docker build -t jojo-scc-app:v${BUILD_NUMBER} .
+                '''
+            }
         }
-      }
-    }
-  }
 
-  post {
-    always {
-      cleanWs()
+        stage('Smoke Test Container') {
+            steps {
+                echo 'Starting container and hitting /…'
+                sh '''
+                  docker run -d --name smoke-test-${BUILD_NUMBER} -p 5000:5000 jojo-scc-app:v${BUILD_NUMBER}
+                  sleep 5
+                  curl --fail http://localhost:5000
+                  docker stop smoke-test-${BUILD_NUMBER}
+                  docker rm smoke-test-${BUILD_NUMBER}
+                '''
+            }
+        }
+
+        stage('Push to Registry') {
+            when { branch 'main' }
+            steps {
+                echo 'Logging in & pushing to Docker Hub…'
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+                    sh '''
+                      echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                      docker tag jojo-scc-app:v${BUILD_NUMBER} docker.io/kais230/jojo-scc-app:latest
+                      docker push docker.io/kais230/jojo-scc-app:latest
+                    '''
+                }
+            }
+        }
     }
-  }
+
+    post {
+        always {
+            echo 'Cleaning workspace…'
+            cleanWs()
+        }
+    }
 }
 
