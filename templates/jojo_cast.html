@@ -5,12 +5,15 @@
 {% block content %}
 <section class="characters">
     <div class="container">
-        <h2>JoJo Characters</h2>
+        <h2>JoJo's Characters</h2>
         <div class="character-grid">
             {% for character in characters %}
             <div class="character-card">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/' + character.image) }}" alt="{{ character.name }}">
+                </div>
                 <h3>{{ character.name }}</h3>
-                <p>{{ character.part }}</p>
+                <p class="season-name">{{ character.part }}</p>
                 <a href="{{ url_for('character_details', name=character.name.lower().replace(' ', '-')) }}" class="character-link">View Details</a>
             </div>
             {% endfor %}
@@ -18,3 +21,4 @@
     </div>
 </section>
 {% endblock %}
+

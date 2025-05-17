@@ -3,54 +3,47 @@
 {% block title %}JoJo's Bizarre Adventure - Home{% endblock %}
 
 {% block content %}
+
+<!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content">
-        <h2>Welcome to JOJO's Bizzare Adventure!</h2>
-        <div class="star-decoration">★★★★★</div>
-    </div>
+  <div class="hero-content container">
+    <h2 class="hero-title">JOJO's <span class="highlight">Bizarre Adventure</span></h2>
+    <p class="hero-subtitle">An epic journey through generations of the Joestar family</p>
+    <a href="{{ url_for('cast') }}" class="cta-button">View Characters</a>
+  </div>
 </section>
 
-<section class="intro">
-    <div class="container">
-        <h3>About JoJo's Bizarre Adventure</h3>
-        <p style="color: #ebdb67">
-            JoJo's Bizarre Adventure is a Japanese manga series written and illustrated by Hirohiko Araki. 
-            The story follows the supernatural adventures of the Joestar family across generations, 
-            with each part featuring a different descendant of the family as the protagonist, 
-            each nicknamed "JoJo."
-        </p>
-        <p style="color: #ebdb67">
-            The series is famous for its unique art style, creative battles, memorable characters, 
-            and its signature "Stands" - manifestations of psychic power that represent a user's 
-            fighting spirit and have various abilities.
-        </p>
-        <h3>The Parts of JoJo</h3>
-        <div class="parts-grid">
-            <div class="part">
-                <h4>Phantom Blood</h4>
-                <p>Jonathan Joestar vs Dio Brando in Victorian England</p>
-            </div>
-            <div class="part">
-                <h4>Battle Tendency</h4>
-                <p>Joseph Joestar battles the Pillar Men</p>
-            </div>
-            <div class="part">
-                <h4>Stardust Crusaders</h4>
-                <p>Jotaro Kujo's journey to defeat DIO</p>
-            </div>
-            <div class="part">
-                <h4>Diamond is Unbreakable</h4>
-                <p>Josuke Higashikata protects his hometown Morioh</p>
-            </div>
-            <div class="part">
-                <h4>Golden Wind</h4>
-                <p>Giorno Giovanna aims to become a Gang-Star</p>
-            </div>
-            <div class="part">
-                <h4>Stone Ocean</h4>
-                <p>Jolyne Cujoh fights for her freedom</p>
-            </div>
-        </div>
+<!-- Parts Overview Section -->
+<section class="parts-overview">
+  <div class="container">
+    <h2 class="section-title">Parts of JoJo's Adventure</h2>
+    <div class="parts-grid">
+      <div class="part">
+        <h4>Phantom Blood</h4>
+        <p>The beginning of the Joestar legacy and the rise of Dio.</p>
+      </div>
+      <div class="part">
+        <h4>Battle Tendency</h4>
+        <p>Joseph Joestar fights ancient Pillar Men to save humanity.</p>
+      </div>
+      <div class="part">
+        <h4>Stardust Crusaders</h4>
+        <p>Jotaro and friends travel to Egypt to defeat DIO.</p>
+      </div>
+      <div class="part">
+        <h4>Diamond is Unbreakable</h4>
+        <p>Josuke and townsfolk protect Morioh from hidden stand users.</p>
+      </div>
+      <div class="part">
+        <h4>Golden Wind</h4>
+        <p>Giorno Giovanna strives to overthrow the mafia from within and bring justice to Italy.</p>
+      </div>
+      <div class="part">
+        <h4>Stone Ocean</h4>
+        <p>Jolyne Cujoh battles hidden threats prison and protects her father.</p>
+      </div>
     </div>
+  </div>
 </section>
+
 {% endblock %}
