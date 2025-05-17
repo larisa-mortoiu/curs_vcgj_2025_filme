@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
-# activate the venv and start Flask
-. .venv/bin/activate
-exec flask run
+# if args provided, run them (e.g. pytest); otherwise launch Flask
+if [ $# -gt 0 ]; then
+  exec "$@"
+else
+  exec flask run
+fi
 
