@@ -63,11 +63,11 @@ Dacă nu există `.venv`, scriptul `activeaza_venv_jenkins` îl creează și ins
 ### Rulare aplicație
 
 ```bash
-./ruleaza_aplicatia
+source breaking_bad
 ```
 
 Acces în browser: [http://localhost:5011](http://localhost:5011)
-
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
 ---
 
 ## Exemple pagină web
@@ -121,7 +121,7 @@ Aplicația include un `Jenkinsfile` care:
 
 Exemplu rulare reușită:
 Containerul rulează pe `localhost:5011`.
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
 
 ---
 
