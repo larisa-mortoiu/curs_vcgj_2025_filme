@@ -9,16 +9,17 @@ pipeline {
             }
         }
 
-        stage('Setup & Unit Tests') {
-            steps {
-                echo 'Activating venv & running pytest…'
-                sh '''
-                  # adjust path to your virtualenv activation script
-                  . ./venv/bin/activate
-                  pytest --maxfail=1 --disable-warnings -q
-                '''
-            }
-        }
+		stage('Setup & Unit Tests') {
+	  steps {
+	    echo 'Creating venv, installing deps & running pytest…'
+	    sh '''
+	      python3 -m venv venv
+	      . venv/bin/activate
+	      pip install --no-cache-dir -r requirements.txt
+	      pytest --maxfail=1 --disable-warnings -q
+	    '''
+	  }
+	}
 
         stage('Build Docker Image') {
             steps {
