@@ -26,16 +26,17 @@ pipeline {
     }
 
     stage('Smoke Test') {
-      steps {
-        sh """
-          docker run -d --name smoke-${BUILD_NUMBER} -p 5000:5000 ${TAG}
-          timeout 10 sh -c 'until curl -s http://localhost:5000 >/dev/null; do sleep 1; done'
-          curl --fail http://localhost:5000
-          docker stop smoke-${BUILD_NUMBER}
-          docker rm smoke-${BUILD_NUMBER}
-        """
-      }
-    }
+  steps {
+    echo "Smoke–testing inside container ${TAG}"
+    // run your dockerstart.sh inside the container, then curl localhost:5000
+    sh """
+      docker run --rm --entrypoint sh ${TAG} -c \\
+        "./dockerstart.sh & \\
+         sleep 5 && \\
+         curl --fail http://127.0.0.1:5000"
+    """
+  }
+}
 
     stage('Push to Hub') {
       when { branch 'main' }
