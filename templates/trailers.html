@@ -6,46 +6,25 @@
   <link rel="stylesheet" href="/static/styles/style.css" />
 </head>
 <body>
-  <div class="smoke"></div>
-  <div class="smoke"></div>
-  <div class="smoke"></div>
 
   <header>
     <h1><span class="element">Tr</span>ailers</h1>
     <p class="tagline">Watch official trailers and promos from Breaking Bad.</p>
   </header>
+
   <nav>
-        <a href="/breaking-bad">Home</a>
-        <a href="/breaking-bad/characters">Characters</a>
-    </nav>
+    <a href="/">Home</a>
+    <a href="/breaking-bad">Description</a>
+    <a href="/breaking-bad/characters">Characters</a>
+  </nav>
 
   <div class="container trailers-container">
-
+    {% for trailer in trailers %}
     <div class="trailer-card">
-      <h3>Official Trailer (Season 1)</h3>
-      <iframe src="https://www.imdb.com/video/embed/vi933805337/?ref_=ttvg_vi_14" frameborder="0" allowfullscreen></iframe>
+      <h3>{{ trailer.title }}</h3>
+      <iframe src="{{ trailer.src }}" frameborder="0" allowfullscreen></iframe>
     </div>
-
-    <div class="trailer-card">
-      <h3>Breaking Bad: Season 2</h3>
-      <iframe src="https://www.imdb.com/video/embed/vi698924313/?ref_=ttvg_vi_13" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="trailer-card">
-      <h3>Breaking Bad: Season 3</h3>
-      <iframe src="https://www.imdb.com/video/embed/vi749255961/?ref_=ttvg_vi_12" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="trailer-card">
-      <h3>Breaking Bad: Season 4</h3>
-      <iframe src="https://www.imdb.com/video/embed/vi4020747545/?ref_=ttvg_vi_34" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="trailer-card">
-      <h3>Breaking Bad: Final Season</h3>
-      <iframe src="https://www.imdb.com/video/embed/vi547929369/?ref_=ttvg_vi_11" frameborder="0" allowfullscreen></iframe>
-    </div>
-
+    {% endfor %}
   </div>
 </body>
 </html>

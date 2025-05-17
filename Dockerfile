@@ -1,32 +1,34 @@
-FROM python:3.11-alpine
+FROM python:3.10-alpine
 
-ENV FLASK_APP=filme.py
-ENV FLASK_RUN_PORT=5011
-ENV FLASK_ENV=development
+ENV FLASK_APP sysinfo
+#ENV FLASK_CONFIG = docker
 
-# Create a non-root user
-RUN adduser -D radu
-USER radu
+#3.8 booster
+#RUN useradd -rm -d /home/site -s /bin/bash -g root -G sudo -u 1001 site
 
-WORKDIR /home/radu
+#3.8 alpine
+RUN adduser -D sysinfo
 
-# Copy application files
+USER sysinfo
+
+WORKDIR /home/sysinfo/
+
 COPY app app
-COPY templates templates
-COPY static static
-COPY filme.py filme.py
-COPY requirements.txt requirements.txt
-COPY pytest.ini pytest.ini
 COPY dockerstart.sh dockerstart.sh
+COPY pytest.ini pytest.ini
+COPY quickrequirements.txt quickrequirements.txt
+COPY sysinfo.py sysinfo.py
+RUN mkdir static
+RUN mkdir static/imagini
+RUN chmod -R 777 static
 
+RUN python3 -m venv .venv
+RUN .venv/bin/pip install -r quickrequirements.txt
+
+#WORKDIR /home/sysinfo/app
+
+# runtime configuration
+EXPOSE 5011
+#ENTRYPOINT ["./dockerstart_jenkins.sh"]
 USER root
-RUN chmod 755 dockerstart.sh
-USER radu
-# Set up virtual environment
-RUN python3 -m venv .venv && \
-    .venv/bin/pip install --upgrade pip && \
-    .venv/bin/pip install -r requirements.txt
-
-# Runtime configuration
-EXPOSE 5000
-ENTRYPOINT ["./dockerstart.sh"]
+#CMD sh

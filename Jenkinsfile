@@ -1,72 +1,58 @@
+/*Jenkins*/
 pipeline {
     agent any
 
-    environment {
-        VENV_DIR = ".venv"
-        ACTIVATE = ". .venv/bin/activate"
-    }
-
     stages {
-        stage('Clone repo') {
+        stage('Build') {
+            agent any
             steps {
-                git branch: 'dev_Zarafin_Radu', 
-                    url: 'https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git'
+                echo 'Building...'
+                sh '''
+                    pwd;
+                    ls -l;
+                    . ./activeaza_venv_jenkins
+                    '''
             }
         }
-
-        stage('Set up virtual environment') {
+        
+        /*stage('Testare') {
+            problema rulare in paralel, al doilea stage nu mai poate porni venv-ul
+            parallel {
+         */
+        stage('pylint - calitate cod') {
+            agent any
             steps {
                 sh '''
-                    python3 -m venv $VENV_DIR
-                    . $VENV_DIR/bin/activate
-                    pip install --upgrade pip
-                    pip install -r requirements.txt
-                '''
-            }
-        }
-
-        stage('Code Quality - pylint') {
-            steps {
-                sh '''
-                    . $VENV_DIR/bin/activate
-                    echo ' Verificare app/lib/*.py'
+                    . ./activeaza_venv;
+                    echo '\n\nVerificare lib/*.py cu pylint\n';
                     pylint --exit-zero lib/*.py;
 
-                    echo ' Verificare app/tests/*.py'
+                    echo '\n\nVerificare tests/*.py cu pylint';
                     pylint --exit-zero tests/*.py;
 
-                    echo ' Verificare filme.py'
-                    pylint --exit-zero filme.py;
+                    echo '\n\nVerificare sysinfo.py cu pylint';
+                    pylint --exit-zero sysinfo.py;
                 '''
             }
         }
 
-        stage('Run Tests - pytest') {
+        stage('Unit Testing cu pytest') {
+            agent any
             steps {
+                echo 'Unit testing with Pytest...'
                 sh '''
-                    . $VENV_DIR/bin/activate
-                    pytest app/tests
+                    . ./activeaza_venv;
+                    pytest;
                 '''
             }
         }
-
-        stage('Deploy - Build Docker Image') {
+        /*    }
+        }*/
+        stage('Deploy') {
+            agent any
             steps {
-                echo " Build ID: ${BUILD_NUMBER}"
-                sh '''
-                    docker build -t movieimage:v${BUILD_NUMBER} .
-
-                    docker create --name moviecontainer${BUILD_NUMBER} -p 8020:5011 movieimage:v${BUILD_NUMBER}
-                '''
+                echo 'IN lucru ! ...'
             }
-        }
-    }
-
-    post {
-        always {
-            echo " Pipeline terminat!"
-            sh "docker ps -a"
         }
     }
 }
-
