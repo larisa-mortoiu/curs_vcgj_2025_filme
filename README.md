@@ -61,7 +61,7 @@ Aplicația web prezintă universul **JoJo's Bizarre Adventure**:
 * Testele unitare se află în folderul `app/tests/` și pot fi rulate cu:
 
   ```bash
-  pytest -q
+  python3 -m pytest app/tests/test_filme.py -q
   ```
 * Smoke-test intern este integrat în pipeline-ul Jenkins.
 
