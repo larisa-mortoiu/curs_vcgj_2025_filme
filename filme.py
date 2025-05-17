@@ -1,4 +1,6 @@
 from flask import Flask, request, redirect
+from app.lib.descriere import descriere_suits as continut_descriere
+from app.lib.actori import personaje_suits as continut_personaje
 
 app = Flask(__name__)
 RECENZII_FILE = "recenzii.txt"
@@ -16,11 +18,25 @@ html_template = """
         }}
         body {{
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #1e1e2f, #3e3e5e);
-            color: #ffffff;
+            background-image: url('https://wallpaperaccess.com/full/1265956.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             margin: 0;
             padding-top: 70px;
             text-align: center;
+            color: #ffffff;
+        }}
+        body::before {{
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: -1;
         }}
         nav {{
             position: fixed;
@@ -43,7 +59,7 @@ html_template = """
             color: #ffffff;
         }}
         .container {{
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 40px;
             margin: 20px auto;
             width: 90%;
@@ -186,28 +202,12 @@ def pagina_suits():
 
 @app.route("/suits/descriere")
 def descriere_suits():
-    continut = """
-    <h2>Un serial despre avocatură, ambiție și secrete</h2>
-    <p>
-        Suits urmărește povestea lui Mike Ross, un tânăr genial fără diplomă, care ajunge să lucreze ca avocat 
-        într-o firmă prestigioasă din New York, alături de legendarul Harvey Specter.
-    </p>
-    <img src="https://telltaletv.com/wp-content/uploads/2019/09/NUP_187980_0636.jpg" alt="Mike și Harvey" />
-    <a href="/suits">← Înapoi la pagina principală</a>
-    """
+    continut = continut_descriere() + '<a href="/suits">← Înapoi la pagina principală</a>'
     return html_template.format(titlu="Descriere", continut=continut)
 
 @app.route("/suits/personaje")
 def personaje_suits():
-    continut = """
-    <h2>Personaje cheie din Suits</h2>
-    <ul>
-        <li><strong>Harvey Specter</strong> – Unul dintre cei mai temuți și eficienți avocați din New York. Elegant, carismatic și incredibil de strategic, Harvey este cunoscut pentru atitudinea sa încrezătoare și refuzul de a pierde vreodată un caz.</li>
-        <li><strong>Mike Ross</strong> – Un tânăr cu o minte sclipitoare și o memorie fotografică. Deși nu are diplomă de drept, cunoștințele sale juridice și empatia naturală îl transformă într-un partener de nădejde pentru Harvey.</li>
-    </ul>
-    <img src="https://external-preview.redd.it/_70SzJVhfIcI_w4XhyxO1QaC9HlkFXdMuaE1RBPfUAk.jpg?auto=webp&s=99c75c26d55eb33ed24f2c64f29dd1a3388200f1" alt="Harvey și Mike" />
-    <a href="/suits">← Înapoi la pagina principală</a>
-    """
+    continut = continut_personaje() + '<a href="/suits">← Înapoi la pagina principală</a>'
     return html_template.format(titlu="Personaje", continut=continut)
 
 @app.route("/suits/trailer")
