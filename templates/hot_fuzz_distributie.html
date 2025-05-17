@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Fuzz - Distribuție</title>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Hot Fuzz - Distribuție</h1>
+
+      <ul class="cast-list">
+	{% for actor_info in cast %}
+	<li class="cast-item">
+	  <img src= {{ url_for('static', filename='/static/photos/' + actor_info.fotografie) }} alt="Fotografie {{ actor_info.actor }}">
+	  <div class="actor-details">
+	    <h3>{{ actor_info.actor }} în rolul {{ actor_info.personaj }}</h3>
+	    <p><strong>Descriere personaj:</strong> {{ actor_info.descriere }}</p>
+	  </div>
+	</li>
+	{% endfor %}
+      </ul>
+
+      <div class="navigation-links">
+	<a href="/hot_fuzz" class="back-to-details">Înapoi la Detalii Film</a>
+	<a href="/movie_selector" class="back-to-list">Înapoi la Lista de Filme</a>
+      </div>
+    </div>
+
+  </body>
+</html>
