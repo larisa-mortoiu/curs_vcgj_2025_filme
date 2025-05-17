@@ -22,7 +22,7 @@ pipeline {
                     . ./activeaza_venv;
 
                     echo '\n\nVerificare test_filme.py cu pylint';
-                    pylint --exit-zero test_filme.py;
+                    pylint --exit-zero app/tests/test_filme.py;
 
                     echo '\n\nVerificare filme.py cu pylint';
                     pylint --exit-zero filme.py;
@@ -44,18 +44,18 @@ pipeline {
         stage('Deploy') {
             agent any
             steps {
-                echo '🚀 Deploy: build & run container Docker'
+                echo 'Deploy: build & run container Docker'
                 sh '''
-                    echo "🔁 Oprire container vechi (dacă există)"
+                    echo "Oprire container vechi (dacă există)"
                     docker rm -f breakingbad-container || true
 
-                    echo "🐳 Build imagine Docker"
+                    echo "Build imagine Docker"
                     docker build -t breakingbad-image:v${BUILD_NUMBER} .
 
-                    echo "🚀 Pornire container pe portul 5011"
+                    echo "Pornire container pe portul 5011"
                     docker run -d --name breakingbad-container -p 5011:5011 breakingbad-image:v${BUILD_NUMBER}
 
-                    echo "📦 Container running:"
+                    echo "Container running:"
                     docker ps | grep breakingbad
                 '''
             }
