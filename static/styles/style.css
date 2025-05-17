@@ -203,12 +203,27 @@ body::before {
 }
 
 
-.synopsis {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 20px auto;
-  line-height: 1.6;
-  color: #d0d0d0;
+.details-box {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: rgba(0, 255, 140, 0.05);
+  border: 1px solid #30f583;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 255, 140, 0.15);
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 10px;
 }
 
 .nav-buttons {

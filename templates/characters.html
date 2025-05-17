@@ -11,7 +11,7 @@
     </header>
 
     <nav>
-    <a href="/">Home</a>
+        <a href="/">Home</a>
         <a href="/breaking-bad">Description</a>
         <a href="/breaking-bad/trailers">Trailers</a>
     </nav>
@@ -19,14 +19,13 @@
     <div class="container">
         {% for actor in actors %}
         <div class="card">
-            <h2>
-                {{ actor.name }}<br>
-                <small>({{ actor.role }})</small>
-            </h2>
+            <h2 class="actor-name">{{ actor.name }}</h2>
+            <h3 class="character-name">({{ actor.role }})</h3>
             <img src="/static/images/{{ actor.image }}" alt="{{ actor.name }}">
-            <p>{{ actor.role }}</p>
+            <p class="character-description">{{ actor.description }}</p>
         </div>
         {% endfor %}
     </div>
 </body>
 </html>
+
