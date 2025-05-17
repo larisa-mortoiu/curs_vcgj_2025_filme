@@ -9,9 +9,17 @@ Acest fișier **README.md** descrie proiectul "Proiect SCC JoJo's Bizarre Advent
 Aplicația web prezintă universul **JoJo's Bizarre Adventure**:
 
 * **Pagina de start** cu informații despre serie.
+  ![image](https://github.com/user-attachments/assets/74a2f34b-7b2f-4a9e-a900-c06cdadfb1d8)
+
 * **Pagina Trailers** cu embed-uri YouTube pentru trailere.
-* **Pagina Characters** cu listă de personaje.
-* **Pagina detaliu personaj** cu imagine, nume, parte (season), descriere și actor vocal.
+  ![image](https://github.com/user-attachments/assets/4a502892-f7e7-4387-baa7-49d437da784b)
+
+* **Pagina Characters** cu lista de personaje.
+  ![image](https://github.com/user-attachments/assets/b1a81241-4560-4a99-94d9-43b8b2928ebb)
+
+* **Pagina detaliu personaj** cu imagine, nume, parte (sezon), descriere și voice actor.
+  ![image](https://github.com/user-attachments/assets/46762e9e-3ba5-4749-b955-8dda3465a197)
+
 
 ### Tehnologii folosite
 
@@ -77,6 +85,8 @@ Fișierul `Jenkinsfile` din root definește pașii pipeline-ului:
 4. **Smoke Test** – testează endpoint-ul interactiv
 5. **Push to Hub** – pe branch `main`, face login și `docker push`
 
+ ![image](https://github.com/user-attachments/assets/db7f4abf-6c4d-4a1f-8509-b897fc4ca1ab)
+
 ---
 
 ## 📂 Structura proiectului
@@ -105,4 +115,3 @@ Fișierul `Jenkinsfile` din root definește pașii pipeline-ului:
 ---
 
 > ✨ Succes la evaluare și mulțumesc pentru parcurgerea proiectului!
-
