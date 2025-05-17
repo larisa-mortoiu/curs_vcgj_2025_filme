@@ -4,6 +4,22 @@ Aceasta aplicatie web este realizata in Flask si are ca scop afisarea detaliilor
 
 ---
 
+## Cuprins
+
+- [Versiune si functionalitati](#versiune-si-functionalitati)
+- [Tehnologii utilizate](#tehnologii-utilizate)
+- [Structura proiectului](#structura-proiectului)
+- [Configurare si rulare locala](#configurare-si-rulare-locala)
+- [Utilizare Docker](#utilizare-docker)
+- [Pipeline Jenkins (CI)](#pipeline-jenkins-ci)
+- [Testare cu Pytest](#testare-cu-pytest)
+- [Verificare cod cu Pylint](#verificare-cod-cu-pylint)
+- [Interfata Web](#interfata-web)
+- [Pull Request](#pull-request)
+- [Licenta](#licenta)
+
+---
+
 ## Versiune si functionalitati
 
 v1.0 - Navigare intre pagini, afisare dinamica a datelor, testare si pipeline CI:
