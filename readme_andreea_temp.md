@@ -84,7 +84,7 @@ curs_vcgj_2025_filme/
 9 directories, 34 files
 ```
 
-![structura-proiect](static/screenshots/structura-proiect.png)
+![structura-proiect](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/structura-proiect.png?raw=true)
 
 # Instructiuni de instalare si configurare
 ```bash
@@ -114,10 +114,11 @@ Aplicația este accesibilă la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 - `/imitation-game/trailer` – Trailer embed din YouTube
 
 ## Capturi interfață
-![homepage](static/screenshots/homepage.png)
-![descriere](static/screenshots/descriere.png)
-![actori](static/screenshots/actori.png)
-![trailer](static/screenshots/trailer.png)
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/homepage.png?raw=true)
+![filmpage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/film-page.png?raw=true)
+![descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/descriere.png?raw=true)
+![actori](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/actori.png?raw=true)
+![trailer](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/trailer.png?raw=true)
 
 # Testare cu pytest
 ```bash
@@ -130,7 +131,7 @@ Teste acoperite:
 - import corect funcții din `app/lib`
 
 ## Rulare pytest
-![testare-pytest](static/screenshots/testare-pytest.png)
+![testare-pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/testare-pytest.png?raw=true)
 
 # Verificare statica cu pylint
 ```bash
@@ -138,7 +139,7 @@ pylint filme.py app/lib/*.py app/tests/*.py --exit-zero
 ```
 Se validează stilul și structurarea codului fără oprirea pipeline-ului (prin `--exit-zero`).
 
-![verificare-pylint](static/screenshots/verificare-pylint.png)
+![verificare-pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/verificare-pylint.png?raw=true)
 
 # Utilizare Docker si containerizare aplicatie
 ```bash
@@ -147,8 +148,8 @@ docker run -p 5050:5050 filme-app
 ```
 Aplicația devine accesibilă la [http://localhost:5050](http://localhost:5050)
 
-![docker-build](static/screenshots/docker-build.png)
-![docker-run](static/screenshots/docker-run.png)
+![docker-build](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/docker-build.png?raw=true)
+![docker-run](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/docker-run.png?raw=true)
 
 # Pipeline Jenkins
 Pipeline-ul definit în `Jenkinsfile` conține etape de:
@@ -160,12 +161,12 @@ Pipeline-ul definit în `Jenkinsfile` conține etape de:
 
 Execuția este vizibilă în interfața Blue Ocean Jenkins.
 
-![jenkins-blueocean](static/screenshots/jenkins-blueocean.png)
+![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/jenkins-blueocean.png?raw=true)
 
 # Pull Request
 PR creat din branch `dev_popa_andreea` către `main`, aprobat de reviewer și validat prin rularea testelor automate în Jenkins.
 
-![pull-request](static/screenshots/pull-request.png)
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/pull-request.png?raw=true)
 
 # Bibliografie
 - [Flask](https://flask.palletsprojects.com)
