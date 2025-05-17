@@ -8,38 +8,21 @@ pipeline {
 
   stages {
     stage('Checkout') {
-<<<<<<< HEAD
       steps {
         checkout scm
       }
-=======
-      steps { checkout scm }
->>>>>>> cdd6593 (updated jenkins and docker files)
     }
 
     stage('Unit Tests') {
       steps {
-<<<<<<< HEAD
         sh 'pytest --maxfail=1 --disable-warnings -q'
-=======
-        script {
-          // Run pytest inside a throw-away Python container
-          docker.image('python:3.10-slim').inside {
-            sh 'pip install --no-cache-dir -r requirements.txt'
-            sh 'pytest --maxfail=1 --disable-warnings -q'
-          }
-        }
->>>>>>> cdd6593 (updated jenkins and docker files)
       }
     }
 
     stage('Build Docker Image') {
       steps {
         script {
-<<<<<<< HEAD
           // Build container tagged with the build number
-=======
->>>>>>> cdd6593 (updated jenkins and docker files)
           dockerImage = docker.build("${IMAGE_NAME}:${env.BUILD_ID}")
         }
       }
@@ -48,10 +31,7 @@ pipeline {
     stage('Smoke Test Container') {
       steps {
         script {
-<<<<<<< HEAD
           // Run a temporary container and hit the root endpoint
-=======
->>>>>>> cdd6593 (updated jenkins and docker files)
           dockerImage.inside('-p 5000:5000') {
             sh '''
               flask run --host=0.0.0.0 &
@@ -64,13 +44,9 @@ pipeline {
     }
 
     stage('Push to Registry') {
-<<<<<<< HEAD
       when {
         branch 'main'
       }
-=======
-      when { branch 'main_Al-Hajjih_Kais' }
->>>>>>> cdd6593 (updated jenkins and docker files)
       steps {
         withCredentials([
           usernamePassword(
@@ -89,14 +65,10 @@ pipeline {
     }
   }
 
-<<<<<<< HEAD
   post {
     always {
       cleanWs()
     }
   }
-=======
-  post { always { cleanWs() } }
->>>>>>> cdd6593 (updated jenkins and docker files)
 }
 
