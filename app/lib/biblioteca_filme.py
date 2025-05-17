@@ -49,4 +49,13 @@ def distribuite_hotfuzz():
             "descriere": "Celălalt detectiv din Sandford, partenerul lui Wainwright. Similar cu acesta, este lipsit de inițiativă și pare mai interesat de relaxare decât de rezolvarea cazurilor."
         },
         
-]
+    ]
+    return distributie
+def descriere_hotfuzz():
+    return """
+    <p>Sergentul Nicholas Angel este cel mai bun ofițer de poliție din Londra. Rata sa excepțională de succes îi face pe colegii săi să arate rău, motiv pentru care superiorii decid să-l "promoveze" și să-l transfere forțat într-un sat aparent idilic din inima Angliei, Sandford. Un loc unde singura emoție pare să fie competiția anuală pentru "Satul Anului" și unde crima pare să fie inexistentă.</p>
+
+    <p>Partenerul său local este entuziastul, dar naivul agent Danny Butterman, un mare fan al filmelor de acțiune "buddy cop". În timp ce Nicholas se chinuie să se adapteze la ritmul lent al vieții de la țară și la colegii săi cam delăsători, o serie de "accidente" bizare încep să zguduie comunitatea. Doar Nicholas bănuiește că ceva sinistru se întâmplă în spatele fațadei perfecte a satului.</p>
+
+    <p>Amestecând umorul britanic specific cu secvențe de acțiune exagerate, inspirate din chiar filmele pe care Danny le adoră, "Hot Fuzz" este o comedie polițistă alertă și plină de surprize, a doua parte din trilogia "Cornetto" a lui Edgar Wright, Simon Pegg și Nick Frost.</p>
+    """
