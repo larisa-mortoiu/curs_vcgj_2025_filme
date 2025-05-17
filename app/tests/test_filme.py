@@ -1,10 +1,13 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
 from filme import app
 import pytest
 import logging
-import sys
-import os
 import app.lib.biblioteca_filme as biblioteca
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
 
 @pytest.fixture
 def client():
@@ -25,13 +28,13 @@ def test_descriere_hotfuzz(client):
 
     assert isinstance(description, str), "Descrierea nu e string."
 
-    response = client.get('/hot_fuzz/descriere')
+    response = client.get('/hot_fuzz/description')
 
     assert response.status_code == 200, "Serverul nu răspunde"
 
     assert "Nicholas Angel este cel mai bun ofițer de poliție din Londra" in description, "descrierea nu conține ce trebuie"
     
-    logger.info("Test descriere trecut")
+    logging.info("Test descriere trecut")
     
     
 def test_distributie_hotfuzz(client):
@@ -40,11 +43,11 @@ def test_distributie_hotfuzz(client):
     
     assert isinstance(cast, list), "Distribuția nu este listă."
 
-    response = client.get('/hot_fuzz/distributie')
+    response = client.get('/hot_fuzz/cast')
 
     assert response.status_code == 200, "Serverul nu răspunde"
     
     for character in cast:
-        assert "actor" in character "Câmpul actor lipsește pentru unul dintre personaje"
+        assert "actor" in character, "Câmpul actor lipsește pentru unul dintre personaje"
 
-    logger.info("Test distribuție trecut")
+    logging.info("Test distribuție trecut")
