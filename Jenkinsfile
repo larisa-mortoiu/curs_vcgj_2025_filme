@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone repo') {
             steps {
-                git branch: 'dev_Hoang_Pham', // modifică după branch-ul tău real
+                git branch: 'dev_Pham_Hoang', 
                     url: 'https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git'
             }
         }
