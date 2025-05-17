@@ -15,10 +15,7 @@ pipeline {
             }
         }
         
-        /*stage('Testare') {
-            problema rulare in paralel, al doilea stage nu mai poate porni venv-ul
-            parallel {
-         */
+        
         stage('pylint - calitate cod') {
             agent any
             steps {
@@ -49,10 +46,24 @@ pipeline {
         /*    }
         }*/
         stage('Deploy') {
-            agent any
-            steps {
-                echo 'IN lucru ! ...'
-            }
-        }
+    agent any
+    steps {
+        echo "🚀 Deploy: build & run container Docker"
+
+        sh '''
+            echo "🔁 Oprire container vechi (dacă există)"
+            docker rm -f breakingbad-container || true
+
+            echo "🐳 Build imagine Docker"
+            docker build -t breakingbad-image:v${BUILD_NUMBER} .
+
+            echo "🚀 Pornire container pe portul 5011"
+            docker run -d --name breakingbad-container -p 5011:5011 breakingbad-image:v${BUILD_NUMBER}
+
+            echo "📦 Container running:"
+            docker ps | grep breakingbad
+        '''
     }
+}
+    
 }
