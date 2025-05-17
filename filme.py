@@ -1,0 +1,181 @@
+from flask import Flask
+from app.lib.biblioteca_shrek import descriere_personaj, replici_memorabile
+
+app = Flask(__name__)
+
+html_template = """
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>{titlu}</title>
+    <style>
+        body {{
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #2e4d35;
+            margin: 0;
+            padding: 0;
+            color: #fffaf0;
+        }}
+        header {{
+            background-color: #3a5f0b;
+            padding: 20px;
+            text-align: center;
+        }}
+        header h1 {{
+            font-size: 44px;
+            margin: 0;
+            color: #ffffff;
+        }}
+        nav {{
+            background-color: #4a633c;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+        }}
+        nav form {{
+            display: inline;
+        }}
+        button {{
+            background-color: #8B4513;
+            color: #fff;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }}
+        button:hover {{
+            background-color: #5c3317;
+        }}
+        .container {{
+            background-color: #ffffff;
+            color: #2c3e50;
+            margin: 40px auto;
+            padding: 30px;
+            width: 85%;
+            max-width: 850px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }}
+        img {{
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }}
+        iframe {{
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }}
+        ul {{
+            text-align: left;
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 20px;
+        }}
+        a {{
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shrek</h1>
+    </header>
+    <nav>
+        <form action="/"><button>Acasă</button></form>
+        <form action="/shrek"><button>Despre</button></form>
+        <form action="/shrek/descriere"><button>Descriere</button></form>
+        <form action="/shrek/personaje"><button>Personaje</button></form>
+        <form action="/shrek/trailer"><button>Trailer</button></form>
+        <form action="/shrek/poveste"><button>Poveste</button></form>
+        <form action="/shrek/replici"><button>Replici</button></form>
+    </nav>
+    <div class="container">
+        {continut}
+    </div>
+</body>
+</html>
+"""
+
+@app.route("/", methods=['GET'])
+def pagina_principala():
+    continut = """
+    <h2>Bine ai venit în regatul lui Shrek!</h2>
+    <p>
+        Descoperă lumea amuzantă și emoționantă a celebrului căpcăun verde. 
+        Shrek nu este un erou tipic, dar te va cuceri prin curaj, loialitate și umor inconfundabil.
+    </p>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhappymag.tv%2Fwp-content%2Fuploads%2F2021%2F05%2Fshrek4_disneyscreencaps.com_675.0.jpg&f=1&nofb=1&ipt=a87841d9b23e8131ffa72b57694f48eef0b0b8faf024e7c37f251ad4a9452e0b" alt="Shrek în mlaștină">
+    """
+    return html_template.format(titlu="Shrek - Acasă", continut=continut)
+
+@app.route("/shrek", methods=['GET'])
+def pagina_shrek():
+    continut = """
+    <h2>Despre filmul Shrek</h2>
+    <p>
+        Lansat în 2001, "Shrek" a fost primul film animat care a câștigat premiul Oscar pentru Cel mai bun film de animație.
+        A revoluționat lumea animației prin combinația sa de umor modern, parodie și mesaj puternic despre acceptare.
+    </p>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feskipaper.com%2Fimages%2Fshrek-and-donkey-2.jpg&f=1&nofb=1&ipt=7cb7cc0f771206416b63c92aad1b7fc7aa84ec4218e75dad86d5931e870cfb91" alt="Shrek și Donkey">
+    """
+    return html_template.format(titlu="Shrek", continut=continut)
+
+@app.route("/shrek/descriere", methods=['GET'])
+def descriere_shrek():
+    continut = """
+    <h2>Descriere generală</h2>
+    <p>
+        Shrek trăiește liniștit până când viața lui este dată peste cap de o invazie de personaje magice. 
+        Cu ajutorul lui Donkey, pornește într-o călătorie pentru a le readuce înapoi, descoperind însă mult mai mult despre el.
+    </p>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F27475238%2Fr%2Fil%2F46b262%2F3758939537%2Fil_fullxfull.3758939537_cop1.jpg&f=1&nofb=1&ipt=56733e24137d38d4ea2eaf4504cb3d0853499be4378cd702652ed813d926a207" alt="Poster film Shrek">
+    """
+    return html_template.format(titlu="Descriere", continut=continut)
+
+@app.route("/shrek/personaje", methods=['GET'])
+def personaje_shrek():
+    continut = """
+    <h2>Personaje principale</h2>
+    <ul>
+        <li><strong>Shrek</strong> – căpcăunul verde cu o inimă mare</li>
+        <li><strong>Donkey</strong> – tovarășul vesel și loial</li>
+        <li><strong>Fiona</strong> – prințesa neobișnuită, curajoasă și cu două fețe</li>
+        <li><strong>Lord Farquaad</strong> – tiranul comic și exagerat</li>
+    </ul>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffacts.net%2Fwp-content%2Fuploads%2F2022%2F06%2FShrek-characters-730x411.jpg&f=1&nofb=1&ipt=dbaa57fd33925296c324a784451f8c50346655e5530b09c107e30e7bef8ee6d0" alt="Echipa Shrek">
+    """
+    return html_template.format(titlu="Personaje", continut=continut)
+
+@app.route("/shrek/trailer", methods=['GET'])
+def trailer_shrek():
+    continut = """
+    <h2>Trailer oficial</h2>
+    <iframe src="https://www.youtube.com/embed/CwXOrWvPBPk" title="Trailer Shrek" frameborder="0" allowfullscreen></iframe>
+    """
+    return html_template.format(titlu="Trailer Shrek", continut=continut)
+
+@app.route("/shrek/poveste", methods=['GET'])
+def poveste_shrek():
+    continut = f"<h2>Povestea lui Shrek</h2><p>{descriere_personaj()}</p>"
+    return html_template.format(titlu="Poveste", continut=continut)
+
+@app.route("/shrek/replici", methods=['GET'])
+def replici_shrek():
+    continut = f"<h2>Replici memorabile</h2>{replici_memorabile()}"
+    return html_template.format(titlu="Replici", continut=continut)
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5050, debug=True)
