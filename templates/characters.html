@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Characters - Breaking Bad</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Breaking Bad Characters</h1>
+    </header>
+
+    <nav>
+    <a href="/">Home</a>
+        <a href="/breaking-bad">Description</a>
+        <a href="/breaking-bad/trailers">Trailers</a>
+    </nav>
+
+    <div class="container">
+        {% for actor in actors %}
+        <div class="card">
+            <h2>
+                {{ actor.name }}<br>
+                <small>({{ actor.role }})</small>
+            </h2>
+            <img src="/static/images/{{ actor.image }}" alt="{{ actor.name }}">
+            <p>{{ actor.role }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
