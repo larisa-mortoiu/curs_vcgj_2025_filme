@@ -17,7 +17,7 @@ COPY app app
 COPY dockerstart.sh dockerstart.sh
 COPY pytest.ini pytest.ini
 COPY quickrequirements.txt quickrequirements.txt
-COPY sysinfo.py sysinfo.py
+COPY filme.py filme.py
 RUN mkdir static
 RUN mkdir static/imagini
 RUN chmod -R 777 static
