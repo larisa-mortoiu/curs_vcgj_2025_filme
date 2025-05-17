@@ -72,7 +72,7 @@ Acces în browser: [http://localhost:5011](http://localhost:5011)
 
 ## Exemple pagină web
 
-- Homepage: imagine Breaking Bad
+- Homepage: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
 - Characters: imagini + descrieri pentru Walter, Jesse, Skyler etc.
 - Trailers: iframe IMDb embed pentru fiecare sezon
 
