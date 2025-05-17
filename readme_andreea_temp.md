@@ -37,20 +37,51 @@ Versiunea curentă `v0` include:
 # Structura proiectului
 ```
 curs_vcgj_2025_filme/
-├── app/
-│   ├── lib/
-│   │   ├── actori.py
-│   │   ├── descriere.py
-│   └── tests/
-│       ├── test_actori.py
-│       ├── test_descriere.py
-│       └── test_filme.py
+├── app
+│   ├── __init__.py
+│   ├── lib
+│   │   ├── actori.py
+│   │   ├── descriere.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── actori.cpython-310.pyc
+│   │       ├── descriere.cpython-310.pyc
+│   │       └── __init__.cpython-310.pyc
+│   ├── __pycache__
+│   │   └── __init__.cpython-310.pyc
+│   └── tests
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-310.pyc
+│       │   ├── test_actori.cpython-310-pytest-8.3.5.pyc
+│       │   ├── test_descriere.cpython-310-pytest-8.3.5.pyc
+│       │   └── test_filme.cpython-310-pytest-8.3.5.pyc
+│       ├── test_actori.py
+│       ├── test_descriere.py
+│       └── test_filme.py
 ├── Dockerfile
+├── filme.py
 ├── Jenkinsfile
 ├── LICENSE
-├── filme.py
+├── __pycache__
+│   └── filme.cpython-310.pyc
 ├── quickrequirements.txt
+├── readme_andreea_temp.md
 ├── README.md
+└── static
+    └── screenshots
+        ├── actori.png
+        ├── descriere.png
+        ├── docker-build.png
+        ├── docker-run.png
+        ├── film-page.png
+        ├── homepage.png
+        ├── jenkins-blueocean.png
+        ├── pull-request.png
+        ├── structura-proiect.png
+        └── trailer.png
+
+9 directories, 34 files
 ```
 
 ![structura-proiect](static/screenshots/structura-proiect.png)
