@@ -17,12 +17,12 @@ def hot_fuzz():
 @app.route('/hot_fuzz/description', methods=['GET'])
 def hot_fuzz_description():
     description = biblioteca.descriere_hotfuzz()
-    return render_template('hot_fuzz_description.html', description = description)
+    return render_template('hot_fuzz_descriere.html', description = description)
 
 @app.route('/hot_fuzz/cast', methods=['GET'])
 def hot_fuzz_cast():
     cast = biblioteca.distributie_hotfuzz()
-    return render_template('hot_fuzz_cast.html', cast = cast)
+    return render_template('hot_fuzz_distributie.html', cast = cast)
 
 if __name__ == '__main__':
     app.run(debug=True)
