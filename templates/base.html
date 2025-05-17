@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}JoJo's Bizarre Adventure{% endblock %}</title>
+
+  <!-- Font Import -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="logo">
+        <h1>JoJo's Bizarre Adventure</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('trailers') }}">Trailers</a></li>
+          <li><a href="{{ url_for('cast') }}">Characters</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      <p>&copy; JoJo's Bizarre Adventure / Proiect SCC Al-Hajjih Kais</p>
+    </footer>
+  </div>
+</body>
+</html>
+

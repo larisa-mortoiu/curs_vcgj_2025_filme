@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}{{ character.name }} - JoJo's Bizarre Adventure{% endblock %}
+
+{% block content %}
+<section class="character-detail">
+    <div class="container">
+        {% if character %}
+            <div class="character-profile">
+                <div class="character-header">
+                    <h2>{{ character.name }}</h2>
+                    <div class="part-badge">{{ character.part }}</div>
+                </div>
+                
+                <div class="character-content">
+                    <div class="character-image">
+                        <img src="{{ url_for('static', filename='images/' + character.image) }}" alt="{{ character.name }}">
+                    </div>
+                    
+                    <div class="character-info">
+                        <div class="info-section">
+                            <h3>Character Info</h3>
+                            <p><strong>Japanese Name:</strong> {{ character.japanese_name }}</p>
+                            <p><strong>Voice Actor:</strong> {{ character.voice_actor }}</p>
+                        </div>
+                        
+                        {% if description %}
+                        <div class="info-section">
+                            <h3>Stand: {{ description.stand_name }}</h3>
+                            <p><strong>Japanese Name:</strong> {{ description.stand_japanese }}</p>
+                            <p><strong>Power:</strong> {{ description.power }}</p>
+                            <p><strong>Speed:</strong> {{ description.speed }}</p>
+                            <p><strong>Range:</strong> {{ description.range }}</p>
+                            <p><strong>Durability:</strong> {{ description.durability }}</p>
+                            <p><strong>Precision:</strong> {{ description.precision }}</p>
+                            <p><strong>Potential:</strong> {{ description.potential }}</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h3>Description</h3>
+                            <p>{{ description.description }}</p>
+                        </div>
+                        {% else %}
+                        <div class="info-section">
+                            <p>No stand information available for this character.</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <a href="{{ url_for('cast') }}" class="back-button">Back to Characters</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="error-message">
+                <h2>Character Not Found</h2>
+                <p>Sorry, we couldn't find information for this character.</p>
+                <a href="{{ url_for('cast') }}" class="back-button">Back to Characters</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

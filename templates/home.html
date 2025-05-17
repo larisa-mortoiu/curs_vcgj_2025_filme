@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}JoJo's Bizarre Adventure - Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content container">
+    <h2 class="hero-title">JOJO's <span class="highlight">Bizarre Adventure</span></h2>
+    <p class="hero-subtitle">An epic journey through generations of the Joestar family</p>
+    <a href="{{ url_for('cast') }}" class="cta-button">View Characters</a>
+  </div>
+</section>
+
+<!-- Parts Overview Section -->
+<section class="parts-overview">
+  <div class="container">
+    <h2 class="section-title">Parts of JoJo's Adventure</h2>
+    <div class="parts-grid">
+      <div class="part">
+        <h4>Phantom Blood</h4>
+        <p>The beginning of the Joestar legacy and the rise of Dio.</p>
+      </div>
+      <div class="part">
+        <h4>Battle Tendency</h4>
+        <p>Joseph Joestar fights ancient Pillar Men to save humanity.</p>
+      </div>
+      <div class="part">
+        <h4>Stardust Crusaders</h4>
+        <p>Jotaro and friends travel to Egypt to defeat DIO.</p>
+      </div>
+      <div class="part">
+        <h4>Diamond is Unbreakable</h4>
+        <p>Josuke and townsfolk protect Morioh from hidden stand users.</p>
+      </div>
+      <div class="part">
+        <h4>Golden Wind</h4>
+        <p>Giorno Giovanna strives to overthrow the mafia from within and bring justice to Italy.</p>
+      </div>
+      <div class="part">
+        <h4>Stone Ocean</h4>
+        <p>Jolyne Cujoh battles hidden threats prison and protects her father.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
