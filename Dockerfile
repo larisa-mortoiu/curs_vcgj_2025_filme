@@ -1,20 +1,23 @@
-# Use a minimal Python image
+# Use a minimal Python base image
 FROM python:3.10-slim
 
-# Set a working directory
+# Set working directory inside the container
 WORKDIR /app
 
-# Install build-time dependencies (if any) and your Python libs
+# Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your app code
+# Copy the rest of your application
 COPY . .
 
-# Expose Flask port and set env vars
+# Tell Flask how to start
 ENV FLASK_APP=filme.py
 ENV FLASK_RUN_HOST=0.0.0.0
+
+# Expose the port your app runs on
 EXPOSE 5000
 
-# Default command to start your app
+# Default command
 CMD ["flask", "run"]
+

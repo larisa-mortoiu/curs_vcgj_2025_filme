@@ -3,7 +3,6 @@ pipeline {
 
   environment {
     IMAGE_NAME = "jojo-scc-app"
-    // your Docker Hub namespace
     REGISTRY   = "docker.io/kais230/${IMAGE_NAME}"
   }
 
@@ -23,6 +22,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         script {
+          // Build container tagged with the build number
           dockerImage = docker.build("${IMAGE_NAME}:${env.BUILD_ID}")
         }
       }
@@ -31,7 +31,8 @@ pipeline {
     stage('Smoke Test Container') {
       steps {
         script {
-          dockerImage.inside("-p 5000:5000") {
+          // Run a temporary container and hit the root endpoint
+          dockerImage.inside('-p 5000:5000') {
             sh '''
               flask run --host=0.0.0.0 &
               sleep 5
@@ -44,15 +45,16 @@ pipeline {
 
     stage('Push to Registry') {
       when {
-        branch 'main_Al‐Hajjih_Kais'
+        branch 'main'
       }
       steps {
-        // Uses the Docker Hub creds you stored under ID "dockerhub-creds"
-        withCredentials([usernamePassword(
+        withCredentials([
+          usernamePassword(
             credentialsId: 'dockerhub-creds',
             usernameVariable: 'DOCKER_USER',
             passwordVariable: 'DOCKER_PASS'
-        )]) {
+          )
+        ]) {
           sh '''
             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
             docker tag ${IMAGE_NAME}:${env.BUILD_ID} ${REGISTRY}:latest
