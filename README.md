@@ -1,50 +1,108 @@
-# Proiect SCC – JoJo's Bizarre Adventure 🌟
+# Proiect SCC – JoJo's Bizarre Adventure
 
-Acest proiect reprezintă o aplicație web dezvoltată în cadrul cursului **Servicii Cloud și Containerizare (SCC)**. Aplicația este dedicată universului **JoJo's Bizarre Adventure** și oferă utilizatorilor o experiență interactivă cu pagini despre personaje, trailere și detalii despre fiecare protagonist.
-
----
-
-## 🔧 Tehnologii folosite
-
-- **Flask (Python)** – pentru partea de backend / server
-- **HTML + CSS** – pentru partea de frontend
-- **Jinja2** – motor de template-uri integrat în Flask
-- **Git** – pentru versionare și managementul codului
+Acest fișier **README.md** descrie proiectul "Proiect SCC JoJo's Bizarre Adventure", implementat în cadrul cursului **Servicii Cloud și Containerizare (SCC)**.
 
 ---
 
-## ⚙️ Funcționalități implementate
+## 🌟 Descriere
 
-- ✅ Pagină de start cu prezentarea universului JoJo
-- ✅ Pagină cu trailere video
-- ✅ Pagină cu lista personajelor
-- ✅ Pagină detaliată pentru fiecare personaj: imagine, nume, parte, descriere etc.
-- ✅ Navigare ușoară între pagini
-- ✅ Stilizare completă cu CSS
+Aplicația web prezintă universul **JoJo's Bizarre Adventure**:
+
+* **Pagina de start** cu informații despre serie.
+* **Pagina Trailers** cu embed-uri YouTube pentru trailere.
+* **Pagina Characters** cu listă de personaje.
+* **Pagina detaliu personaj** cu imagine, nume, parte (season), descriere și actor vocal.
+
+### Tehnologii folosite
+
+* **Flask (Python)** – backend și rutare
+* **HTML + CSS** – interfață și stilizare (Jinja2 pentru templating)
+* **Docker** – containerizare a aplicației
+* **Jenkins** – pipeline de build, test și deploy
+
+---
+
+## 🚀 Cum rulezi local (fără Docker și fără virtualenv)
+
+1. Clonează repo-ul și schimbă branch:
+
+   ```bash
+   git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+   cd curs_vcgj_2025_filme
+   git checkout main_Al-Hajjih_Kais
+   ```
+2. Rulează aplicația direct cu Python:
+
+   ```bash
+   python3 filme.py
+   ```
+3. Accesează în browser: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+---
+
+## 🐳 Cum rulezi cu Docker
+
+1. Build imagine Docker:
+
+   ```bash
+   docker build -t jojo-scc-app .
+   ```
+2. Rulează container:
+
+   ```bash
+   docker run --rm -p 5000:5000 jojo-scc-app
+   ```
+3. Accesează în browser: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
 ## 🧪 Testare
 
-- Aplicația a fost testată manual în browser (`localhost`) și funcționează corect.
-- În prezent, nu există încă integrare automatizată cu Jenkins.
+* Testele unitare se află în folderul `app/tests/` și pot fi rulate cu:
+
+  ```bash
+  pytest -q
+  ```
+* Smoke-test intern este integrat în pipeline-ul Jenkins.
 
 ---
 
-## 📦 Containerizare (în lucru)
+## ⚙️ Pipeline Jenkins
 
-- 🔧 Urmează integrarea cu Docker (creare Dockerfile)
-- 🔧 Urmează integrarea cu Jenkins (Jenkinsfile și pipeline)
+Fișierul `Jenkinsfile` din root definește pașii pipeline-ului:
+
+1. **Checkout** sursă
+2. **Build Image** – `docker build`
+3. **Unit Tests (in-container)** – rulează `pytest` în container
+4. **Smoke Test** – testează endpoint-ul interactiv
+5. **Push to Hub** – pe branch `main`, face login și `docker push`
 
 ---
 
-## 📁 Structura proiectului
+## 📂 Structura proiectului
 
-```bash
+```text
 ├── app/
-│   └── lib/ (codul sursă)
-├── templates/ (fișiere HTML)
-├── static/ (fișiere CSS și imagini)
-├── filme.py (main Flask app)
-├── README.md (acest fișier)
+│   └── lib/        # cod logic și date despre personaje
+│   └── tests/      # teste unitare
+├── static/         # fișiere CSS și imagini
+├── templates/      # fișiere HTML (Jinja2)
+├── filme.py        # aplicația Flask
+├── requirements.txt
+├── Dockerfile
+├── dockerstart.sh  # script entrypoint
+├── Jenkinsfile
+├── README.md       # acest fișier
 └── ...
+```
+
+---
+
+## 👤 Autor
+
+* Al-Hajjih Kais (Grupa 442D)
+
+---
+
+> ✨ Succes la evaluare și mulțumesc pentru parcurgerea proiectului!
+
