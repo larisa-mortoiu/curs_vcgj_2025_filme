@@ -1,25 +1,17 @@
-FROM python:3.10-alpine
+# Imagine de bază
+FROM python:3.10-slim
 
-# Creează un utilizator non-root numit 'filme'
-RUN adduser -D filme
+# Creează un director de lucru
+WORKDIR /app
 
-# Setează directorul de lucru
-WORKDIR /home/filme/app
+# Copiază fișierele necesare în imagine
+COPY . .
 
-# Copiază fișierele aplicației
-COPY filme.py .
-COPY quickrequirements.txt quickrequirements.txt
+# Instalează dependențele
+RUN pip install --no-cache-dir -r quickrequirements.txt
 
-# Creează un mediu virtual și instalează pachetele
-RUN python3 -m venv .venv
-RUN .venv/bin/pip install --no-cache-dir -r quickrequirements.txt
-
-# Rulează aplicația ca utilizator non-root
-USER filme
-
-# Expune portul pe care rulează aplicația
+# Expune portul aplicației
 EXPOSE 5050
 
-# Pornește aplicația cu gunicorn
-CMD [".venv/bin/gunicorn", "-b", "0.0.0.0:5050", "filme:app"]
-
+# Comandă pentru a porni aplicația
+CMD ["gunicorn", "-b", "0.0.0.0:5050", "filme:app"]
