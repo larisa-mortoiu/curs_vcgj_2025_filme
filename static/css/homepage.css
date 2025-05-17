@@ -72,9 +72,3 @@ li:hover a {
     color: #3498db; 
 }
 
-body > p:last-of-type {
-    margin-top: 30px; 
-    text-align: center;
-    font-style: italic;
-    color: #555; 
-}
