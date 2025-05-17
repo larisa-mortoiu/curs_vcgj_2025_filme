@@ -1375,19 +1375,19 @@ sudo apt install python3.12-venv
 ## Interfața web
 Homepage
 
-![Homepage](static/images/homepage.png)
+![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/homepage.png)
 
 Pagina principală Bridgerton
 
-![bridgerton.html](static/images/bridgerton_html.png)
+![bridgerton.html](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/bridgerton_html.png)
 
 Descrierea Bridgerton
 
-![bridgerton_description.html](static/images/bridgerton_description_html.png)
+![bridgerton_description.html](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/bridgerton_description_html.png)
 
 Cast Bridgerton
 
-![bridgerton_cast.html](static/images/bridgerton_cast_html.png)
+![bridgerton_cast.html](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/bridgerton_cast_html.png)
 
 ## Testare pytest
 
@@ -1409,7 +1409,7 @@ Ele pot fi rulate folosind comanda:
 pytest 
 ```
 
-![Testare pytest](static/images/pytest.png)
+![Testare pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/pytest.png)
 
 Testele au trecut cu succes.
 
@@ -1427,7 +1427,7 @@ pylint [nume_fisier]
 
 Următoarea imagine este un test pentru filme.py.
 
-![Testare pylint](static/images/pylint.png)
+![Testare pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/pylint.png)
 
 Se poate afirma că acest cod poate fi îmbunătățit.
 
@@ -1454,7 +1454,7 @@ sudo docker stop elena_docker
 
 Output rulare dockertsart.sh:
 
-![Docker](static/images/docker.png)
+![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/docker.png)
 
 La accesarea link-ului se va ajunge la aceeași pagină web, dar containerizată.
 
@@ -1468,17 +1468,17 @@ Pipeline-ul definit rulează în orice agent disponibil (`agent any`) și conți
 
 După rularea tuturor etapelor, Jenkins va afișa mesajul final Pipeline finished, indiferent de rezultatul testelor sau al analizei pylint.
 
-![Jenkins](static/images/jenkins.png)
+![Jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/jenkins.png)
 
 Vizualizarea pipe-line-ului se face în Blue Ocean:
 
-![Blue Ocean](static/images/blue_ocean.png)
+![Blue Ocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/blue_ocean.png)
 
 ## Pull request
 
 Am solocitat aprobarea unui coleg pentru a adăuga modificări în main_Mirica_Elena:
 
-![Pull Request](static/images/pull_request.png)
+![Pull Request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/pull_request.png)
 
 --------------------------------------------------------------------
 # Mitrea Bogdan Gabriel
