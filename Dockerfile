@@ -3,22 +3,23 @@ FROM python:3.10-alpine
 # Creează utilizator non-root
 RUN adduser -D movieuser
 
-# Setează directorul de lucru
+# Creează directorul aplicației și îl setează ca director de lucru
 WORKDIR /home/movieuser/app
 
-# Copiază fișierele aplicației în container
+# Copiază fișierele aplicației
+COPY app/ app/
 COPY filme.py .
 COPY quickrequirements.txt .
 
-# Creează și activează mediu virtual + instalează dependențele
+# Creează și activează mediul virtual + instalează dependințele
 RUN python3 -m venv .venv && \
     .venv/bin/pip install --no-cache-dir -r quickrequirements.txt
 
-# Rulează aplicația ca user non-root
+# Trecere la utilizator non-root
 USER movieuser
 
-# Expune portul Flask
+# Expune portul folosit de Flask
 EXPOSE 5050
 
-# Rulează aplicația Flask cu gunicorn
+# Rulează aplicația Flask cu Gunicorn
 CMD [".venv/bin/gunicorn", "-b", "0.0.0.0:5050", "filme:app"]
