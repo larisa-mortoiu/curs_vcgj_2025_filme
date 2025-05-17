@@ -71,8 +71,8 @@ sudo apt install python3.12-venv
 - **`bridgerton.html`** – Pagină care poate combina informațiile despre serial într-o prezentare unificată.
 - **`bridgerton_cast.html`** – Afișează distribuția serialului "Bridgerton".
 - **`bridgerton_description.html`** – Pagina cu descrierea și contextul serialului "Bridgerton".
-- **`bridgerton_cast.py`** – Script Python care gestionează date legate de actori/distribuția serialului "Bridgerton".
-- **`bridgerton_description.py`** – Script care conține descrierea sau metadatele serialului.
+- **`bridgerton_cast.py`** – Script Python care gestionează date legate de distribuția serialului "Bridgerton".
+- **`bridgerton_description.py`** – Script care conține descrierea serialului.
 - **`README.md`** – Acest fișier, conținând descrierea proiectului și modul de realizare.
 
 
