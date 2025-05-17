@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali G Indahouse - Cast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/aligin.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/banner5.jpg') }}" alt="Ali G Indahouse Banner" class="banner">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/description">Movie Details</a></li>
+                    <li class="active"><a href="/cast">Cast</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cast-section">
+                <h1>Main Cast</h1>
+                
+                <div class="cast-grid">
+                    {% for member in cast %}
+                        <div class="cast-card">
+                            <img src="{{ url_for('static', filename='images/' + member.image) }}" alt="{{ member.actor }}" class="cast-image">
+                            <div class="cast-info">
+                                <h2>{{ member.actor }}</h2>
+                                <h3>as {{ member.character }}</h3>
+                                <p>{{ member.bio }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ali G Indahouse | This is a fan-made website for educational purposes only</p>
+        </footer>
+    </div>
+</body>
+</html>
+

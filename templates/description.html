@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }} - Movie Details</title>
+    <link rel="stylesheet" href="../static/styles/aligin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../static/images/bannerdescription.jpg" alt="Ali G Indahouse Banner" class="banner">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/description.">Movie Details</a></li>
+                    <li><a href="/cast">Cast</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="movie-details">
+                <h1>Movie Details</h1>
+                
+                <div class="movie-poster">
+                    <img src="../static/images/poster.jpg" alt="Movie Poster" class="poster-image">
+                </div>
+                
+                <div class="details-card">
+                    <div class="detail-item">
+                        <h3>Release Year</h3>
+                        <p>{{ movie.year }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Director</h3>
+                        <p>{{ movie.director }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Genre</h3>
+                        <p>{{ movie.genre }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Runtime</h3>
+                        <p>85 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="plot-summary">
+                    <h2>Plot Summary</h2>
+                    <p>
+                        {{ movie.summary }}
+                    </p>
+                </div>
+                
+                <div class="movie-gallery">
+                    <img src="../static/images/scene1.jpg" alt="Movie Scene 1" class="gallery-image">
+                    <img src="../static/images/scene2.jpg" alt="Movie Scene 2" class="gallery-image">
+                    <img src="../static/images/scene3.jpg" alt="Movie Scene 3" class="gallery-image">
+                </div>
+                
+                <div class="fun-facts">
+                    <h2>Fun Facts</h2>
+                    <ul>
+                        <li>First feature film starring the Ali G character</li>
+                        <li>Filmed primarily in London and Surrey, England</li>
+                        <li>Many scenes were improvised by Sacha Baron Cohen</li>
+                        <li>Features cameos from several UK celebrities and politicians</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ali G Indahouse | This is a fan-made website for educational purposes only</p>
+        </footer>
+    </div>
+</body>
+</html>
