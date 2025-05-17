@@ -20,14 +20,12 @@ pipeline {
             steps {
                 sh '''
                     . ./activeaza_venv;
-                    echo '\n\nVerificare lib.py cu pylint\n';
-                    pylint --exit-zero lib.py;
 
-                    echo '\n\nVerificare tests.py cu pylint';
-                    pylint --exit-zero tests.py;
+                    echo '\n\nVerificare test_filme.py cu pylint';
+                    pylint --exit-zero test_filme.py;
 
-                    echo '\n\nVerificare sysinfo.py cu pylint';
-                    pylint --exit-zero sysinfo.py;
+                    echo '\n\nVerificare filme.py cu pylint';
+                    pylint --exit-zero filme.py;
                 '''
             }
         }
