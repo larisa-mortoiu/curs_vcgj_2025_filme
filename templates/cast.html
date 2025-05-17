@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali G Indahouse - Cast</title>
-    <link rel="stylesheet" href="../static/styles/aligin.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/aligin.css') }}">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="../static/images/banner5.jpg" alt="Ali G Indahouse Banner" class="banner">
+            <img src="{{ url_for('static', filename='images/banner5.jpg') }}" alt="Ali G Indahouse Banner" class="banner">
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
@@ -24,65 +24,16 @@
                 <h1>Main Cast</h1>
                 
                 <div class="cast-grid">
-                    <div class="cast-card">
-                        <img src="../static/images/cast1.jpeg" alt="Sacha Baron Cohen" class="cast-image">
-                        <div class="cast-info">
-                            <h2>Sacha Baron Cohen</h2>
-                            <h3>as Ali G / Borat</h3>
-                            <p>
-                                Sacha Baron Cohen portrays the titular character Ali G, a wannabe gangster from Staines,
-                                as well as a brief appearance as Borat Sagdiyev.
-                            </p>
+                    {% for member in cast %}
+                        <div class="cast-card">
+                            <img src="{{ url_for('static', filename='images/' + member.image) }}" alt="{{ member.actor }}" class="cast-image">
+                            <div class="cast-info">
+                                <h2>{{ member.actor }}</h2>
+                                <h3>as {{ member.character }}</h3>
+                                <p>{{ member.bio }}</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="cast-card">
-                        <img src="../static/images/cast3.jpg" alt="Michael Gambon" class="cast-image">
-                        <div class="cast-info">
-                            <h2>Michael Gambon</h2>
-                            <h3>as Prime Minister</h3>
-                            <p>
-                                Michael Gambon plays the Prime Minister, who becomes unexpectedly popular
-                                after Ali G joins his team.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="cast-card">
-                        <img src="../static/images/cast4.jpg" alt="Charles Dance" class="cast-image">
-                        <div class="cast-info">
-                            <h2>Charles Dance</h2>
-                            <h3>as David Carlton</h3>
-                            <p>
-                                Charles Dance portrays the villainous Chancellor David Carlton, who plots
-                                to overthrow the Prime Minister.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="cast-card">
-                        <img src="../static/images/cast2.webp" alt="Martin Freeman" class="cast-image">
-                        <div class="cast-info">
-                            <h2>Martin Freeman</h2>
-                            <h3>as Ricky C</h3>
-                            <p>
-                                Martin Freeman plays Ricky C, Ali's best friend and a member of his gang,
-                                the "West Staines Massiv".
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="cast-card">
-                        <img src="../static/images/cast5.webp" alt="Rhona Mitra" class="cast-image">
-                        <div class="cast-info">
-                            <h2>Rhona Mitra</h2>
-                            <h3>as Kate Hedges</h3>
-                            <p>
-                                Rhona Mitra portrays Kate Hedges, a political aide who works closely with
-                                Ali G after he joins the government.
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </section>
         </main>
@@ -93,3 +44,4 @@
     </div>
 </body>
 </html>
+

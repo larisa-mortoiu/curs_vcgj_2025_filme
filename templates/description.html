@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali G Indahouse - Movie Details</title>
+    <title>{{ movie.title }} - Movie Details</title>
     <link rel="stylesheet" href="../static/styles/aligin.css">
 </head>
 <body>
@@ -30,15 +30,15 @@
                 <div class="details-card">
                     <div class="detail-item">
                         <h3>Release Year</h3>
-                        <p>2002</p>
+                        <p>{{ movie.year }}</p>
                     </div>
                     <div class="detail-item">
                         <h3>Director</h3>
-                        <p>Mark Mylod</p>
+                        <p>{{ movie.director }}</p>
                     </div>
                     <div class="detail-item">
                         <h3>Genre</h3>
-                        <p>Comedy</p>
+                        <p>{{ movie.genre }}</p>
                     </div>
                     <div class="detail-item">
                         <h3>Runtime</h3>
@@ -49,13 +49,7 @@
                 <div class="plot-summary">
                     <h2>Plot Summary</h2>
                     <p>
-                        Ali G unwittingly becomes a pawn in the Chancellor's plot to overthrow the Prime Minister of Great Britain.
-                        However, Ali is embraced by the nation as a voice of the youth, making the PM and his government more popular than ever.
-                    </p>
-                    <p>
-                        When his beloved leisure center is threatened with demolition, Ali G goes on a hunger strike and then stands for Parliament.
-                        He is elected, and through a series of hilarious mishaps and misunderstandings, he becomes instrumental in foiling 
-                        the Chancellor's plot to overthrow the government.
+                        {{ movie.summary }}
                     </p>
                 </div>
                 
