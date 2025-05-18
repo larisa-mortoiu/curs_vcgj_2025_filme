@@ -10,7 +10,8 @@ if [ ! -d "$VENV_NAME" ]; then
 fi
 
 # Activează mediul virtual
-source $VENV_NAME/bin/activate
+. venv/bin/activate
+
 echo "Mediul virtual '$VENV_NAME' este activat."
 
 # Instalează pachetele
