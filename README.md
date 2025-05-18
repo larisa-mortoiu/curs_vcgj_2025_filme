@@ -57,4 +57,5 @@ Cum am testat:
 	Branch: dev_Simion_Razvan
 	Script path: Jenkinsfile
 
-![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
+![Jenkins](https://github.com/user-attachments/assets/e3a3680c-cc68-4779-bc42-09bbcde374a7)
+
