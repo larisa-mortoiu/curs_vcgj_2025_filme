@@ -28,7 +28,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	* accesarea aplicației în browser la http://localhost:5000
 	
 	Pytest:
-	![Testare cu Pytest](static/images/pytest.jpg)
+	![Testare cu Pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/raw/dev_Achitei_Alexandru/static/images/pytest.jpg)
 
 🐳 Cum am rulat în container (Docker)
 
@@ -40,7 +40,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	Aplicația devine accesibilă în browser la:
 	http://localhost:5000
 	
-	![Docker Build](static/images/docker.jpg)
+	![Docker Build](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/raw/dev_Achitei_Alexandru/static/images/docker.jpg)
 
 
 🔧 Jenkins: configurare și rulare automată
@@ -53,7 +53,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	Branch: dev_Achitei_Alexandru
 	Script path: Jenkinsfile
 
-	![Pipeline Jenkins](static/images/Jenkins.jpg)
+	![Pipeline Jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/raw/dev_Achitei_Alexandru/static/images/Jenkins.jpg)
 
 
 
