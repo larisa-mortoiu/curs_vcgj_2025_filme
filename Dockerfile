@@ -11,7 +11,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expune portul pe care Flask rulează implicit
-EXPOSE 5000
+EXPOSE 5077
 
 # Rulează aplicația
 CMD ["python", "filme.py"]

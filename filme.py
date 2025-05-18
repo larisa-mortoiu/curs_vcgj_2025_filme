@@ -31,4 +31,4 @@ def trailer():
     return render_template('trailer.html', trailer=trailer_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0',port=5077)

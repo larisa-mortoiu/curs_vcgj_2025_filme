@@ -53,8 +53,8 @@ pipeline {
                     echo "Build imagine Docker"
                     docker build -t theblacklist-image:v${BUILD_NUMBER} .
 
-                    echo "Pornire container pe portul 5000"
-                    docker run -d --name theblacklist-container -p 5000:5000 theblacklist-image:v${BUILD_NUMBER}
+                    echo "Pornire container pe portul 5077"
+                    docker run -d --name theblacklist-container -p 5077:5077 theblacklist-image:v${BUILD_NUMBER}
 
                     echo "Container running:"
                     docker ps | grep theblacklist
