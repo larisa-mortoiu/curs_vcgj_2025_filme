@@ -70,10 +70,16 @@ Aplicația este dezvoltată folosind Flask, este containerizată cu Docker și i
     └── screenshots
         ├── descriere.png
         ├── despre.png
+        ├── docker.png
+        ├── docker-run.png
         ├── home.png
+        ├── jenkins-blueocean.png
         ├── personaje.png
+        ├── pull-request.png
         ├── recenzii.png
-        └── trailer.png
+        ├── testare-pytest.png
+        ├── trailer.png
+        └── verificare-pylint.png
 
 
 
