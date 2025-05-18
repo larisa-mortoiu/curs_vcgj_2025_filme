@@ -172,11 +172,12 @@ python3 -m pytest app/tests/ -q
 ## Analiză statică cu Pylint
 
 ```bash
-pylint app/lib/*.py app/tests/*.py filme.py
+PYTHONPATH=. pylint --exit-zero app/tests/test_filme.py
+PYTHONPATH=. pylint --exit-zero filme.py
 ```
 
 Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
-
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/test_pylint.png)
 ---
 
 ## Containerizare cu Docker
