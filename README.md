@@ -167,8 +167,6 @@ Pentru a construi imaginea Docker:
     docker run --name scc -p 25568:25568 scc:latest
     ```
 
-![ruleaza_aplicatia](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/rulare_aplicatie.png)
-
 ## Pipeline-ul Jenkins
 
 `Jenkinsfile` definește un pipeline de Integrare Continuă (CI). Acesta automatizează pașii de construire, testare și analiză a codului de fiecare dată când sunt făcute modificări în depozitul Git.
