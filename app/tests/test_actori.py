@@ -4,7 +4,8 @@ from app.lib.actori import get_actori_dark
 
 def test_actor_principal_in_lista():
     """Checks if Louis Hofmann is in the actor list."""
-    assert "Louis Hofmann" in get_actori_dark()
+    actor_names = [actor["nume"] for actor in get_actori_dark()]
+    assert "Louis Hofmann" in actor_names
 
 def test_numar_minim_actori():
     """Ensures there are at least 3 actors in the list."""
