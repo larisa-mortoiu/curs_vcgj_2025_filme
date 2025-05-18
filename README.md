@@ -130,29 +130,29 @@ Pentru activarea virtual environment (mediului virtual), se rulează următoarel
 . ./ruleaza_app.sh
 ```
 
-![configurare-venv]()
+![venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/venv.png)
 
 # Prezentarea interfetei web
 
 ## Pagină principală (Homepage)
 
 Afișează lista cu filmele disponibile, cu acces rapid prin link-uri către pagina cu detalii a fiecărui film/serial.
-![homepage]()
+![stranger-things-homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/home%20page.png)
 
 ## Pagină film
 
 Include o scurtă prezentarea despre film/serial și două butoane către paginile de descriere și distribuție.
-![stranger-things]()
+![stranger-things_serial_home](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/serial_home.png)
 
 ## Pagină descriere film
 
 Oferă detalii extinse despre filmul/serialul ales.
-![stranger-things-descriere]()
+![stranger-things-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/descriere.png)
 
 ## Pagină distribuție film
 
 Prezintă actorii principali și personajele interpretate.
-![stranger-things-distributie]()
+![stranger-things-distributie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/distributie.png)
 
 # Testarea aplicatiei cu Pytest
 
@@ -177,7 +177,7 @@ Aceste teste sunt incluse atât în procesul de rulare locală, cât și în pip
 
 ## Testare locală
 
-![testare-locala]()
+![pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/pytest.png)
 
 # Analiza calitatii codului cu Pylint
 
@@ -261,7 +261,7 @@ docker build -t movieimage:v1 .
 
 Imaginea creată poate fi vizualizată astfel:
 
-![docker-image]()
+![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/docker_images.png)
 
 ## Creare container
 
@@ -285,11 +285,11 @@ Containerele (atât active cât și oprite) pot fi vizualizate astfel:
 docker ps -a
 ```
 
-![docker-container]()
+![docker-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/container.png)
 
 ## Rularea aplicației din container
 
-![run-app-docker]()
+![rulare-din-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/home%20page.png)
 
 # Automatizarea prin Jenkins Pipeline
 
@@ -317,18 +317,18 @@ Execuția pipeline-ului este vizibilă și într-o altă interfață grafică pr
 
 ## Exemplu execuție pipeline Jenkins (interfață Blue Ocean)
 
-![jenkins-blueocean]()
+![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/blue-ocean.png)
 
 # Flux de lucru colaborativ - Pull Request
 
 Am creat un PR(Pull Request) din branch-ul de dezvoltare (`dev_Gorcea_Cristina`) către branch-ul main (`main_Gorcea_Cristina`)
-![pull-request]()
+![PR](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/Pull%20Request.png)
 
 # Bibliografie
 
-- [HTML Documentation ]()
-- [CSS Documentation ]()
+- [HTML Documentation ](https://www.w3schools.com/html/html_intro.asp)
+- [CSS Documentation ](https://www.w3schools.com/CSSref/index.php)
 - [Flask Documentation](https://flask.palletsprojects.com/en/stable/)
-- [Pytest Documentation](https://docs.pytest.org/en/latest/)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/contents.html)
 - [Docker Documentation](https://docs.docker.com/)
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
