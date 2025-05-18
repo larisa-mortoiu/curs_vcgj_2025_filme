@@ -28,7 +28,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	* accesarea aplicației în browser la http://localhost:5000
 	
 	
-)
+
 	Pytest:
 ![pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
 
