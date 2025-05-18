@@ -4,14 +4,12 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                echo 'Construim imaginea Docker'
                 sh 'docker build -t mechanicressurection .'
             }
         }
 
-        stage('Run Container') {
+        stage('Run Docker Container') {
             steps {
-                echo 'Pornim containerul'
                 sh '''
                     docker rm -f mechanicressurection || true
                     docker run -d -p 5000:5000 --name mechanicressurection mechanicressurection
@@ -19,9 +17,8 @@ pipeline {
             }
         }
 
-        stage('List Running Containers') {
+        stage('Check Container') {
             steps {
-                echo 'Listăm containerele active'
                 sh 'docker ps'
             }
         }
