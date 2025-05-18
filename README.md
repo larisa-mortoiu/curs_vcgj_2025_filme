@@ -80,13 +80,16 @@ Acces aplicație: [http://localhost:5077](http://localhost:5077)
 ## Prezentare interfață web
 
 ### 1. Homepage
-![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
+![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/home_page.png)
 
-### 2. Characters
-![Characters](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
+### 2. Actori
+![Characters](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/actori.png)
 
 ### 3. Trailers
-![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
+![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/trailer.png)
+
+### 4. Descriere
+![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/descriere.png)
 
 ---
 
@@ -99,7 +102,7 @@ Testele validează:
 ```bash
 python3 -m pytest app/tests/ -q
 ```
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_manuala.png)
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/pytest.png)
 ---
 
 ## Analiză statică cu Pylint
@@ -110,7 +113,7 @@ PYTHONPATH=. pylint --exit-zero filme.py
 ```
 
 Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_pylint.png)
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/pylint.png)
 ---
 
 ## Containerizare cu Docker
@@ -135,7 +138,7 @@ Pipeline-ul include pașii:
 
 
 Exemplu rulare cu succes:
-![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
+![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Ichim_Ionut/static/images/pipeline.png)
 
 ---
 
