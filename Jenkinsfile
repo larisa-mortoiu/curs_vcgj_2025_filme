@@ -1,27 +1,49 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = 'filme_app'
+        CONTAINER_NAME = 'filme_app'
+        HOST_PORT = '5000'
+        CONTAINER_PORT = '5000'
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'dev_Simion_Razvan', url: 'https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git'
+                // Folosește repo-ul și branch-ul setat în Jenkins job
+                checkout scm
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh 'docker build -t filme_app .'
-                }
+                echo "Building Docker image: ${IMAGE_NAME}"
+                sh "docker build -t ${IMAGE_NAME} ."
+            }
+        }
+
+        stage('Remove Old Container') {
+            steps {
+                echo "Removing old container if exists..."
+                sh "docker rm -f ${CONTAINER_NAME} || true"
             }
         }
 
         stage('Run Container') {
             steps {
-                script {
-                    sh 'docker run -d -p 5000:5000 --name filme_app filme_app || true'
-                }
+                echo "Running new container..."
+                sh "docker run -d -p ${HOST_PORT}:${CONTAINER_PORT} --name ${CONTAINER_NAME} ${IMAGE_NAME}"
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline finished successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check console output for details.'
         }
     }
 }
