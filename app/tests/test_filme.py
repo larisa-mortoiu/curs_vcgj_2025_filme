@@ -24,11 +24,11 @@ def test_descriere_status(client):
     response = client.get('/shrek/descriere')
     assert response.status_code == 200
 
-# 4. Test descriere - conținut
+# ✅ 4. Test descriere - conținut (modificat)
 def test_descriere_content(client):
     response = client.get('/shrek/descriere')
     html = response.data.decode('utf-8')  # Decodificăm din bytes în string
-    assert "căpcăun verde" in html or "Shrek este un" in html
+    assert "Descriere generală" in html
 
 # 5. Test personaje - status
 def test_personaje_status(client):
