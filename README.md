@@ -16,6 +16,7 @@
 8. [Analiză statică cu Pylint](#analiză-statică-cu-pylint)
 9. [Containerizare cu Docker](#containerizare-cu-docker)
 10. [Pipeline CI/CD cu Jenkins](#pipeline-cicd-cu-jenkins)
+11. [Pull Request & Mentenanță](#pull-request--mentenanță)
 
 ---
 
@@ -201,5 +202,13 @@ Pipeline-ul include pașii:
 
 Exemplu rulare cu succes:
 ![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
+
+---
+
+## Pull Request & Mentenanță
+
+* Dezvoltarea se face pe branch `dev_Zarafin_Radu`
+* Se deschide PR către `main_Zarafin_Radu`
+* După review și succes pipeline, se face merge și build automat pe `main`
 
 ---
