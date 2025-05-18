@@ -104,6 +104,8 @@ html_template = """
     </nav>
     <div class="container">
         {continut}
+        <br><br>
+        <form action="/"><button>Înapoi</button></form>
     </div>
 </body>
 </html>
@@ -116,8 +118,9 @@ def pagina_principala():
     <p>
         Descoperă lumea amuzantă și emoționantă a celebrului căpcăun verde. 
         Shrek nu este un erou tipic, dar te va cuceri prin curaj, loialitate și umor inconfundabil.
+        Explorează fiecare secțiune a site-ului pentru a afla mai multe despre povestea sa, personajele haioase și replicile care au rămas în istorie.
     </p>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhappymag.tv%2Fwp-content%2Fuploads%2F2021%2F05%2Fshrek4_disneyscreencaps.com_675.0.jpg&f=1&nofb=1&ipt=a87841d9b23e8131ffa72b57694f48eef0b0b8faf024e7c37f251ad4a9452e0b" alt="Shrek în mlaștină">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhappymag.tv%2Fwp-content%2Fuploads%2F2021%2F05%2Fshrek4_disneyscreencaps.com_675.0.jpg" alt="Shrek în mlaștină">
     """
     return html_template.format(titlu="Shrek - Acasă", continut=continut)
 
@@ -127,9 +130,10 @@ def pagina_shrek():
     <h2>Despre filmul Shrek</h2>
     <p>
         Lansat în 2001, "Shrek" a fost primul film animat care a câștigat premiul Oscar pentru Cel mai bun film de animație.
-        A revoluționat lumea animației prin combinația sa de umor modern, parodie și mesaj puternic despre acceptare.
+        Cu un amestec unic de umor, emoție și satiră, filmul a redefinit genul animației.
+        Seria a avut un impact cultural major, generând mai multe continuări și un număr imens de fani.
     </p>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feskipaper.com%2Fimages%2Fshrek-and-donkey-2.jpg&f=1&nofb=1&ipt=7cb7cc0f771206416b63c92aad1b7fc7aa84ec4218e75dad86d5931e870cfb91" alt="Shrek și Donkey">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feskipaper.com%2Fimages%2Fshrek-and-donkey-2.jpg" alt="Shrek și Donkey">
     """
     return html_template.format(titlu="Shrek", continut=continut)
 
@@ -138,10 +142,11 @@ def descriere_shrek():
     continut = """
     <h2>Descriere generală</h2>
     <p>
-        Shrek trăiește liniștit până când viața lui este dată peste cap de o invazie de personaje magice. 
-        Cu ajutorul lui Donkey, pornește într-o călătorie pentru a le readuce înapoi, descoperind însă mult mai mult despre el.
+        Shrek este o creație originală – un căpcăun cu suflet mare care își dorește doar liniște.
+        Filmul ne arată cum aparențele înșală și cum fiecare are o poveste complexă în spate.
+        Este un personaj memorabil, plin de sarcasm dar și de sensibilitate autentică.
     </p>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F27475238%2Fr%2Fil%2F46b262%2F3758939537%2Fil_fullxfull.3758939537_cop1.jpg&f=1&nofb=1&ipt=56733e24137d38d4ea2eaf4504cb3d0853499be4378cd702652ed813d926a207" alt="Poster film Shrek">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F27475238%2Fr%2Fil%2F46b262%2F3758939537%2Fil_fullxfull.3758939537_cop1.jpg" alt="Poster film Shrek">
     """
     return html_template.format(titlu="Descriere", continut=continut)
 
@@ -151,11 +156,11 @@ def personaje_shrek():
     <h2>Personaje principale</h2>
     <ul>
         <li><strong>Shrek</strong> – căpcăunul verde cu o inimă mare</li>
-        <li><strong>Donkey</strong> – tovarășul vesel și loial</li>
-        <li><strong>Fiona</strong> – prințesa neobișnuită, curajoasă și cu două fețe</li>
-        <li><strong>Lord Farquaad</strong> – tiranul comic și exagerat</li>
+        <li><strong>Donkey</strong> – tovarășul vesel și loial, plin de vorbe</li>
+        <li><strong>Fiona</strong> – prințesa care ascunde un secret incredibil</li>
+        <li><strong>Lord Farquaad</strong> – tiranul comic obsedat de perfecțiune</li>
     </ul>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffacts.net%2Fwp-content%2Fuploads%2F2022%2F06%2FShrek-characters-730x411.jpg&f=1&nofb=1&ipt=dbaa57fd33925296c324a784451f8c50346655e5530b09c107e30e7bef8ee6d0" alt="Echipa Shrek">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffacts.net%2Fwp-content%2Fuploads%2F2022%2F06%2FShrek-characters-730x411.jpg" alt="Echipa Shrek">
     """
     return html_template.format(titlu="Personaje", continut=continut)
 
@@ -163,6 +168,7 @@ def personaje_shrek():
 def trailer_shrek():
     continut = """
     <h2>Trailer oficial</h2>
+    <p>Urmărește trailerul care a lansat o legendă!</p>
     <iframe src="https://www.youtube.com/embed/CwXOrWvPBPk" title="Trailer Shrek" frameborder="0" allowfullscreen></iframe>
     """
     return html_template.format(titlu="Trailer Shrek", continut=continut)
