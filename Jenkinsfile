@@ -41,24 +41,25 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            agent any
-            steps {
-                echo 'Deploy: build & run container Docker'
-                sh '''
-                    echo "Oprire container vechi (dacă există)"
-                    docker rm -f breakingbad-container || true
+       stage('Deploy') {
+    agent any
+    steps {
+        echo 'Deploy: build & run container Docker'
+        sh '''
+            echo "Oprire container vechi (dacă există)"
+            docker rm -f flask-filme-container || true
 
-                    echo "Build imagine Docker"
-                    docker build -t breakingbad-image:v${BUILD_NUMBER} .
+            echo "Build imagine Docker"
+            docker build -t flask-filme-image:v${BUILD_NUMBER} .
 
-                    echo "Pornire container pe portul 5011"
-                    docker run -d --name breakingbad-container -p 5011:5011 breakingbad-image:v${BUILD_NUMBER}
+            echo "Pornire container pe portul 5011"
+            docker run -d --name flask-filme-container -p 5011:5011 flask-filme-image:v${BUILD_NUMBER}
 
-                    echo "Container running:"
-                    docker ps | grep breakingbad
-                '''
-            }
-        }
+            echo "Container running:"
+            docker ps | grep flask-filme
+        '''
+    }
+}
+
     }
 }
