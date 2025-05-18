@@ -152,7 +152,7 @@ Pentru a construi imaginea Docker:
 2.  Comanda `docker build -t scc:latest .` este utilizată pentru a construi imaginea. Numele și tag-ul imaginii pot fi specificate după `-t`.
 3. Se rulează un container din imaginea construită:
     ```bash
-    docker run --name scc_container -p 8020:25568 scc:latest
+    docker run --name scc -p 25568:25568 scc:latest
     ```
 
 ## Pipeline-ul Jenkins
