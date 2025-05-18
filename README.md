@@ -184,6 +184,7 @@ sudo docker build -t interstellar-app .
 sudo docker run -it --rm interstellar-app:latest
 
 ```
+![Docker](https://github.com/user-attachments/assets/1f1b00d0-ef65-4b04-b675-6a5cf2bc2780)
 
 Aplicația devine accesibilă la: [http://localhost:5011](http://localhost:5011)
 
