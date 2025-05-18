@@ -1,6 +1,6 @@
 # Proiect SCC – Interstellar WEB APP
 
-**Autor:** Tofan IOnut Lucian (Grupa 442D)
+**Autor:** Tofan Ionut Lucian (Grupa 442D)
 
 ---
 
