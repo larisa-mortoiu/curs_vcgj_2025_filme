@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Actorii din Lucifer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fisier_css.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Actorii principali</h1>
+        <div class="grid">
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Tom_Ellis.jpeg') }}" alt="Tom Ellis">
+                <p>Tom Ellis - Lucifer Morningstar</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Lauren_German.jpeg') }}" alt="Lauren German">
+                <p>Lauren German - Chloe Decker</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Kevin_Alejandro.jpeg') }}" alt="Kevin Alejandro">
+                <p>Kevin Alejandro - Dan Espinoza</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Aimee_Garcia.jpeg') }}" alt="Aimee Garcia">
+                <p>Aimee Garcia - Ella Lopez</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/DB_Woodside.jpeg') }}" alt="D.B. Woodside">
+                <p>D.B. Woodside - Amenadiel</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Rachael_Harris.jpeg') }}" alt="Rachael Harris">
+                <p>Rachael Harris - Linda Martin</p>
+            </div>
+            <div class="actor-card">
+                <img src="{{ url_for('static', filename='images/Lesley_Ann_Brandt.jpeg') }}" alt="Lesley-Ann Brandt">
+                <p>Lesley-Ann Brandt - Mazikeen</p>
+            </div>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Înapoi</a>
+    </div>
+</body>
+</html>
