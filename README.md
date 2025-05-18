@@ -30,7 +30,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	
 )
 	Pytest:
-	![pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
+![pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
 
 🐳 Cum am rulat în container (Docker)
 
@@ -41,8 +41,8 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 
 	Aplicația devine accesibilă în browser la:
 	http://localhost:5000
-	
-	![docker](https://github.com/user-attachments/assets/6d44727f-0f86-4d8b-8061-81db8597cbbf)
+ 
+![docker](https://github.com/user-attachments/assets/6d44727f-0f86-4d8b-8061-81db8597cbbf)
 
 
 
@@ -56,7 +56,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	Branch: dev_Achitei_Alexandru
 	Script path: Jenkinsfile
 
-	![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
+![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
 
 
 
