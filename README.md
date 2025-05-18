@@ -9,9 +9,9 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 ✅ Ce am implementat
 
 	Am dezvoltat o aplicație web în Flask, dedicată gestionării filmelor (proiectul Projet_SCC), care conține:
-	* o pagină principală cu titlul aplicației și informații de bază;
-	* o pagină cu detalii despre filme (implementare bazată pe filme.py);
-	* o pagină cu descrierea proiectului, stilizată tematic;
+	* o pagină principală cu titlul serialului și trailer-ul;
+	* o pagină cu actorii principali;
+	* o pagină cu descrierea serialului;
 	* stil personalizat CSS cu temă adaptată și butoane interactive;
 	* structură modulară templates/, static/, și filme.py.
 
@@ -28,7 +28,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	* accesarea aplicației în browser la http://localhost:5000
 	
 	Pytest:
-	(![Testare cu Pytest](static/images/pytest.png))
+	![Testare cu Pytest](static/images/pytest.png)
 
 🐳 Cum am rulat în container (Docker)
 
@@ -40,7 +40,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	Aplicația devine accesibilă în browser la:
 	http://localhost:5000
 	
-	(![Docker Build](static/images/docker.png))
+	![Docker Build](static/images/docker.png)
 
 
 🔧 Jenkins: configurare și rulare automată
@@ -53,7 +53,7 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 	Branch: dev_Achitei_Alexandru
 	Script path: Jenkinsfile
 
-	(![Pipeline Jenkins](static/images/Jenkins.png))
+	![Pipeline Jenkins](static/images/Jenkins.png)
 
 
 
