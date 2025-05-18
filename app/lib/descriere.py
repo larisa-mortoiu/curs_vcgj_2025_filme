@@ -1,3 +1,5 @@
+"""Funcții pentru afișarea descrierii filmului."""
+
 def descriere_suits():
     return """
     <h2>Un serial despre avocatură, ambiție și secrete</h2>

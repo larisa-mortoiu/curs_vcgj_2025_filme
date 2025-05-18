@@ -1,3 +1,5 @@
+"""Teste unitare pentru aplicația de afișare film."""
+
 import pytest
 import filme  # aplicația ta Flask
 
@@ -70,4 +72,3 @@ def test_recenzii_status(client):
 def test_recenzii_text(client):
     response = client.get('/suits/recenzii')
     assert b"Recenzii ale fanilor" in response.data
-

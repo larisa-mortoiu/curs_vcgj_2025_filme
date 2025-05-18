@@ -1,24 +1,33 @@
-FROM python:3.10-alpine
+FROM python:3.10-slim
 
-# Creăm un user neprivilegiat numit `suits`
-RUN adduser -D filme
+# Instalăm pachetele necesare pentru venv
+RUN apt-get update && apt-get install -y \
+    python3-venv \
+    python3-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
-# Setăm directorul de lucru
+# Creăm un user neprivilegiat
+RUN adduser --disabled-password --gecos "" filme
+
+# Director de lucru
 WORKDIR /home/filme/app
 
 # Copiem fișierele aplicației
-COPY filme.py .
-COPY quickrequirements.txt .
+COPY . .
 
-# Creăm un mediu virtual și instalăm dependințele
+# Creăm mediu virtual și instalăm dependințele
 RUN python3 -m venv .venv && \
+    .venv/bin/pip install --upgrade pip && \
     .venv/bin/pip install --no-cache-dir -r quickrequirements.txt
 
-# Rulăm aplicația ca utilizator non-root
+# Setăm utilizator non-root
 USER filme
 
-# Expunem portul Flask
+# Port aplicație
 EXPOSE 5050
+ENV PYTHONPATH="/home/filme/app:/home/filme"
 
-# Pornim aplicația cu gunicorn
+# Pornire server Flask cu gunicorn
 CMD [".venv/bin/gunicorn", "-b", "0.0.0.0:5050", "filme:app"]
+

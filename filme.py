@@ -1,3 +1,6 @@
+"""Modul principal al aplicației Flask - definește rutele și interfața web."""
+# pylint: disable=invalid-name
+
 from flask import Flask, request, redirect
 from app.lib.descriere import descriere_suits as continut_descriere
 from app.lib.actori import personaje_suits as continut_personaje
@@ -268,4 +271,3 @@ def adauga_recenzie():
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5050, debug=True)
-

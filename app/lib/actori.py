@@ -1,3 +1,5 @@
+"""Funcții pentru generarea distribuției actorilor din film."""
+
 def personaje_suits():
     return """
     <h2>Personaje cheie din Suits</h2>
@@ -11,4 +13,3 @@ def personaje_suits():
              style="margin-top: 20px; max-width: 90%; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
     </div>
     """
-
