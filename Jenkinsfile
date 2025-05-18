@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Preluăm codul sursă'
-                checkout scm
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 echo 'Construim imaginea Docker'
@@ -19,7 +12,10 @@ pipeline {
         stage('Run Container') {
             steps {
                 echo 'Pornim containerul'
-                sh 'docker run -d -p 5000:5000 sonsofanarchy'
+                sh '''
+                    docker rm -f sonsofanarchy || true
+                    docker run -d -p 5000:5000 --name sonsofanarchy sonsofanarchy
+                '''
             }
         }
 
