@@ -1940,7 +1940,6 @@ Afișează actorii principali ai filmului împreună cu imaginile acestora, orga
 ![Cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mologani_Adil/static/images/captures/cast.png)
 
 --------------------------------------------------------------------
-
 # Mortoiu Larisa Maria
 -------------------------
 
