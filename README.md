@@ -1,4 +1,4 @@
-Proiect SCC - Containerizare și CI/CD
+![image](https://github.com/user-attachments/assets/60a7dc69-a83d-4f4a-844d-3b783dc325f8)Proiect SCC - Containerizare și CI/CD
 
 Autor: Simion Razvan-Marian
 
@@ -42,7 +42,8 @@ Cum am testat:
 	Aplicația devine accesibilă în browser la:
 	http://localhost:5000
  
-![Docker](https://github.com/user-attachments/assets/6d44727f-0f86-4d8b-8061-81db8597cbbf)
+![Docker](https://github.com/user-attachments/assets/01135ec9-8c47-4ef3-9d3d-e7d64e906136)
+
 
 
 
