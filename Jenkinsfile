@@ -30,6 +30,7 @@ pipeline {
                 echo 'Rulăm testele cu pytest'
                 sh '''
                     . $VENV/bin/activate
+                    export PYTHONPATH=$WORKSPACE
                     pytest tests/
                 '''
             }
