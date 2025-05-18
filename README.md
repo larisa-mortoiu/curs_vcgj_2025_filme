@@ -1,127 +1,205 @@
-# Breaking Bad Web App
-===================================
+# Proiect SCC – Breaking Bad Web App
+
+**Autor:** Zarafin Radu-Adrian (Grupa 442D)
+
+---
 
 ## Cuprins
-1. [Descriere aplicație](#descriere-aplicație)
-2. [Descriere versiune](#descriere-versiune)
-   1. [Probleme cunoscute](#probleme-cunoscute)
-3. [Configurare](#configurare)
-4. [Exemple pagină web](#exemple-pagină-web)
-5. [Testare cu pytest](#testare-cu-pytest)
-6. [Verificare statică cu pylint](#verificare-statică-cu-pylint)
-7. [DevOps CI](#devops-ci)
-   1. [Executare pipeline Jenkins](#executare-pipeline-jenkins)
 
+1. [Descriere aplicație](#descriere-aplicație)
+2. [Funcționalități & Versiuni](#funcționalități--versiuni)
+3. [Tehnologii folosite](#tehnologii-folosite)
+4. [Structura proiectului](#structura-proiectului)
+5. [Configurare & Instalare](#configurare--instalare)
+6. [Prezentare interfață web](#prezentare-interfață-web)
+7. [Testare cu Pytest](#testare-cu-pytest)
+8. [Analiză statică cu Pylint](#analiză-statică-cu-pylint)
+9. [Containerizare cu Docker](#containerizare-cu-docker)
+10. [Pipeline CI/CD cu Jenkins](#pipeline-cicd-cu-jenkins)
 
 ---
 
 ## Descriere aplicație
 
-Această aplicație web oferă o interfață vizuală pentru serialul Breaking Bad. Este construită cu ajutorul framework-ului Flask și include pagini cu:
+Această aplicație web este dedicată serialului „Breaking Bad” și oferă utilizatorilor o interfață simplă pentru a vizualiza:
+- o descriere generală a serialului,
+- personaje principale,
+- trailere oficiale.
 
-- descriere generală a serialului
-- listă de personaje principale
-- trailere oficiale
-
-Structura aplicației este modulară, codul fiind organizat în:
-- `filme.py`: aplicația Flask principală
-- `app/lib`: module logice pentru afișarea atributelor
-- `app/tests`: teste unitare pentru atribute
-
-Aplicația include suport pentru rulare în container Docker și integrare continuă în Jenkins.
+Aplicația este construită cu Flask și este modularizată astfel încât fiecare atribut (descriere, actori, trailere) este gestionat într-un fișier separat.
 
 ---
 
-## Descriere versiune
+## Funcționalități & Versiuni
 
-### Versiunea: `v1.0`
-
-- Pagina principală la `http://localhost:5011/`
-- Rute implementate:
-  - `/` – homepage
-  - `/breaking-bad` – descriere
-  - `/breaking-bad/characters` – personaje
-  - `/breaking-bad/trailers` – trailere
-
-### Probleme cunoscute
-
-- Codul HTML este simplificat și nu include protecție CSRF.
-- Lipsesc validări avansate pentru rute inexistente (ex: 404 custom).
+* **v1.0** – versiune funcțională cu:
+  * pagină principală `/`
+  * pagină cu descriere `/breaking-bad`
+  * pagină cu personaje `/breaking-bad/characters`
+  * pagină cu trailere `/breaking-bad/trailers`
+  * integrare Jenkins + Docker + Pytest + Pylint
 
 ---
 
-## Configurare
+## Tehnologii folosite
 
-### Activare venv
+* **Python 3.10** & **Flask** – backend web
+* **HTML/CSS** – afișare interfețe
+* **Jinja2** – motor de template-uri
+* **Pytest** – testare automată
+* **Pylint** – analiză statică
+* **Docker** – containerizare
+* **Jenkins** – CI/CD pipeline
 
-```bash
-source activeaza_venv
+---
+
+## Structura proiectului
+
+```text
+curs_vcgj_2025_filme
+    ├── activeaza_venv
+    ├── activeaza_venv_jenkins
+    ├── app
+    │   ├── lib
+    │   │   ├── actors.py
+    │   │   ├── description.py
+    │   │   ├── __pycache__
+    │   │   │   ├── actors.cpython-310.pyc
+    │   │   │   ├── description.cpython-310.pyc
+    │   │   │   └── trailers.cpython-310.pyc
+    │   │   └── trailers.py
+    │   └── tests
+    │       ├── __pycache__
+    │       │   └── test_filme.cpython-310-pytest-7.4.0.pyc
+    │       └── test_filme.py
+    ├── breaking_bad
+    ├── Dockerfile
+    ├── dockerstart_jenkins.sh
+    ├── dockerstart.sh
+    ├── filme.py
+    ├── Jenkinsfile
+    ├── LICENSE
+    ├── __pycache__
+    │   └── filme.cpython-310.pyc
+    ├── pytest.ini
+    ├── quickrequirements.txt
+    ├── README.md
+    ├── static
+    │   ├── images
+    │   │   ├── breaking_bad.jpg
+    │   │   ├── gus_fring.jpg
+    │   │   ├── hank_schrader.jpg
+    │   │   ├── hector_salamanca.jpg
+    │   │   ├── imdb-logo.png
+    │   │   ├── jesse_pinkman.jpg
+    │   │   ├── marie_schrader.jpg
+    │   │   ├── mike_ehrmantraut.jpg
+    │   │   ├── saul_goodman.jpg
+    │   │   ├── skyler_white.jpg
+    │   │   ├── smoke.gif
+    │   │   ├── tuco_salamanca.jpg
+    │   │   └── walter_white.avif
+    │   ├── screenshots
+    │   │   ├── activare_venv_start_app.png
+    │   │   ├── actori.png
+    │   │   ├── descriere.png
+    │   │   ├── homepage.png
+    │   │   ├── pipeline.png
+    │   │   └── trailers.png
+    │   └── styles
+    │       └── style.css
+    └── templates
+        ├── characters.html
+        ├── description.html
+        ├── index.html
+        └── trailers.html
+
 ```
 
-Dacă nu există `.venv`, scriptul `activeaza_venv_jenkins` îl creează și instalează dependințele.
+---
 
-### Rulare aplicație
+## Configurare & Instalare
+
+1. **Clone repo & branch**:
 
 ```bash
+git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+cd curs_vcgj_2025_filme
+git checkout dev_Zarafin_Radu
+```
+2. **Rulare directă** (fără venv):
+ ```bash
+ python3 filme.py
+ ```
+3. **Rulare cu venv**:
+```bash
+source activeaza_venv
 source breaking_bad
 ```
 
-Acces în browser: [http://localhost:5011](http://localhost:5011)
+Acces aplicație: [http://localhost:5011](http://localhost:5011)
+
+---
 ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
+
+
+## Prezentare interfață web
+
+### 1. Homepage
+![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
+
+### 2. Characters
+![Characters](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
+
+### 3. Trailers
+![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
+
 ---
 
-## Exemple pagină web
+## Testare cu Pytest
 
-- Homepage: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
-- Characters: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
-- Trailers: ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
+Testele validează:
+- codul 200 pentru fiecare rută
+- structura obiectului `trailers`
 
----
-
-## Testare cu pytest
-
-Aplicația include 4 teste:
-- verifică dacă rutele returnează 200 OK
-- verifică structura atributului `trailers`
-
-Comandă:
 ```bash
-pytest
+python3 -m pytest app/tests/ -q
 ```
-
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_manuala.png)
 ---
 
-## Verificare statică cu pylint
+## Analiză statică cu Pylint
 
-Se rulează `pylint` pe:
-- `filme.py`
-- `app/lib/*.py`
-- `app/tests/*.py`
-
-Comandă:
 ```bash
 pylint app/lib/*.py app/tests/*.py filme.py
 ```
 
-Rezultatele nu opresc pipeline-ul (folosim `--exit-zero`).
+Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
 
 ---
 
-## DevOps CI
+## Containerizare cu Docker
 
-Aplicația include un `Jenkinsfile` care:
+```bash
+docker build -t breakingbad-app .
+docker run -p 5011:5011 breakingbad-app
+```
 
-- clonează repo-ul
-- activează venv-ul
-- rulează `pytest` și `pylint`
-- build-uiește imaginea Docker
-- rulează aplicația în container (`breakingbad-container`)
-
-### Executare pipeline Jenkins
-
-Exemplu rulare reușită:
-Containerul rulează pe `localhost:5011`.
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
+Aplicația devine accesibilă la: [http://localhost:5011](http://localhost:5011)
 
 ---
 
+## Pipeline CI/CD cu Jenkins
+
+Pipeline-ul include pașii:
+
+1. Clonare cod
+2. Activare venv
+3. Rulare Pytest + Pylint
+4. Build imagine Docker
+5. Pornire container local (`breakingbad-container`)
+
+Exemplu rulare cu succes:
+![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
+
+---
