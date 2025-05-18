@@ -54,7 +54,65 @@
 --------------------------------------------------------------------
 
 # Achitei Mihai Alexandru
-(insereaza readme)
+Proiect SCC - Containerizare și CI/CD
+
+Autor: Achitei Mihai-Alexandru
+
+Branch: dev_Achitei_Alexandru
+
+Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+
+✅ Ce am implementat
+
+	Am dezvoltat o aplicație web în Flask, dedicată gestionării filmelor (proiectul Projet_SCC), care conține:
+	* o pagină principală cu titlul serialului și trailer-ul;
+	* o pagină cu actorii principali;
+	* o pagină cu descrierea serialului;
+	* stil personalizat CSS cu temă adaptată și butoane interactive;
+	* structură modulară templates/, static/, și filme.py.
+
+	Aplicația a fost containerizată cu Docker și testată automat prin Jenkins.
+
+🔍 Cum am testat
+
+	Am folosit:
+
+	* rulare locală cu python3 filme.py
+	* build și rulare în container Docker (docker build, docker run)
+	* integrare continuă cu Jenkins (pull din GitHub, build, run)
+	* comanda docker ps pentru a verifica starea containerului
+	* accesarea aplicației în browser la http://localhost:5000
+	
+	
+
+	Pytest:
+![pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
+
+🐳 Cum am rulat în container (Docker)
+
+	Comenzi folosite:
+
+	* docker build -t sonsofanarchy .
+	* run -p 5000:5000 sonsofanarchy
+
+	Aplicația devine accesibilă în browser la:
+	http://localhost:5000
+ 
+![docker](https://github.com/user-attachments/assets/6d44727f-0f86-4d8b-8061-81db8597cbbf)
+
+
+
+🔧 Jenkins: configurare și rulare automată
+
+	Job creat în Jenkins: SonsOfAnarchy-PipeLine
+
+	Configurat ca Pipeline script from SCM
+
+	Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+	Branch: dev_Achitei_Alexandru
+	Script path: Jenkinsfile
+
+![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
 --------------------------------------------------------------------
 # Al Hajjih Kais
 
@@ -515,7 +573,99 @@ Am realizat un PR din branch-ul de dezvoltare (`dev_Anghelina_Mara`) către bran
 (insereaza readme)
 --------------------------------------------------------------------
 # Camburu Mihail Whilliam
-(insereaza readme)
+# 📦 Proiect: Aplicație web Flask – Lucifer  
+**Autor:** Camburu Mihail  
+**Branch:** `dev_Camburu_mihail`  
+**Repo:** [https://github.com/larisa-mortoiu/curs_vcgj_2025_filme](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme)
+
+---
+
+## ✅ Ce am implementat
+
+Am dezvoltat o aplicație web în Flask, dedicată serialului **Lucifer**, care conține:
+
+- o pagină principală cu titlul serialului și trailerul video;
+- o pagină cu actorii principali și fotografiile lor;
+- o pagină cu descrierea serialului, stilizată tematic;
+- stil personalizat CSS cu temă dark și butoane interactive;
+- structură modulară `templates/`, `static/`, `filme.py`.
+
+Aplicația a fost **containerizată cu Docker** și testată automat prin **Jenkins**.
+
+---
+
+## 🔍 Cum am testat
+
+Am folosit:
+
+- rulare locală cu `python3 filme.py`
+- build și rulare în container Docker (`docker build`, `docker run`)
+- integrare continuă cu Jenkins (pull din GitHub, build, run)
+- comanda `docker ps` pentru a verifica starea containerului
+- accesarea aplicației în browser la `http://localhost:5000`
+
+---
+
+## 🐳 Cum am rulat în container (Docker)
+
+Comenzi folosite:
+
+```bash
+docker build -t lucifer-app .
+docker run -d -p 5000:5000 lucifer-app
+```
+
+Aplicația devine accesibilă în browser la:
+```
+http://localhost:5000
+```
+
+Verificare container:
+```bash
+docker ps
+```
+
+---
+
+## 🔧 Jenkins: configurare și rulare automată
+
+1. Job creat în Jenkins: `lucifer-pipeline`
+2. Configurat ca **Pipeline script from SCM**
+   - Repo: `https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git`
+   - Branch: `dev_Camburu_mihail`
+   - Script path: `Jenkinsfile`
+3. Etape în Jenkinsfile:
+   - `Checkout` din GitHub
+   - `Docker build`
+   - `Docker run`
+   - `docker ps`
+
+---
+
+## 📁 Structura proiectului
+
+```
+.
+├── filme.py
+├── Dockerfile
+├── Jenkinsfile
+├── requirements.txt
+├── templates/
+│   ├── pagina_principala.html
+│   ├── pagina_actori.html
+│   └── pagina_descriere_film.html
+├── static/
+│   ├── style/
+│   │   └── fisier_css.css
+│   └── images/
+└── README_Camburu_Mihail.md
+```
+
+---
+
+### 🔚 Proiect realizat cu succes, funcțional atât local cât și în mediu automatizat.
+
+---
 --------------------------------------------------------------------
 # Constantinescu Adelina Maria
 
@@ -2312,7 +2462,221 @@ PR creat din branch `dev_popa_andreea` către `main`, aprobat de reviewer și va
 (insereaza readme)
 --------------------------------------------------------------------
 # Zarafin Radu Adrian
-(insereaza readme)
+# Proiect SCC – Breaking Bad Web App
+
+**Autor:** Zarafin Radu-Adrian (Grupa 442D)
+
+---
+
+## Cuprins
+
+1. [Descriere aplicație](#descriere-aplicație)
+2. [Funcționalități & Versiuni](#funcționalități--versiuni)
+3. [Tehnologii folosite](#tehnologii-folosite)
+4. [Structura proiectului](#structura-proiectului)
+5. [Configurare & Instalare](#configurare--instalare)
+6. [Prezentare interfață web](#prezentare-interfață-web)
+7. [Testare cu Pytest](#testare-cu-pytest)
+8. [Analiză statică cu Pylint](#analiză-statică-cu-pylint)
+9. [Containerizare cu Docker](#containerizare-cu-docker)
+10. [Pipeline CI/CD cu Jenkins](#pipeline-cicd-cu-jenkins)
+11. [Pull Request & Mentenanță](#pull-request--mentenanță)
+
+---
+
+## Descriere aplicație
+
+Această aplicație web este dedicată serialului „Breaking Bad” și oferă utilizatorilor o interfață simplă pentru a vizualiza:
+- o descriere generală a serialului,
+- personaje principale,
+- trailere oficiale.
+
+Aplicația este construită cu Flask și este modularizată astfel încât fiecare atribut (descriere, actori, trailere) este gestionat într-un fișier separat.
+
+---
+
+## Funcționalități & Versiuni
+
+* **v1.0** – versiune funcțională cu:
+  * pagină principală `/`
+  * pagină cu descriere `/breaking-bad`
+  * pagină cu personaje `/breaking-bad/characters`
+  * pagină cu trailere `/breaking-bad/trailers`
+  * integrare Jenkins + Docker + Pytest + Pylint
+
+---
+
+## Tehnologii folosite
+
+* **Python 3.10** & **Flask** – backend web
+* **HTML/CSS** – afișare interfețe
+* **Jinja2** – motor de template-uri
+* **Pytest** – testare automată
+* **Pylint** – analiză statică
+* **Docker** – containerizare
+* **Jenkins** – CI/CD pipeline
+
+---
+
+## Structura proiectului
+
+```text
+curs_vcgj_2025_filme
+    ├── activeaza_venv
+    ├── activeaza_venv_jenkins
+    ├── app
+    │   ├── lib
+    │   │   ├── actors.py
+    │   │   ├── description.py
+    │   │   ├── __pycache__
+    │   │   │   ├── actors.cpython-310.pyc
+    │   │   │   ├── description.cpython-310.pyc
+    │   │   │   └── trailers.cpython-310.pyc
+    │   │   └── trailers.py
+    │   └── tests
+    │       ├── __pycache__
+    │       │   └── test_filme.cpython-310-pytest-7.4.0.pyc
+    │       └── test_filme.py
+    ├── breaking_bad
+    ├── Dockerfile
+    ├── dockerstart_jenkins.sh
+    ├── dockerstart.sh
+    ├── filme.py
+    ├── Jenkinsfile
+    ├── LICENSE
+    ├── __pycache__
+    │   └── filme.cpython-310.pyc
+    ├── pytest.ini
+    ├── quickrequirements.txt
+    ├── README.md
+    ├── static
+    │   ├── images
+    │   │   ├── breaking_bad.jpg
+    │   │   ├── gus_fring.jpg
+    │   │   ├── hank_schrader.jpg
+    │   │   ├── hector_salamanca.jpg
+    │   │   ├── imdb-logo.png
+    │   │   ├── jesse_pinkman.jpg
+    │   │   ├── marie_schrader.jpg
+    │   │   ├── mike_ehrmantraut.jpg
+    │   │   ├── saul_goodman.jpg
+    │   │   ├── skyler_white.jpg
+    │   │   ├── smoke.gif
+    │   │   ├── tuco_salamanca.jpg
+    │   │   └── walter_white.avif
+    │   ├── screenshots
+    │   │   ├── activare_venv_start_app.png
+    │   │   ├── actori.png
+    │   │   ├── descriere.png
+    │   │   ├── homepage.png
+    │   │   ├── pipeline.png
+    │   │   └── trailers.png
+    │   └── styles
+    │       └── style.css
+    └── templates
+        ├── characters.html
+        ├── description.html
+        ├── index.html
+        └── trailers.html
+
+```
+
+---
+
+## Configurare & Instalare
+
+1. **Clone repo & branch**:
+
+```bash
+git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+cd curs_vcgj_2025_filme
+git checkout dev_Zarafin_Radu
+```
+2. **Rulare directă** (fără venv):
+ ```bash
+ python3 filme.py
+ ```
+3. **Rulare cu venv**:
+```bash
+source activeaza_venv
+source breaking_bad
+```
+
+Acces aplicație: [http://localhost:5011](http://localhost:5011)
+
+---
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
+
+
+## Prezentare interfață web
+
+### 1. Homepage
+![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
+
+### 2. Characters
+![Characters](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
+
+### 3. Trailers
+![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
+
+---
+
+## Testare cu Pytest
+
+Testele validează:
+- codul 200 pentru fiecare rută
+- structura obiectului `trailers`
+
+```bash
+python3 -m pytest app/tests/ -q
+```
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_manuala.png)
+---
+
+## Analiză statică cu Pylint
+
+```bash
+PYTHONPATH=. pylint --exit-zero app/tests/test_filme.py
+PYTHONPATH=. pylint --exit-zero filme.py
+```
+
+Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_pylint.png)
+---
+
+## Containerizare cu Docker
+
+```bash
+docker build -t breakingbad-app .
+docker run -p 5011:5011 breakingbad-app
+```
+
+Aplicația devine accesibilă la: [http://localhost:5011](http://localhost:5011)
+
+---
+
+## Pipeline CI/CD cu Jenkins
+
+Pipeline-ul include pașii:
+
+1. Build
+2. Analiză statică cu Pylint
+3. Testare unitară cu Pytest
+4. Deploy: Pornire container local (`breakingbad-container`)
+
+
+Exemplu rulare cu succes:
+![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
+
+---
+
+## Pull Request & Mentenanță
+
+* Dezvoltarea se face pe branch `dev_Zarafin_Radu`
+* Se deschide PR către `main_Zarafin_Radu`
+* După review și succes pipeline, se face merge și build automat pe `main`
+
+---
 --------------------------------------------------------------------
 
 
