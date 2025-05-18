@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Construim imaginea Docker'
-                sh 'docker build -t sonsofanarchy .'
+                sh 'docker build -t mechanicressurection .'
             }
         }
 
@@ -13,8 +13,8 @@ pipeline {
             steps {
                 echo 'Pornim containerul'
                 sh '''
-                    docker rm -f sonsofanarchy || true
-                    docker run -d -p 5000:5000 --name sonsofanarchy sonsofanarchy
+                    docker rm -f mechanicressurection || true
+                    docker run -d -p 5000:5000 --name mechanicressurection mechanicressurection
                 '''
             }
         }
