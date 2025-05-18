@@ -35,7 +35,7 @@ Aplicația este dezvoltată folosind Flask, este containerizată cu Docker și i
 - *Jenkins* – CI/CD
 
 # Structura proiectului
-
+```
 .
 ├── app
 │   ├── __init__.py
@@ -80,16 +80,17 @@ Aplicația este dezvoltată folosind Flask, este containerizată cu Docker și i
         ├── testare-pytest.png
         ├── trailer.png
         └── verificare-pylint.png
-
+```
 
 
 # Instrucțiuni de instalare
+```
 bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r quickrequirements.txt
 python3 filme.py
-
+```
 Accesează aplicația la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 
 # Pagini disponibile
@@ -101,45 +102,48 @@ Accesează aplicația la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 - /recenzii – Afișare și trimitere recenzii
 
 ### Capturi interfață
-- ![home](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/home.png?raw=true)
-- ![descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/descriere.png?raw=true)
-- ![personaje](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/personaje.png?raw=true)
-- ![trailer](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/trailer.png?raw=true)
-- ![recenzii](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/recenzii.png?raw=true)
+- ![home](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/home.png?raw=true)
+- ![descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/descriere.png?raw=true)
+- ![personaje](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/personaje.png?raw=true)
+- ![trailer](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/trailer.png?raw=true)
+- ![recenzii](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/recenzii.png?raw=true)
 
 # Testare Pytest
+```
 bash
 pytest app/tests/
-
+```
 - verificare status 200 pentru rute
 - testare adăugare recenzie
 
-![pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/testare-pytest.png?raw=true)
+![pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/testare-pytest.png?raw=true)
 
 # Analiză cu Pylint
+```
 bash
 pylint filme.py app/lib/*.py app/tests/*.py --exit-zero
-
-![pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/verificare-pylint.png?raw=true)
+```
+![pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/verificare-pylint.png?raw=true)
 
 # Utilizare Docker
+```
 bash
 docker build -t suits-app .
 docker run -p 5050:5050 suits-app
-
-![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/docker-run.png?raw=true)
-![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/docker.png?raw=true)
+```
+![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/docker-run.png?raw=true)
+![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/docker.png?raw=true)
 # Integrare Jenkins
 Pipeline-ul rulează automat:
 - instalare dependințe
 - pylint
 - pytest
 - build container Docker
-![jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/jenkins-blueocean.png?raw=true)
+![jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/jenkins-blueocean.png?raw=true)
 
 # Pull Request
 PR din dev_nume_student către main, aprobat și testat automat.
-![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/static/screenshots/pull-request.png?raw=true)
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Mihalcea_Larisa/static/screenshots/pull-request.png?raw=true)
 
 # Surse
 - [Flask Docs](https://flask.palletsprojects.com)
