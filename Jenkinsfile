@@ -1,4 +1,5 @@
-/*Jenkins*/
+/* Jenkins */
+
 pipeline {
     agent any
 
@@ -41,23 +42,25 @@ pipeline {
             }
         }
 
-       stage('Deploy') {
-    	agent any
-    		steps {
-        		echo 'Deploy: build & run container Docker'
-        sh '''
-            echo "Oprire container vechi (dacă există)"
-            docker rm -f theblacklist-container || true
+        stage('Deploy') {
+            agent any
+            steps {
+                echo 'Deploy: build & run container Docker'
+                sh '''
+                    echo "Oprire container vechi (dacă există)"
+                    docker rm -f theblacklist-container || true
 
-            echo "Build imagine Docker"
-            docker build -t theblacklist-image:v${BUILD_NUMBER} .
+                    echo "Build imagine Docker"
+                    docker build -t theblacklist-image:v${BUILD_NUMBER} .
 
-            echo "Pornire container pe portul 5000"
-            docker run -d --name theblacklist-container -p 5000:5000 theblacklist-image:v${BUILD_NUMBER}
+                    echo "Pornire container pe portul 5000"
+                    docker run -d --name theblacklist-container -p 5000:5000 theblacklist-image:v${BUILD_NUMBER}
 
-            echo "Container running:"
-            docker ps | grep theblacklist
-        '''
+                    echo "Container running:"
+                    docker ps | grep theblacklist
+                '''
+            }
+        }
     }
 }
 
