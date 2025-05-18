@@ -177,7 +177,7 @@ PYTHONPATH=. pylint --exit-zero filme.py
 ```
 
 Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/test_pylint.png)
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_pylint.png)
 ---
 
 ## Containerizare cu Docker
