@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/background.jpg'); /* imagine de fundal */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* fundal semitransparent pentru conținut */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* negru cu transparență */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff9800;
+    margin-bottom: 30px;
+}
+
+.trailer {
+    margin: 30px auto;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #e65100;
+}
