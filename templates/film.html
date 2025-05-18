@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Despre Film{% endblock %}
+
+{% block content %}
+<div class="uk-text-center">
+    <h1 class="uk-heading-line"><span>Bob Marley: One Love</span></h1>
+    <img src="{{ url_for('static', filename='images/bob_marley_portrait.jpg') }}" 
+         alt="Bob Marley" 
+         class="uk-border-circle uk-box-shadow-large uk-margin-large uk-width-2-3@s uk-width-1-1">
+
+    <p class="uk-text-lead">
+        Un film biografic despre viața și moștenirea lui Bob Marley, liderul revoluției reggae.
+    </p>
+
+    <div class="uk-margin-top">
+        <a class="uk-button uk-button-secondary" href="{{ url_for('descriere') }}">Descriere</a>
+        <a class="uk-button uk-button-default" href="{{ url_for('actori') }}">Distribuție</a>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Verifică dacă folderul venv există
+if [ ! -d "venv" ]; then
+    echo "🔧 Creare mediu virtual..."
+    python3 -m venv venv
+fi
+
+# Activează mediul virtual
+echo "✅ Activare mediu virtual..."
+source venv/bin/activate
+
+# Instalează dependențele de bază
+echo "📦 Instalare Flask și pytest (dacă lipsesc)..."
+pip install --upgrade pip
+pip install flask pytest
+
+echo "🎉 Mediu virtual activat și pachetele sunt instalate!"
+

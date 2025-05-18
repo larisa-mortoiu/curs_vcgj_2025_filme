@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Descriere Film{% endblock %}
+
+{% block content %}
+<div class="uk-article uk-width-2xlarge uk-margin-auto">
+    <h2 class="uk-heading-small uk-text-center">Descriere</h2>
+
+    <img src="{{ url_for('static', filename='images/film_gallery_2.jpg') }}" 
+         alt="Scenă din film" 
+         class="uk-border-rounded uk-box-shadow-small uk-align-center uk-width-2-3@s uk-margin-bottom">
+
+    <p class="uk-text-justify uk-text-large">
+        {{ descriere }}
+    </p>
+</div>
+{% endblock %}
+

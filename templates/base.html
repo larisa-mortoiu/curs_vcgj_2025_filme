@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bob Marley: One Love{% endblock %}</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar UIkit -->
+    <nav class="uk-navbar-container uk-navbar-transparent uk-padding-small" uk-navbar>
+        <div class="uk-navbar-left">
+            <a href="{{ url_for('home') }}" class="uk-navbar-item uk-logo">🎬 Filme VCJG</a>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li><a href="{{ url_for('home') }}">Acasă</a></li>
+                <li><a href="{{ url_for('film') }}">Bob Marley: One Love</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conținut pagină -->
+    <div class="uk-container uk-margin-top uk-margin-large-bottom">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer simplu -->
+    <footer class="uk-section uk-section-small uk-text-center uk-text-muted">
+        <p>&copy; 2025 Proiect Flask – Bob Marley: One Love</p>
+    </footer>
+
+</body>
+</html>
+
