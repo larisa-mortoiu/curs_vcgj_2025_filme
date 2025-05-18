@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actori - Twilight</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #e6e6e6;
+            font-family: 'Georgia', serif;
+            padding: 20px;
+        }
+        .content {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .actor {
+            display: flex;
+            align-items: center;
+            background: #333;
+            border: 1px solid #555;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .actor img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .actor-info {
+            flex: 1;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #d4af37;
+            color: #1c1c1c;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #bfa334;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Actori</h2>
+        {% for actor in actori %}
+        <div class="actor">
+            <img src="{{ actor.image }}" alt="{{ actor.name }}">
+            <div class="actor-info">
+                <h3>{{ actor.name }} as {{ actor.character }}</h3>
+                <p>{{ actor.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <a href="/twilight" class="back-button">Înapoi</a>
+    </div>
+</body>
+</html>
