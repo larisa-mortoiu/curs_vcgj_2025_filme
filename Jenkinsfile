@@ -28,7 +28,7 @@ pipeline {
         stage('Unit Testing cu pytest') {
             steps {
                 echo 'Running unit tests...'
-                sh 'PYTHONPATH=/app pytest app/tests/'
+                sh 'PYTHONPATH=$WORKSPACE pytest app/tests/'
             }
         }
 

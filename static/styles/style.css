@@ -214,6 +214,10 @@ body {
     background-image: url("../images/card_actori.jpg");
 }
 
+#dark-card {
+    background-image: url("../images/dark_card.jpg");
+}
+
 .banner-image {
     width: 95vw;
     max-width: 1000px;
@@ -232,4 +236,23 @@ body {
 
 .banner-image img:hover {
     transform: scale(1.015);
+}
+
+.homepage-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+.homepage-subtitle {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.homepage-card {
+    width: 300px;
+    margin: 0 auto;
 }
