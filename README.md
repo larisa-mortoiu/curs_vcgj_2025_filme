@@ -1,4 +1,4 @@
-# Proiect SCC – Breaking Bad Web App
+# Proiect SCC – Interstellar WEB APP
 
 **Autor:** Tofan IOnut Lucian (Grupa 442D)
 
