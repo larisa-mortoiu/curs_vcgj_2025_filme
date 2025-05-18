@@ -103,16 +103,26 @@ Utilizarea unui mediu virtual este o practică recomandată pentru a izola depen
         source ruleaza_aplicatia
         ```
 
+![ruleaza_aplicatia](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/rulare_aplicatie.png)
+
 ## Prezentarea Paginilor Web
-Aplicația web oferă o navigare simplă între pagini:
+Aplicația web oferă o navigare simplă printre filme:
 
 * **Pagina Principală** Afișează o listă de filme disponibile. Fiecare element din listă este un link către pagina de detalii a filmului respectiv.
+
+![pagina_principala](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/pagina_principala.png)
   
 * **Pagina Detaliilor Filmului** Prezintă informații scurte despre film (regie, genuri, durată, an lansare) și afișează posterul filmului. Conține butoane pentru a naviga către pagina de descriere completă, pagina de distribuție și înapoi la lista principală.
+
+![pagina_film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/pagina_film.png)
   
 * **Pagina Descrierii Filmului** Afișează descrierea detaliată a filmului, preluată din modulul `biblioteca_filme.py`.
+
+![pagina_descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/pagina_descriere.png)
   
 * **Pagina Distribuției Filmului** Listează actorii principali, personajele interpretate și o scurtă descriere a personajului, însoțită de o fotografie a actorului/personajului. Datele sunt preluată din modulul `biblioteca_filme.py`.
+
+![pagina_distributie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/pagina_distributie.png)
 
 ## Procesul de Testare cu Pytest
 Proiectul utilizează `pytest` pentru a rula teste automate. Testele sunt localizate în directorul `app/tests/` și verifică funcționalitatea aplicației Flask și a modulelor interne.
@@ -129,6 +139,8 @@ Pentru a rula testele:
 1.  Mediul virtual este activat (dacă nu este deja activat).
 2.  Se navighează la directorul rădăcină al proiectului.
 3.  Comanda `pytest app/tests/` este utilizată pentru a descoperi și executa testele din directorul specificat.
+
+![testare_pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/testare_pytest.png)
 
 ## Analiza Codului cu Pylint
 `Pylint` este folosit pentru a analiza static codul Python, ajutând la menținerea unui stil de cod consistent și la identificarea potențialelor erori.
@@ -155,6 +167,8 @@ Pentru a construi imaginea Docker:
     docker run --name scc -p 25568:25568 scc:latest
     ```
 
+![ruleaza_aplicatia](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/rulare_aplicatie.png)
+
 ## Pipeline-ul Jenkins
 
 `Jenkinsfile` definește un pipeline de Integrare Continuă (CI). Acesta automatizează pașii de construire, testare și analiză a codului de fiecare dată când sunt făcute modificări în depozitul Git.
@@ -167,6 +181,8 @@ Pipeline-ul este structurat în următoarele etape:
 5.  **Deploy:** Construirea imaginii Docker a aplicației și crearea unui container Docker din această imagine.
 
 Pentru a rula acest pipeline, o instanță Jenkins trebuie să fie configurată și conectată la depozitul GitHub.
+
+![rulare_jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Corlan_Victor/static/photos/rulare_jenkins.png)
 
 ## Cum se face un Pull Request pe GitHub
 
