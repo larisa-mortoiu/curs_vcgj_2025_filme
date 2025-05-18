@@ -1,6 +1,6 @@
 import pytest
 from filme import app
-from app.lib.trailers import get_trailers
+
 
 @pytest.fixture
 
