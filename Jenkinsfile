@@ -26,7 +26,7 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    . ./activeaza_venv;
+                    . ./activeaza_venv_jenkins;
                     echo '\n\nVerificare lib/*.py cu pylint\n';
                     pylint --exit-zero lib/*.py;
 
@@ -44,7 +44,7 @@ pipeline {
             steps {
                 echo 'Unit testing with Pytest...'
                 sh '''
-                    . ./activeaza_venv;
+                    . ./activeaza_venv_jenkins;
 		    pytest app/tests
                 '''
             }
