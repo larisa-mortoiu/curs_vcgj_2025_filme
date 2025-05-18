@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/60a7dc69-a83d-4f4a-844d-3b783dc325f8)Proiect SCC - Containerizare și CI/CD
+Proiect SCC - Containerizare și CI/CD
 
 Autor: Simion Razvan-Marian
 
@@ -30,7 +30,8 @@ Cum am testat:
 	
 
 	Pytest:
-![Pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
+![Pytest](https://github.com/user-attachments/assets/7293bb1b-aa9b-41d4-b223-de7999d192a8)
+
 
 🐳 Cum am rulat în container (Docker)
 
