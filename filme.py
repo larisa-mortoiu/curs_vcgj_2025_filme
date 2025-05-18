@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
+    """Displays the homepage with the movie selection."""
     return render_template("index.html")
 
 @app.route('/dark')

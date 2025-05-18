@@ -14,13 +14,13 @@ pipeline {
                 echo 'Running pylint...'
                 sh '''
                     echo "--- Lint app/lib/"
-                    pylint --exit-zero app/lib/*.py
+                    PYTHONPATH=$WORKSPACE pylint --exit-zero app/lib/*.py
 
                     echo "--- Lint app/tests/"
-                    pylint --exit-zero app/tests/*.py
+                    PYTHONPATH=$WORKSPACE pylint --exit-zero app/tests/*.py
 
                     echo "--- Lint filme.py"
-                    pylint --exit-zero filme.py
+                    PYTHONPATH=$WORKSPACE pylint --exit-zero filme.py
                 '''
             }
         }
