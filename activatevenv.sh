@@ -1,25 +1,13 @@
-#!/bin/bash
+# venv-ul se gaseste in directorul parinte: .venv
+# source ../.venv/bin/activate
+. .venv/bin/activate
 
-# Setează numele folderului venv
-VENV_DIR="venv"
-
-# Creează venv dacă nu există
-if [ ! -d "$VENV_DIR" ]; then
-    echo "Creare mediu virtual în ./$VENV_DIR ..."
-    python3 -m venv "$VENV_DIR"
-fi
-
-# Activează venv
-echo "Activare mediu virtual..."
-source "$VENV_DIR/bin/activate"
-
-# Instalează pachetele din requirements.txt dacă există
-if [ -f "requirements.txt" ]; then
-    echo "Instalare pachete din requirements.txt ..."
-    pip install -r requirements.txt
+# daca comanda de mai sus esueaza, creaza .venv si instaleaza dependintele
+# venv-ul va ramane activat in acest caz
+if [ $? -eq 0 ]
+then
+    echo "SUCCESS: venv was activated."
 else
-    echo "Fișier requirements.txt nu a fost găsit."
+    echo "FAIL: cannot activate venv"
+    . ./activeazavenvjenkins
 fi
-
-# Confirmare
-echo "Mediul virtual este activat. Promptul ar trebui să înceapă cu (venv)."

@@ -2,18 +2,20 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Trailer & Info - The Blacklist</title>
+    <title>Trailer - The Blacklist</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Trailer și alte informații</h1>
-    <p>Urmărește trailerul oficial:</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/JGBIimq1I3g" 
-        title="The Blacklist Trailer" frameborder="0" allowfullscreen></iframe>
-    <p>Gen: Thriller, Dramă, Crimă</p>
-    <p>Primul episod: 2013</p>
-    <p>Creator: Jon Bokenkamp</p>
+    <h1>Trailer The Blacklist</h1>
+    <iframe width="560" height="315"
+        src="{{ trailer.embed_url }}"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <p>{{ trailer.info }}</p>
     <a href="/">Înapoi</a>
 </body>
 </html>
+
 
