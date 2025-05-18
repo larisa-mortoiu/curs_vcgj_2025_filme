@@ -1,0 +1,27 @@
+FROM python:3.11-alpine
+
+RUN apk add --no-cache python3-dev py3-pip py3-virtualenv gcc musl-dev
+
+ENV FLASK_APP=filme.py
+
+RUN adduser -D lucian_docker
+
+WORKDIR /home/lucian_docker
+
+COPY templates templates
+COPY static static
+COPY dockerstart.sh dockerstart.sh
+COPY requirements.txt requirements.txt
+COPY filme.py filme.py
+
+RUN chmod +x dockerstart.sh
+
+RUN python3 -m venv .venv && \
+    .venv/bin/pip install --upgrade pip && \
+    .venv/bin/pip install -r requirements.txt
+
+USER lucian_docker
+
+EXPOSE 5011
+ENTRYPOINT ["./dockerstart.sh"]
+
