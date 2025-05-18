@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #33ff77;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #33ff77;
+}
+
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #33ff77;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 220px; /* smaller card */
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px; /* fixed width */
+    height: 250px; /* fixed height */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.element {
+    display: inline-block;
+    background-color: #3a3a3a;
+    color: #33ff77;
+    padding: 2px 6px;
+    border: 2px solid #33ff77;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: url('/static/images/smoke.gif') center center / cover no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.landing {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.landing p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+	
+
+.bb-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  color: #33ff77;
+  gap: 0.3rem;
+  margin: 0;
+  position: relative;
+  animation: fadeInTitle 1.5s ease-out;
+  text-shadow: 0 0 20px rgba(51, 255, 119, 0.4);
+}
+
+@keyframes fadeInTitle {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bb-title .element {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a3a3a;
+  color: #33ff77;
+  padding: 4px 8px;
+  border: 2px solid #33ff77;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: relative;
+  text-shadow: 0 0 8px #33ff77;
+  box-shadow: 0 0 15px rgba(51, 255, 119, 0.3);
+}
+
+.bb-title .atomic {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  opacity: 0.8;
+  color: #fefefe;
+}
+
+.bb-header-glow {
+  filter: drop-shadow(0 0 40px rgba(51, 255, 119, 0.3));
+}
+
+
+.bb-title .text {
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+}
+
+
+.details-box {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: rgba(0, 255, 140, 0.05);
+  border: 1px solid #30f583;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 255, 140, 0.15);
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.nav-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #33ff77;
+  color: #121212;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 0 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #29cc66;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #33ff77;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 10px;
+}
+
+.imdb-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5c518;
+}
+
+.imdb-logo {
+  height: 28px;
+  width: auto;
+}
+
+.rating {
+  font-size: 1.4rem;
+}
+
+.trailers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* reduced from 30px */
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.trailer-card {
+  background-color: #1c1c1c;
+  padding: 15px; /* reduced from 20px */
+  border-left: 4px solid #33ff77;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(51, 255, 119, 0.1);
+}
+
+
+.trailer-card h3 {
+  margin-bottom: 15px;
+  color: #33ff77;
+}
+
+.trailer-card iframe {
+  width: 100%;
+  height: 240px;  /* ✅ more compact */
+  border-radius: 6px;
+}
+
+
+
+
