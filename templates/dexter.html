@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Dexter{% endblock %}
+{% block content %}
+<h1>Dexter</h1>
+<p>Un serial psihologic despre un criminal în serie care ucide doar criminali, respectând un cod moral.</p>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Dexter Logo">
+<ul>
+    <li><a href="/dexter/descriere">📄 Vezi descrierea</a></li>
+    <li><a href="/dexter/actori">🎭 Vezi actorii</a></li>
+</ul>
+{% endblock %}
+

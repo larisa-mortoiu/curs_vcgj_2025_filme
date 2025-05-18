@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Actori Dexter{% endblock %}
+{% block content %}
+<h1>Actori Principali</h1>
+<ul>
+    {% for actor in actori %}
+        <li>
+            <img src="{{ url_for('static', filename='images/' + actor.image) }}" class="actor-img">
+            <h3>{{ actor.nume }}</h3>
+            <p>{{ actor.descriere }}</p>
+        </li>
+    {% endfor %}
+</ul>
+<a href="/dexter">⏪ Înapoi</a>
+{% endblock %}
+

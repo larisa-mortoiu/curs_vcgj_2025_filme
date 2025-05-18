@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Acasă{% endblock %}
+{% block content %}
+<h1>Filme și Seriale</h1>
+<p>Proiect realizat cu Flask. Explorează lumea serialului <strong>Dexter</strong>.</p>
+<a href="/dexter"><img src="{{ url_for('static', filename='images/dexter.jpg') }}" alt="Dexter"></a>
+<a href="/dexter">Intră în pagina Dexter</a>
+{% endblock %}
+

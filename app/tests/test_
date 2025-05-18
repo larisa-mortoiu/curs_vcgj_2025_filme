@@ -1,0 +1,4 @@
+from app.lib.descriere import get_descriere
+
+def test_descriere_content():
+    assert "criminal" in get_descriere()
