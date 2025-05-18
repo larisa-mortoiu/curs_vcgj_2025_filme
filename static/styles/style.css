@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header img {
+    width: 400px;
+    margin-top: 60px;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 300px);
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.panel {
+    background-color: #292929;
+    border: 2px solid #444;
+    padding: 30px 60px;
+    margin: 0 20px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+    background-color: #444;
+}
+
+.actor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.actor-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    margin: 20px;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.actor-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.actor-card:hover {
+    transform: scale(1.03);
+}
+
+.descriere {
+    width: 90vw;
+    max-width: 1000px;
+    margin: 60px auto;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #222;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #444;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item img {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #000;
+    margin-bottom: 10px;
+}
+
+.timeline-item .content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 80%;
+    box-shadow: 0 0 10px #222;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: auto auto 40px auto;
+    padding: 12px 24px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #555;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #444;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 80px auto;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    width: 280px;
+    height: 500px;
+    background-color: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 12px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #aaa;
+}
+
+.card-image {
+    flex: 1 1 70%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #111 100%);
+}
+
+.card-text {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.card-text h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #f1f1f1;
+}
+
+.card-text p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+#descriere-card {
+    background-image: url("../images/card_descriere.jpg");
+    background-size: 110%;
+    background-position: center;
+}
+
+#actori-card {
+    background-image: url("../images/card_actori.jpg");
+}
+
+.banner-image {
+    width: 95vw;
+    max-width: 1000px;
+    margin: 40px auto 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #111;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.banner-image img:hover {
+    transform: scale(1.015);
+}

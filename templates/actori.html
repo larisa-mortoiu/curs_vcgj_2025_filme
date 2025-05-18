@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actori Dark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/dark_logo.png') }}" alt="Dark Logo">
+    </div>
+    <div class="timeline">
+        {% for actor in actori %}
+            {% set index = loop.index0 %}
+            <div class="timeline-item {{ 'left' if index % 2 == 0 else 'right' }}">
+                <img src="{{ url_for('static', filename='images/' + actor.imagine) }}" alt="{{ actor.nume }}">
+                <div class="content">
+                    <h3>{{ actor.nume }} – {{ actor.rol }}</h3>
+                    <p>{{ actor.descriere }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="back-btn" href="/">Înapoi</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/dark_logo.png') }}" alt="Dark Logo">
+    </div>
+    <div class="card-container">
+        <a href="/descriere" class="info-card">
+            <div class="card-image" id="descriere-card"></div>
+            <div class="card-text">
+                <h2>Descriere</h2>
+                <p>Explorează povestea întunecată, misterioasă și profundă a serialului.</p>
+            </div>
+        </a>
+
+        <a href="/actori" class="info-card">
+            <div class="card-image" id="actori-card"></div>
+            <div class="card-text">
+                <h2>Actori</h2>
+                <p>Descoperă personajele cheie și actorii care dau viață universului Dark.</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
