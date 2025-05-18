@@ -193,11 +193,11 @@ Aplicația devine accesibilă la: [http://localhost:5011](http://localhost:5011)
 
 Pipeline-ul include pașii:
 
-1. Clonare cod
-2. Activare venv
-3. Rulare Pytest + Pylint
-4. Build imagine Docker
-5. Pornire container local (`breakingbad-container`)
+1. Build
+2. Analiză statică cu Pylint
+3. Testare unitară cu Pytest
+4. Deploy: Pornire container local (`breakingbad-container`)
+
 
 Exemplu rulare cu succes:
 ![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
