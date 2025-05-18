@@ -50,10 +50,10 @@
 
 [# Zarafin Radu Adrian](#zarafin-radu-adrian)
 
-
---------------------------------------------------------------------
+---
 
 # Achitei Mihai Alexandru
+
 Proiect SCC - Containerizare și CI/CD
 
 Autor: Achitei Mihai-Alexandru
@@ -64,56 +64,55 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 
 ✅ Ce am implementat
 
-	Am dezvoltat o aplicație web în Flask, dedicată gestionării filmelor (proiectul Projet_SCC), care conține:
-	* o pagină principală cu titlul serialului și trailer-ul;
-	* o pagină cu actorii principali;
-	* o pagină cu descrierea serialului;
-	* stil personalizat CSS cu temă adaptată și butoane interactive;
-	* structură modulară templates/, static/, și filme.py.
+    Am dezvoltat o aplicație web în Flask, dedicată gestionării filmelor (proiectul Projet_SCC), care conține:
+    * o pagină principală cu titlul serialului și trailer-ul;
+    * o pagină cu actorii principali;
+    * o pagină cu descrierea serialului;
+    * stil personalizat CSS cu temă adaptată și butoane interactive;
+    * structură modulară templates/, static/, și filme.py.
 
-	Aplicația a fost containerizată cu Docker și testată automat prin Jenkins.
+    Aplicația a fost containerizată cu Docker și testată automat prin Jenkins.
 
 🔍 Cum am testat
 
-	Am folosit:
+    Am folosit:
 
-	* rulare locală cu python3 filme.py
-	* build și rulare în container Docker (docker build, docker run)
-	* integrare continuă cu Jenkins (pull din GitHub, build, run)
-	* comanda docker ps pentru a verifica starea containerului
-	* accesarea aplicației în browser la http://localhost:5000
-	
-	
+    * rulare locală cu python3 filme.py
+    * build și rulare în container Docker (docker build, docker run)
+    * integrare continuă cu Jenkins (pull din GitHub, build, run)
+    * comanda docker ps pentru a verifica starea containerului
+    * accesarea aplicației în browser la http://localhost:5000
 
-	Pytest:
+
+
+    Pytest:
+
 ![pytest](https://github.com/user-attachments/assets/fb53242b-b6f2-4d26-b96c-3c3584b29511)
 
 🐳 Cum am rulat în container (Docker)
 
-	Comenzi folosite:
+    Comenzi folosite:
 
-	* docker build -t sonsofanarchy .
-	* run -p 5000:5000 sonsofanarchy
+    * docker build -t sonsofanarchy .
+    * run -p 5000:5000 sonsofanarchy
 
-	Aplicația devine accesibilă în browser la:
-	http://localhost:5000
- 
+    Aplicația devine accesibilă în browser la:
+    http://localhost:5000
+
 ![docker](https://github.com/user-attachments/assets/6d44727f-0f86-4d8b-8061-81db8597cbbf)
-
-
 
 🔧 Jenkins: configurare și rulare automată
 
-	Job creat în Jenkins: SonsOfAnarchy-PipeLine
+    Job creat în Jenkins: SonsOfAnarchy-PipeLine
 
-	Configurat ca Pipeline script from SCM
+    Configurat ca Pipeline script from SCM
 
-	Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
-	Branch: dev_Achitei_Alexandru
-	Script path: Jenkinsfile
+    Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+    Branch: dev_Achitei_Alexandru
+    Script path: Jenkinsfile
 
-![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
---------------------------------------------------------------------
+## ![Jenkins](https://github.com/user-attachments/assets/861010db-8296-4238-a6b2-413bd96bb096)
+
 # Al Hajjih Kais
 
 # Proiect SCC – JoJo's Bizarre Adventure
@@ -142,10 +141,10 @@ Repo: https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 
 Aplicația **JoJo's Bizarre Adventure** este un site informativ despre celebrul serial manga/anime, implementat în Flask (Python) cu HTML/CSS (Jinja2). Oferă:
 
-* **Landing Page:** scurt istoric și descriere generală
-* **Trailers:** colecție de clipuri video embed din YouTube
-* **Characters:** listă de personaje principale cu poze și denumiri
-* **Detalii Personaj:** pagină dedicată fiecărui personaj cu Stand, descriere, voice actor și imagine
+- **Landing Page:** scurt istoric și descriere generală
+- **Trailers:** colecție de clipuri video embed din YouTube
+- **Characters:** listă de personaje principale cu poze și denumiri
+- **Detalii Personaj:** pagină dedicată fiecărui personaj cu Stand, descriere, voice actor și imagine
 
 Toate paginile sunt construite pe aceeași structură de template-uri și stiluri comune.
 
@@ -153,22 +152,22 @@ Toate paginile sunt construite pe aceeași structură de template-uri și stilur
 
 ## Funcționalități & Versiuni
 
-* **v0.1** – structură de bază și landing page static
-* **v0.2** – pagini dinamice pentru trailers și characters
-* **v0.3** – detalii personaj și link-uri între pagini
-* **v1.0** – integrare Docker, testare Pytest și pipeline Jenkins
+- **v0.1** – structură de bază și landing page static
+- **v0.2** – pagini dinamice pentru trailers și characters
+- **v0.3** – detalii personaj și link-uri între pagini
+- **v1.0** – integrare Docker, testare Pytest și pipeline Jenkins
 
 ---
 
 ## Tehnologii folosite
 
-* **Python 3.12 & Flask**: server web și rutare dinamică
-* **Jinja2**: generare HTML din template-uri
-* **CSS & Grid/Flexbox**: layout și responsivitate
-* **Docker**: containerizare și portabilitate
-* **Pytest**: testare automată unități și endpoint-uri
-* **Pylint**: analiză statică a calității codului
-* **Jenkins**: orchestrare CI/CD cu pipeline declarativ
+- **Python 3.12 & Flask**: server web și rutare dinamică
+- **Jinja2**: generare HTML din template-uri
+- **CSS & Grid/Flexbox**: layout și responsivitate
+- **Docker**: containerizare și portabilitate
+- **Pytest**: testare automată unități și endpoint-uri
+- **Pylint**: analiză statică a calității codului
+- **Jenkins**: orchestrare CI/CD cu pipeline declarativ
 
 ---
 
@@ -207,6 +206,7 @@ curs_vcgj_2025_filme/
    cd curs_vcgj_2025_filme
    git checkout main_Al-Hajjih_Kais
    ```
+
 2. **Rulare directă** (fără venv):
 
    ```bash
@@ -223,26 +223,26 @@ curs_vcgj_2025_filme/
 
 1. **Landing Page**
 
-   * Banner și descriere sumară
-   * Navigare navbar: Home, Trailers, Characters
-  
-    ![image](https://github.com/user-attachments/assets/74a2f34b-7b2f-4a9e-a900-c06cdadfb1d8)
+   - Banner și descriere sumară
+   - Navigare navbar: Home, Trailers, Characters
+
+   ![image](https://github.com/user-attachments/assets/74a2f34b-7b2f-4a9e-a900-c06cdadfb1d8)
 
 2. **Trailers**
 
-   * Grid responsive cu iframe-uri YouTube
-  
-    ![image](https://github.com/user-attachments/assets/4a502892-f7e7-4387-baa7-49d437da784b)
+   - Grid responsive cu iframe-uri YouTube
+
+   ![image](https://github.com/user-attachments/assets/4a502892-f7e7-4387-baa7-49d437da784b)
 
 3. **Characters**
 
-   * Carduri cu imagine, nume și link detalii
-   ![image](https://github.com/user-attachments/assets/b1a81241-4560-4a99-94d9-43b8b2928ebb)
+   - Carduri cu imagine, nume și link detalii
+     ![image](https://github.com/user-attachments/assets/b1a81241-4560-4a99-94d9-43b8b2928ebb)
 
 4. **Detail Page**
 
-   * Stand power, descriere, voice actor, imagine mare
-  
+   - Stand power, descriere, voice actor, imagine mare
+
      ![image](https://github.com/user-attachments/assets/46762e9e-3ba5-4749-b955-8dda3465a197)
 
 ---
@@ -251,15 +251,16 @@ curs_vcgj_2025_filme/
 
 Teste unitare incluse în `app/tests/`: verifică:
 
-* Pagina de start `/` răspunde 200
-* `/trailers`, `/cast` și `/character/<slug>` răspund 200
-* Conținut minim așteptat (nume serie, titlu personaj)
+- Pagina de start `/` răspunde 200
+- `/trailers`, `/cast` și `/character/<slug>` răspund 200
+- Conținut minim așteptat (nume serie, titlu personaj)
 
 **Rulare**:
 
 ```bash
 python3 -m pytest app/tests/ -q
 ```
+
 ![image](https://github.com/user-attachments/assets/b8175eeb-b70a-458c-aa53-e6cb30eb69b0)
 
 ---
@@ -286,31 +287,33 @@ Pași declarativi în `Jenkinsfile`:
 3. Unit Tests (in-container cu override ENTRYPOINT)
 4. Smoke Test (HTTP check fără port binding)
 5. Push to Docker Hub (pe `main`)
-   
+
 ![image](https://github.com/user-attachments/assets/db7f4abf-6c4d-4a1f-8509-b897fc4ca1ab)
 
 Credențiale: `dockerhub-creds` (ID în Jenkins)
-
 
 ---
 
 ## Pull Request & Mentenanță
 
-* Dezvoltarea se face pe branch `dev_Al-Hajjih_Kais`
-* Se deschide PR către `main_Al-Hajjih_Kais`
-* După review și succes pipeline, se face merge și build automat pe `main`
+- Dezvoltarea se face pe branch `dev_Al-Hajjih_Kais`
+- Se deschide PR către `main_Al-Hajjih_Kais`
+- După review și succes pipeline, se face merge și build automat pe `main`
 
 ---
 
---------------------------------------------------------------------
+---
+
 # Anghel Alexandru Dan
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
 
 # Anghelina Mara
--------------------------
+
+---
 
 # Cuprins
+
 1. [Descriere aplicatie](#descriere-aplicatie)
 1. [Versiune si functionalitati](#versiune-si-functionalitati)
 1. [Tehnologii folosite](#tehnologii-folosite)
@@ -322,7 +325,6 @@ Credențiale: `dockerhub-creds` (ID în Jenkins)
 1. [Utilizare Docker si containerizare aplicatie](#utilizare-docker-si-containerizare-aplicatie)
 1. [Pipeline Jenkins](#pipeline-jenkins)
 1. [Pull Request](#pull-request)
-
 
 # Descriere aplicatie
 
@@ -351,11 +353,11 @@ Această aplicație a fost construită folosind un set de tehnologii care susți
 
 Structura aplicației este organizată astfel:
 
-- `app/` –  conține logica principală a aplicației:
+- `app/` – conține logica principală a aplicației:
 
   - `lib/` – aici se află funcțiile Python responsabile pentru afișarea detaliilor legate de descriere și distribuție;
 
-  - `test/` –  include testele unitare asociate funcțiilor definite în lib/;
+  - `test/` – include testele unitare asociate funcțiilor definite în lib/;
 
 - `static/` – director dedicat resurselor statice:
 
@@ -407,12 +409,12 @@ Structura aplicației este organizată astfel:
 
 Pentru activarea virtual environment, în folder-ul 'curs_vcgj_2025_filme' trebuie rulate următoarele script-uri bash:
 
-1. `activeaza_venv` - Scriptul încearcă să activeze un virtual environment Python existent în directorul (`.venv`).  Dacă activarea reușește, afișează un mesaj de succes. Dacă nu, rulează un alt script (`activeaza_venv_jenkins`) care creează și activează un mediu virtual nou și instalează dependințele necesare.
+1. `activeaza_venv` - Scriptul încearcă să activeze un virtual environment Python existent în directorul (`.venv`). Dacă activarea reușește, afișează un mesaj de succes. Dacă nu, rulează un alt script (`activeaza_venv_jenkins`) care creează și activează un mediu virtual nou și instalează dependințele necesare.
 
 2. `start_app` - Scriptul trebuie rulat doar după activarea venv-ului. Acesta rulează aplicația, pornind server-ul pe IP: 127.0.0.1 și port:5011. Se poate accesa din browser pe link-ul: http://127.0.0.1:5011 (sau http://localhost:5011/)
 
 ```text
-mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ source activeaza_venv 
+mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ source activeaza_venv
     bash: .venv/bin/activate: No such file or directory
     FAIL: cannot activate venv
     Trying to create the venv in the folder: .venv
@@ -426,18 +428,22 @@ mara@mara:~/proiectSCC/curs_vcgj_2025_filme$ source activeaza_venv
 # Prezentare interfata web
 
 ## Pagină principală (Homepage)
+
 Afișează o listă cu filmele disponibile, cu link-uri către pagina detaliată a fiecărui film/serial.
 ![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/homepage.jpeg)
 
 ## Pagină film
+
 Această pagină oferă o privire generală asupra unui film sau serial selectat, incluzând titlul și accesul rapid către paginile dedicate descrierii și distribuției.
 ![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_mainpage.jpeg)
 
 ## Pagină descriere film
+
 Conține detalii extinse despre conținutul filmului sau serialului, oferind utilizatorilor contextul narativ și tematica principală.
 ![gentlemen-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_descriere.jpeg)
 
 ## Pagină distribuție film
+
 Prezintă actorii principali și personajele interpretate, contribuind la o mai bună înțelegere a rolurilor și a distribuției producției.
 ![gentlemen-distributie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/gentlemen_distributie.jpeg)
 
@@ -451,7 +457,6 @@ Aceste teste vizează componentele principale ale aplicației:
 
 - Testarea distribuției – evaluează rezultatul funcției `get_cast()` din gentlemen_cast, asigurând că returnează o listă completă de actori cu atribute precum name, character și photo, fiecare în formatul corect.
 
-
 Cele două teste validează corectitudinea conținutului generat pentru pagini, nu doar existența lor, astfel:
 
 - Validările efectuate includ:
@@ -460,9 +465,9 @@ Cele două teste validează corectitudinea conținutului generat pentru pagini, 
 
 Testele sunt configurate pentru a fi rulate atât local, cât și automat, în cadrul pipeline-urilor Jenkins, oferind siguranță și stabilitate aplicației în fiecare etapă de dezvoltare.
 
-## Testare locală 
-![local-test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/local_test.jpeg)
+## Testare locală
 
+![local-test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/local_test.jpeg)
 
 # Verificare statica cu pylint
 
@@ -473,6 +478,7 @@ Pentru asigurarea calității codului sursă, aplicația utilizează Pylint, un 
 - structura generală a codului.
 
 Analiza este aplicată asupra fișierelor esențiale ale aplicației:
+
 - modulele din `app/lib/` care conțin logica pentru descriere și distribuție,
 - fișierul principal `filme.py`,
 - testele din `app/tests/`.
@@ -494,6 +500,7 @@ Aplicația este containerizată folosind Docker, pentru a asigura portabilitate 
 Containerizarea înseamnă „împachetarea” aplicației împreună cu toate dependințele necesare (librării, configurații, mediu virtual), astfel încât aceasta să poată fi rulată pe orice sistem care are Docker instalat, fără configurări suplimentare.
 
 ## Configurație Docker
+
 Fișierul `Dockerfile` definește pașii pentru construirea imaginii:
 
 - folosește imaginea de bază python:3.12-alpine;
@@ -516,23 +523,29 @@ Această abordare asigură o rulare izolată, consistentă și ușor de replicat
 ## Instructiuni pentru rulare aplicatie in container
 
 Prima oara se va crea o imagine, folosind urmatoarea comanda:
+
 ```text
     sudo docker build -t mara_docker:latest .
 ```
+
 Apoi, pentru a crea un container si a il rula:
+
 ```text
     sudo docker run --name mara_docker -p 8020:5011 mara_docker:latest
 ```
+
 Inainte de a da start containerului, verificam daca avem atat imaginea cat si containerul:
 
 ![docker-test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/verif_docker.jpeg)
 
 Pentru a rula aplicatia prin container com folosi urmatoarea comanda:
+
 ```text
     docker start mara_docker
 ```
 
 Iar pentru a opri rularea aplicatiei:
+
 ```text
     docker stop mara_docker
 ```
@@ -540,7 +553,6 @@ Iar pentru a opri rularea aplicatiei:
 # Pipeline Jenkins
 
 Pentru procesul de Continuous Integration (CI), aplicația folosește Jenkins. De fiecare dată când codul este actualizat, Jenkins declanșează automat o serie de pași pentru a testa și verifica aplicația, contribuind astfel la identificarea rapidă a erorilor și menținerea calității codului.
-
 
 Fișierul `Jenkinsfile` descrie etapele automate ale pipeline-ului de CI:
 
@@ -552,28 +564,33 @@ Fișierul `Jenkinsfile` descrie etapele automate ale pipeline-ului de CI:
 Containerizare Docker: creează o imagine Docker a aplicației și pornește un container pe portul 8020, folosind un tag corespunzător build-ului curent.
 
 Lansarea serverului Jenkins local se face prin comanda:
+
 ```text
     systemctl start jenkins
 ```
+
 Pipeline-ul poate fi vizualizat într-o interfață grafică modernă și intuitivă prin extensia Blue Ocean, care oferă o imagine de ansamblu asupra fiecărui pas executat.
 ![pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/pipeline.jpeg)
 
-
 # Pull Request
+
 Am realizat un PR din branch-ul de dezvoltare (`dev_Anghelina_Mara`) către branch-ul main (`main_Anghelina_Mara`)
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Anghelina_Mara/static/images/readme_Mara/PR.jpeg)
 
+---
 
-
---------------------------------------------------------------------
 # Baican Antonia Alexandra
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Bancila Vlad Valentin
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Camburu Mihail Whilliam
-# 📦 Proiect: Aplicație web Flask – Lucifer  
+
+# 📦 Proiect: Aplicație web Flask – Lucifer
+
 **Autor:** Camburu Mihail  
 **Branch:** `dev_Camburu_mihail`  
 **Repo:** [https://github.com/larisa-mortoiu/curs_vcgj_2025_filme](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme)
@@ -616,11 +633,13 @@ docker run -d -p 5000:5000 lucifer-app
 ```
 
 Aplicația devine accesibilă în browser la:
+
 ```
 http://localhost:5000
 ```
 
 Verificare container:
+
 ```bash
 docker ps
 ```
@@ -666,7 +685,9 @@ docker ps
 ### 🔚 Proiect realizat cu succes, funcțional atât local cât și în mediu automatizat.
 
 ---
---------------------------------------------------------------------
+
+---
+
 # Constantinescu Adelina Maria
 
 Această aplicație web este o implementare personalizată dedicată filmului _The Curious Case of Benjamin Button_. Proiectul oferă o interfață web modernă prin care utilizatorii pot vizualiza informații despre distribuția filmului și descrierea tematicii, fiind construit cu Python și Flask, cu suport pentru testare automată și analiză statică a codului.
@@ -685,9 +706,8 @@ Această aplicație web este o implementare personalizată dedicată filmului _T
 - [Etape pipeline Jenkins](#etape-pipeline-jenkins)
 - [Pull Request](#pull-request)
 
-
-
 ---
+
 ## Funcționalități
 
 - Pagina principală de tip homepage cu titlu, imagine și mesaj introductiv
@@ -707,7 +727,6 @@ Această aplicație web este o implementare personalizată dedicată filmului _T
 - Pylint (analiză cod)
 - Jenkins (CI/CD pipeline)
 - Docker (pentru rulare izolată)
-
 
 ---
 
@@ -749,6 +768,7 @@ CURS_VCGJ_2025_FILME/
 ---
 
 ## Configurare și rulare
+
 ### Configurare initiala
 
 1. Clonează proiectul local:
@@ -759,6 +779,7 @@ git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 ```
 
 2. Instalare pachete de baza
+
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt install git
@@ -767,18 +788,22 @@ sudo apt install python3-pip
 sudo apt install python3.10-venv  # sau python3.12-venv, în funcție de versiune
 sudo apt install net-tools
 ```
+
 3. Trecere in folderul cu proiectul
+
 ```bash
  cd curs_vcgj_2025_filme
- ```
+```
+
 4. Comuta pe branch-ul personal
+
 ```bash
 git checkout dev_Constantinescu_Adelina
 ```
+
 ### Configurare .venv
+
 Proiectul include două scripturi bash utile pentru rulare rapidă și automată în orice mediu:
-
-
 
 #### 🔹 `activeaza_venv`
 
@@ -791,8 +816,6 @@ Acest script verifică dacă există un mediu virtual activabil în directorul `
 
 Această abordare ajută la rularea proiectului atât în medii locale, cât și în Jenkins.
 
-
-
 #### 🔹 `start_app.sh`
 
 După activarea mediului virtual, rulează acest script pentru a porni aplicația Flask.
@@ -804,9 +827,10 @@ După activarea mediului virtual, rulează acest script pentru a porni aplicați
   - [http://localhost:5011](http://localhost:5011)
 
 ---
+
 ## Interfață web
 
-###  Pagini disponibile
+### Pagini disponibile
 
 - **Homepage** (`/`)
   - Pagina principală cu titlul proiectului, un mesaj de întâmpinare și posterul filmului
@@ -831,7 +855,6 @@ După activarea mediului virtual, rulează acest script pentru a porni aplicați
 
 Testarea aplicației se realizează folosind **Pytest**, prin teste unitare definite în fișierul `test_filme.py`, localizat în directorul `app/tests/`.
 
-
 ### Ce validează testele
 
 Testele acoperă funcționalitatea principală a aplicației Flask:
@@ -839,6 +862,7 @@ Testele acoperă funcționalitatea principală a aplicației Flask:
 - **Testarea descrierii filmului**  
   Se testează funcția `get_description()` din modulul `curious_case_description`.  
   Verificările includ:
+
   - Răspunsul HTTP al rutei `/curious_case/description` este 200 (OK)
   - Textul HTML generat conține cuvinte-cheie esențiale precum `Brad Pitt`, `Cate Blanchett`, `David Fincher`
   - Descrierea returnată de funcție este identică cu cea afișată în pagină
@@ -850,16 +874,13 @@ Testele acoperă funcționalitatea principală a aplicației Flask:
   - Fiecare actor și numele personajului sunt afișate corect în HTML
   - Se validează existența câmpurilor `name` și `character` pentru fiecare membru din distribuție
 
-
-
 ### Obiectivul testelor
 
 Scopul testelor este să confirme:
+
 - că datele generate de backend sunt afișate corect în interfața HTML
 - că toate elementele esențiale ale aplicației apar în pagini
 - că modificările în cod nu afectează funcționalitatea de bază
-
-
 
 ### Rulare locală
 
@@ -868,18 +889,21 @@ Testele pot fi rulate local folosind comanda:
 ```bash
 pytest app/tests/
 ```
- - ![Teste](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Constantinescu_Adelina/static/images/test.png)
 
- ### Analiză statică a codului
+- ![Teste](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Constantinescu_Adelina/static/images/test.png)
+
+### Analiză statică a codului
 
 Pentru asigurarea unui cod curat și ușor de întreținut, aplicația utilizează **Pylint**, un instrument de analiză statică Python.
 
 Verificările acoperă:
+
 - Respectarea convențiilor de stil (naming, indentare, lungime linii)
 - Utilizarea corectă a variabilelor (nefolosite, redefinite)
 - Organizarea logică a modulelor
 
 Analiza este aplicată pe:
+
 - modulele din `app/lib/`
 - fișierul principal `filme.py`
 - fișierele de test
@@ -895,12 +919,12 @@ pylint --exit-zero app/lib/*.py
 pylint --exit-zero app/tests/*.py
 pylint --exit-zero filme.py
 ```
+
 ---
 
 ## Rulare cu Docker
 
 Aplicația poate fi rulată rapid și izolat folosind Docker. Acest lucru este util pentru testare, livrare sau rulare pe orice sistem fără a instala dependințele manual.
-
 
 Asigură-te că te afli în directorul proiectului unde se află `Dockerfile`, apoi rulează:
 
@@ -912,6 +936,7 @@ sudo docker run --name adelina_docker -p 8020:5011 adelina_docker:latest
 Pentru a rula aplicatia prin container vom folosi urmatoarea comanda:
 
     sudo docker start adelina_docker
+
 Pentru a opri rularea aplicatiei:
 
     sudo docker stop adelina_docker
@@ -930,43 +955,46 @@ Etapele definite în `Jenkinsfile` sunt:
 - **Run Tests**: rulează testele unitare definite cu `pytest`
 - **Containerizare Docker**: creează și rulează o imagine Docker a aplicației pe portul `8020`
 
-
 ```bash
     systemctl start jenkins
 ```
+
 ![Jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Constantinescu_Adelina/static/images/jenkins.png)
 
 ---
 
 ## Pull Request
+
 Dupa finalizarea cerintelor, am realizat un pull request de pe `dev_Constantinescu_Adelina` catre `main_Constantinescu_Adelina`.
 ![Readme](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Constantinescu_Adelina/static/images/readme.png)
 
---------------------------------------------------------------------
+---
+
 # Corlan Victor Alexandru
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Dina Nitoi Maria Alexandra
 
 # CUPRINS
-1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)  
-2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)  
-3. [Tehnologii utilizate](#tehnologii-utilizate)  
-4. [Structura proiectului](#structura-proiectului)  
-5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)  
-6. [Interfata web prezentare](#interfata-web-prezentare)  
-7. [Testare Pytest](#testare-pytest)  
-8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)  
-9. [Containerizare cu Docker](#containerizare-cu-docker)  
-10. [Pipeline cicd cu Jenkins](#pipeline-cicd-cu-jenkins)  
-11. [Procedura Pull Request](#procedura-pull-request)  
+
+1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)
+2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)
+3. [Tehnologii utilizate](#tehnologii-utilizate)
+4. [Structura proiectului](#structura-proiectului)
+5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)
+6. [Interfata web prezentare](#interfata-web-prezentare)
+7. [Testare Pytest](#testare-pytest)
+8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)
+9. [Containerizare cu Docker](#containerizare-cu-docker)
+10. [Pipeline cicd cu Jenkins](#pipeline-cicd-cu-jenkins)
+11. [Procedura Pull Request](#procedura-pull-request)
 12. [Bibliografie](#bibliografie)
 
 # Prezentarea generala a aplicatiei
 
 Acest proiect web, intitulat **Filme**, are ca scop prezentarea detaliată a unui film ales – The Prestige.
 Aplicația le oferă utilizatorilor acces rapid la informații esențiale despre film, precum descrierea tematică și distribuția principală, printr-o interfață intuitivă și responsivă. Din punct de vedere tehnic, aplicația este dezvoltată cu **Flask** și este rulată într-un mediu izolat folosind **Docker**, ceea ce asigură portabilitate și consistență între medii. Testele unitare sunt automatizate cu **Pytest**, iar verificarea calității codului este realizată prin **Pylint**. Întregul flux de dezvoltare – de la instalarea dependințelor, până la rularea testelor și containerizarea aplicației – este gestionat automat printr-un pipeline de integrare continuă configurat în **Jenkins**.
-
 
 # Versiuni si functionalitati disponibile
 
@@ -976,9 +1004,9 @@ Afișarea informațiilor despre filmul The Prestige, selectat manual ca subiect 
 
 Pagini dedicate pentru:
 
- - Descrierea filmului – un rezumat detaliat care evidențiază tematica și atmosfera poveștii.
+- Descrierea filmului – un rezumat detaliat care evidențiază tematica și atmosfera poveștii.
 
- - Distribuție – listă cu actorii principali, ilustrată vizual cu imagini și nume.
+- Distribuție – listă cu actorii principali, ilustrată vizual cu imagini și nume.
 
 Navigare intuitivă între homepage și paginile detaliate, cu opțiuni de întoarcere.
 
@@ -1017,130 +1045,149 @@ Integrare continuă cu Jenkins, care rulează automat:
 # Structura proiectului
 
 ![Structura](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/structure_of_project.jpg)
-  
-  Conține logica principală a aplicației.
-   - lib/ – module Python care oferă datele pentru descriere și distribuție:
-   the_prestige_cast.py – returnează lista actorilor.
-   the_prestige_description.py – returnează descrierea filmului.
-   
-   - tests/ – teste unitare scrise cu Pytest:
-   test_filme.py – verifică funcțiile din lib/.
 
-- static/  
-  
+Conține logica principală a aplicației.
+
+- lib/ – module Python care oferă datele pentru descriere și distribuție:
+  the_prestige_cast.py – returnează lista actorilor.
+  the_prestige_description.py – returnează descrierea filmului.
+
+- tests/ – teste unitare scrise cu Pytest:
+  test_filme.py – verifică funcțiile din lib/.
+
+- static/
+
   Conține resurse statice accesate de aplicație.
+
   - images/ – imaginile folosite pentru actori și background.
   - styles/ – fișiere CSS pentru stilizarea paginilor HTML.
 
-
 - templates/
-  
-   Fișiere HTML care definesc structura vizuală a paginilor web.
+
+  Fișiere HTML care definesc structura vizuală a paginilor web.
+
   - homepage.html – pagina de pornire.
   - the_prestige_cast.html – pagină cu distribuția.
   - the_prestige_description.html – pagină cu descrierea filmului.
   - the_prestige.html – pagină principală pentru film.
 
 - Aplicația Flask principală
-  - filme.py – aplicația Flask principală, definește rutele.  
 
+  - filme.py – aplicația Flask principală, definește rutele.
 
 - Fișiere de configurare și automatizare
-  - Jenkinsfile – definește pașii de build/test/deploy în Jenkins.  
+  - Jenkinsfile – definește pașii de build/test/deploy în Jenkins.
   - Dockerfile – folosit pentru a construi imaginea Docker.
-  
 - Scripturi de rulare și mediu
-  - pytest.ini – configurare pentru rularea testelor.  
-  - requirements.txt – lista librăriilor necesare.  
-  - dockerstart.sh – script de pornire în container.  
-  - run_app.sh – script de rulare locală.  
-  - activate_venv.sh / activate_venv_jenkins – scripturi pentru activarea mediului virtual.  
+
+  - pytest.ini – configurare pentru rularea testelor.
+  - requirements.txt – lista librăriilor necesare.
+  - dockerstart.sh – script de pornire în container.
+  - run_app.sh – script de rulare locală.
+  - activate_venv.sh / activate_venv_jenkins – scripturi pentru activarea mediului virtual.
 
   # Instructiuni de instalare si configurare
 
   ## Configurație inițială
- Navighează în directorul Desktop al utilizatorului curent, locul unde va fi clonat proiectul.
+
+  Navighează în directorul Desktop al utilizatorului curent, locul unde va fi clonat proiectul.
+
 ```
-cd ~/Desktop/            
+cd ~/Desktop/
 ```
 
 Clonează repository-ul GitHub local
+
 ```
 git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 ```
 
 Intră în directorul nou creat care conține fișierele proiectului clonat.
+
 ```
 cd curs_vcgj_2025_filme
 ```
 
 Aceasta afișează toate branch-urile remote disponibile în repository-ul GitHub.
+
 ```
-git branches -r     
+git branches -r
 ```
 
 Creează local un branch nou denumit dev_Dina_Alexandra pe baza branch-ului cu același nume de pe remote și comută pe el.
+
 ```
 git checkout -b dev_Dina_Alexandra origin/dev_Dina_Alexandra
 ```
+
 Rulează scriptul de activare a mediului virtual, sau îl creează dacă nu există.
+
 ```
-. ./activeaza_venv.sh     
+. ./activeaza_venv.sh
 ```
+
 Pornește aplicația Flask, setând IP-ul și portul pentru accesarea în browser.
+
 ```
-. ./ruleaza_app.sh    
+. ./ruleaza_app.sh
 ```
- ## Configurare .venv și instalare pachete
- Pentru a rula aplicația local, este necesară activarea unui mediu virtual Python. Acest proces este automatizat prin scripturi bash aflate în rădăcina proiectului:
+
+## Configurare .venv și instalare pachete
+
+Pentru a rula aplicația local, este necesară activarea unui mediu virtual Python. Acest proces este automatizat prin scripturi bash aflate în rădăcina proiectului:
 
 - activeaza_venv.sh
- Acest script încearcă să activeze un mediu virtual existent în directorul .venv.
- Dacă .venv nu există sau activarea eșuează, scriptul creează automat un nou mediu virtual și instalează toate pachetele din requirements.txt.
+  Acest script încearcă să activeze un mediu virtual existent în directorul .venv.
+  Dacă .venv nu există sau activarea eșuează, scriptul creează automat un nou mediu virtual și instalează toate pachetele din requirements.txt.
 
 -start_app.sh
- Se folosește doar după activarea mediului virtual. Scriptul lansează aplicația Flask pe IP-ul 127.0.0.1, portul 5011. Poți accesa aplicația din browser la:
- http://127.0.0.1:5011 sau http://localhost:5011
+Se folosește doar după activarea mediului virtual. Scriptul lansează aplicația Flask pe IP-ul 127.0.0.1, portul 5011. Poți accesa aplicația din browser la:
+http://127.0.0.1:5011 sau http://localhost:5011
 
- ![Running_App](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/Running_app.png)
+![Running_App](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/Running_app.png)
 
- # Interfata web prezentare
+# Interfata web prezentare
 
- ## Pagina principală (Homepage)
-  Este punctul de start al aplicației, oferind utilizatorului o primă interacțiune și acces rapid către detalii despre filmul selectat.
-  
-  ![Home_page](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/homepage_image.png)
+## Pagina principală (Homepage)
 
- ## Pagina film
- 
- Oferă o prezentare sumară a filmului, cu opțiuni de navigare către pagina de descriere detaliată sau distribuție, permițând utilizatorului să aleagă ce informație dorește să exploreze mai departe.
+Este punctul de start al aplicației, oferind utilizatorului o primă interacțiune și acces rapid către detalii despre filmul selectat.
 
-  ![Movie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/the_prestige_movie.png)
+![Home_page](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/homepage_image.png)
 
-  ## Secțiunea de descriere 
-  Oferă o prezentare amplă a subiectului filmului, evidențiind temele și atmosfera acestuia.
-  
-  ![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description1.png)
-  ![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description2.png)
-  
-  ## Secțiunea de distribuție
-  Afișează actorii principali împreună cu personajele pe care le interpretează.
-   ![Cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/cast.jpg)
-   
-  # Testare Pytest
+## Pagina film
+
+Oferă o prezentare sumară a filmului, cu opțiuni de navigare către pagina de descriere detaliată sau distribuție, permițând utilizatorului să aleagă ce informație dorește să exploreze mai departe.
+
+![Movie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/the_prestige_movie.png)
+
+## Secțiunea de descriere
+
+Oferă o prezentare amplă a subiectului filmului, evidențiind temele și atmosfera acestuia.
+
+![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description1.png)
+![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/description2.png)
+
+## Secțiunea de distribuție
+
+Afișează actorii principali împreună cu personajele pe care le interpretează.
+![Cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/cast.jpg)
+
+# Testare Pytest
 
 Pentru a valida funcționalitatea corectă a aplicației, au fost implementate teste unitare cu ajutorul framework-ului Pytest. Acestea sunt definite în fișierul test_filme.py, aflat în directorul app/tests/.
 
 Testele vizează componentele esențiale ale aplicației:
 
-Testarea descrierii filmului 
- - Verifică dacă descrierea filmului returnată de get_descriere()
- - Caută în textul descrierii anumite cuvinte-cheie relevante pentru tematica filmului The Prestige
+Testarea descrierii filmului
+
+- Verifică dacă descrierea filmului returnată de get_descriere()
+- Caută în textul descrierii anumite cuvinte-cheie relevante pentru tematica filmului The Prestige
 
 Testarea distribuției
- - Evaluează formatul general al listei de actori returnată de get_actori()
- - Confirmă prezența actorilor principali în listă
-   
+
+- Evaluează formatul general al listei de actori returnată de get_actori()
+- Confirmă prezența actorilor principali în listă
+
 Pentru fiecare test:
 
 Se apelează funcțiile din the_prestige_description.py și the_prestige_cast.py.
@@ -1153,11 +1200,12 @@ Testele rulează atât local (manual, cu comanda pytest), cât și automat, prin
 
 ## Testare locală
 
-  ![Test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/tests.png)
+![Test](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/tests.png)
 
 ## Testare automată
 
 Prin intermediul Jenkinsfile
+
 ```
 stage('Run Tests - pytest') {
           steps {
@@ -1167,8 +1215,10 @@ stage('Run Tests - pytest') {
               '''
    }
  }
- ```
+```
+
 # Analiza statica a codului cu Pylint
+
 Pentru verificarea calității codului sursă, proiectul utilizează Pylint – un instrument de analiză statică ce ajută la menținerea unui stil de cod curat și coerent. Analiza este aplicată asupra fișierelor esențiale ale aplicației, precum modulele din app/lib/, fișierul principal filme.py și testele din app/tests/.
 
 Această etapă detectează automat aspecte precum:
@@ -1208,23 +1258,23 @@ Fișierul Dockerfile definește pașii pentru construirea imaginii:
 
 # Containter și imagine Docker
 
-Creare imagine: 
+Creare imagine:
 
-``` docker build -t movieimage:v1 .```
+` docker build -t movieimage:v1 .`
 
- ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker-images.jpeg)
+![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker-images.jpeg)
 
-Creare container:  
+Creare container:
 
- ```docker create --name moviecontainer -p 8020:5011 movieimage:v1```
+`docker create --name moviecontainer -p 8020:5011 movieimage:v1`
 
- ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/doker_commands.jpeg)
- 
- Pornire container:
- 
- ```docker start moviecontainer```
- 
- ![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker_homepage.png)
+![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/doker_commands.jpeg)
+
+Pornire container:
+
+`docker start moviecontainer`
+
+![Docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/docker_homepage.png)
 
 După pornirea aplicației cu `./dockerstart.sh`, aceasta va fi accesibilă în browser la adresa locală: **http://127.0.0.1:8020**.
 
@@ -1236,72 +1286,76 @@ Jenkins este un instrument de automatizare folosit în acest proiect pentru a ge
 Fișierul Jenkinsfile definește pașii automatizați pe care Jenkins îi urmează. Acest pipeline asigură integrarea continuă, permițând dezvoltatorului să verifice rapid dacă aplicația funcționează corect după fiecare modificare. Pipeline-ul conține următoarele stagii:
 
 - Clone repo
- Clonarea codului sursă din ramura dev_Dina_Alexandra a repository-ului GitHub pentru a pregăti aplicația pentru build.
+  Clonarea codului sursă din ramura dev_Dina_Alexandra a repository-ului GitHub pentru a pregăti aplicația pentru build.
 
 - Set up virtual environment
- Creează un mediu virtual Python (.venv), îl activează și instalează toate pachetele necesare specificate în requirements.txt.
+  Creează un mediu virtual Python (.venv), îl activează și instalează toate pachetele necesare specificate în requirements.txt.
 
 - Code Quality - pylint
- Verifică stilul și calitatea codului folosind pylint pe modulele aplicației (app/lib, app/tests, filme.py) fără a opri execuția dacă sunt avertismente.
+  Verifică stilul și calitatea codului folosind pylint pe modulele aplicației (app/lib, app/tests, filme.py) fără a opri execuția dacă sunt avertismente.
 
 - Run Tests - pytest
- Rulează testele unitare definite în app/tests folosind pytest pentru a valida funcționalitatea aplicației.
+  Rulează testele unitare definite în app/tests folosind pytest pentru a valida funcționalitatea aplicației.
 
 - Deploy
- Construiește o imagine Docker din aplicație și creează un container cu un port expus, pentru a putea fi rulată ulterior în izolare.
+  Construiește o imagine Docker din aplicație și creează un container cu un port expus, pentru a putea fi rulată ulterior în izolare.
 
 Pentru a porni serverul Jenkins local, este suficient să rulezi comanda:
 
-```jenkins```
+`jenkins`
 
 Aceasta va inițializa serverul pe portul implicit (de obicei 8080), permițând accesul la interfața web Jenkins prin adresa:
 http://localhost:8080 sau http://127.0.0.1:8080
 
-
 Pipeline-ul este configurat astfel încât, la fiecare push în repository-ul GitHub, să se declanșeze automat o execuție a pipeline-ului prin intermediul agentului Jenkins. Acest comportament este asigurat prin bifarea opțiunii **GitHub hook trigger for GITScm polling**, precum și prin activarea opțiunii **Poll SCM**, care determină verificarea modificărilor în repository la fiecare 2 minute. Astfel, proiectul se actualizează constant în funcție de modificările aduse codului sursă.
 
 # Procedura Pull Request
+
 Modificările aduse în branch-ul de dezvoltare dev_Dina_Alexandra au fost propuse pentru a fi integrate în ramura principală main_Dina_Alexandra prin crearea unui Pull Request.
 
- ![PR](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/PR.jpeg)
-
+![PR](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dina_Alexandra/static/images/screenshots/PR.jpeg)
 
 # Bibliografie
+
 - [Docker Documentation](https://docs.docker.com/)
 - [Git Documentation](https://git-scm.com/doc)
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
-- [Repo crchende/sysinfo  ](https://github.com/crchende/sysinfo)
+- [Repo crchende/sysinfo ](https://github.com/crchende/sysinfo)
 
---------------------------------------------------------------------
+---
+
 # Dumitrache Sorana Denisa
 
 # CUPRINS
-1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)  
-2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)  
-3. [Tehnologii utilizate](#tehnologii-utilizate)  
-4. [Structura proiectului](#structura-proiectului)  
-5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)  
-6. [Interfata web prezentare](#interfata-web-prezentare)  
-7. [Testare Pytest](#testare-pytest)  
-8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)  
-9. [Containerizare cu Docker](#containerizare-cu-docker)  
-10. [Pipeline cicd cu Jenkins](#pipeline-cicd-cu-jenkins)  
-11. [Procedura Pull Request](#procedura-pull-request)  
+
+1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)
+2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)
+3. [Tehnologii utilizate](#tehnologii-utilizate)
+4. [Structura proiectului](#structura-proiectului)
+5. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)
+6. [Interfata web prezentare](#interfata-web-prezentare)
+7. [Testare Pytest](#testare-pytest)
+8. [Analiza statica a codului cu Pylint](#analiza-statica-a-codului-cu-pylint)
+9. [Containerizare cu Docker](#containerizare-cu-docker)
+10. [Pipeline cicd cu Jenkins](#pipeline-cicd-cu-jenkins)
+11. [Procedura Pull Request](#procedura-pull-request)
 12. [Bibliografie](#bibliografie)
 
-
 # Prezentarea generală a aplicației
- Aplicația web "MovieHub" oferă o platformă simplă pentru filme și seriale, permițând utilizatorilor să exploreze detalii specifice fiecărui titlu, cum ar fi descrierea și distribuția actorilor. Interfața este construită pentru a asigura o experiență clară și ușor de folosit.
+
+Aplicația web "MovieHub" oferă o platformă simplă pentru filme și seriale, permițând utilizatorilor să exploreze detalii specifice fiecărui titlu, cum ar fi descrierea și distribuția actorilor. Interfața este construită pentru a asigura o experiență clară și ușor de folosit.
 
 Navigarea este facilitată printr-un meniu principal care conduce către paginile de detalii, iar fiecare pagină conține un link de revenire către ecranul principal.
 
 Aplicația suportă containerizarea folosind Docker, iar pentru asigurarea calității codului și automatizarea testelor se folosesc Pytest și Jenkins, care gestionează un pipeline de integrare continuă ce activează mediul virtual, instalează dependențele și rulează testele și verificările statice.
 
 # Versiuni și funcționalități disponibile
+
 Funcționalitățile implementate includ afișarea a două caracteristici principale: descrierea filmelor/serialelor și distribuția actorilor. Navigarea se realizează bidirecțional între pagina principală și paginile de detalii pentru o utilizare facilă.
 
-Versiunea curentă: v0. 
+Versiunea curentă: v0.
 Funcționalitățile implementate:
+
 - Pagina principală cu rută către un film.
 - Pagini dedicate pentru: descriere, distribuție.
 - Navigare între pagini.
@@ -1312,27 +1366,29 @@ Funcționalitățile implementate:
 - Suport pentru rulare în Docker.
 
 # Tehnologii utilizate
-- **Flask** – framework web folosit pentru crearea rutelor și gestionarea logicii aplicației;  
-- **HTML & CSS** – pentru realizarea structurii și designului paginilor web;  
-- **Pytest** – utilizat pentru testarea unitară a componentelor interne;  
-- **Pylint** – pentru evaluarea calității și conformității codului Python;  
-- **Docker** – containerizarea aplicației pentru medii consistente de rulare;  
+
+- **Flask** – framework web folosit pentru crearea rutelor și gestionarea logicii aplicației;
+- **HTML & CSS** – pentru realizarea structurii și designului paginilor web;
+- **Pytest** – utilizat pentru testarea unitară a componentelor interne;
+- **Pylint** – pentru evaluarea calității și conformității codului Python;
+- **Docker** – containerizarea aplicației pentru medii consistente de rulare;
 - **Jenkins** – pentru automatizarea proceselor de build, testare și integrare continuă.
 
 # Structura proiectului
-- `app/` – codul sursă al aplicației:  
-  - `lib/` – module Python ce furnizează date despre filme și distribuție;  
-  - `tests/` – teste unitare pentru funcțiile din `lib/`;  
-- `static/` – resurse statice:  
-  - `images/` – imagini utilizate în paginile web;  
-  - `styles/` – fișiere CSS pentru aspectul vizual;  
-- `templates/` – șabloane HTML pentru toate paginile web: pagina principală, detalii filme, descriere și distribuție;  
-- Fișiere de configurare și scripturi:  
-  - `filme.py` – scriptul principal al aplicației Flask;  
-  - `Dockerfile`, `dockerstart.sh` – fișiere pentru containerizare;  
-  - `Jenkinsfile` – definiția pipeline-ului Jenkins;  
-  - `pytest.ini` – configurarea testelor Pytest;  
-  - `quickrequirements.txt` – lista pachetelor necesare pentru mediul virtual;  
+
+- `app/` – codul sursă al aplicației:
+  - `lib/` – module Python ce furnizează date despre filme și distribuție;
+  - `tests/` – teste unitare pentru funcțiile din `lib/`;
+- `static/` – resurse statice:
+  - `images/` – imagini utilizate în paginile web;
+  - `styles/` – fișiere CSS pentru aspectul vizual;
+- `templates/` – șabloane HTML pentru toate paginile web: pagina principală, detalii filme, descriere și distribuție;
+- Fișiere de configurare și scripturi:
+  - `filme.py` – scriptul principal al aplicației Flask;
+  - `Dockerfile`, `dockerstart.sh` – fișiere pentru containerizare;
+  - `Jenkinsfile` – definiția pipeline-ului Jenkins;
+  - `pytest.ini` – configurarea testelor Pytest;
+  - `quickrequirements.txt` – lista pachetelor necesare pentru mediul virtual;
   - Scripturi de configurare și rulare: `ruleaza_app.sh`, `activeaza_venv`, `activeaza_venv_jenkins`.
 
 ```text
@@ -1367,7 +1423,7 @@ curs_vcgj_2025_filme/
 
 ## Configurare și instalare
 
-Instrucțiuni pentru configurarea aplicației pe mașina virtuală locală (user: *denisa*):
+Instrucțiuni pentru configurarea aplicației pe mașina virtuală locală (user: _denisa_):
 
 ```text
 # 1. Navigare în Desktop
@@ -1402,8 +1458,9 @@ pip install -r quickrequirements
 Pentru activarea mediului virtual (`virtual environment`) în folder-ul `curs_vcgj_2025_filme`, trebuie rulate următoarele scripturi bash:
 
 - **`activeaza_venv`**  
-  Acest script încearcă să activeze un mediu virtual Python existent în directorul `.venv`.  
-  - Dacă activarea reușește, afișează un mesaj de succes.  
+  Acest script încearcă să activeze un mediu virtual Python existent în directorul `.venv`.
+
+  - Dacă activarea reușește, afișează un mesaj de succes.
   - Dacă nu, rulează un alt script `activeaza_venv_jenkins`, care creează și activează un mediu virtual nou și instalează dependințele necesare.
 
 - **`ruleaza_app`**  
@@ -1421,9 +1478,11 @@ Pentru activarea mediului virtual (`virtual environment`) în folder-ul `curs_vc
 # Pornire aplicație Flask
 . ./ruleaza_app.sh
 ```
+
 ![configurare-venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/configurare-venv.png)
 
 # Interfața web - prezentare
+
 Pagina principală (Homepage) oferă o listă cu filmele disponibile, fiecare având un link care duce către pagina detaliată a filmului sau serialului.
 
 Pagina film afișează informații esențiale despre film/serial, inclusiv link-uri către paginile de descriere și distribuție a actorilor.
@@ -1431,26 +1490,31 @@ Pagina film afișează informații esențiale despre film/serial, inclusiv link-
 Pagini detaliate: există o pagină pentru descrierea detaliată a filmului și o altă pagină dedicată distribuției, care prezintă actorii și personajele interpretate.
 
 ## Pagina Principală (Homepage)
+
 Această pagină afișează lista de filme disponibile. Fiecare titlu este un link care duce către pagina cu detalii specifice despre film.
 
 ![pagina-principala](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/pagina-principala.png)
 
 ## Pagina Film
+
 Pagina dedicată fiecărui film oferă informații sumare și include linkuri către paginile ce conțin descrierea și distribuția.
 
 ![film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/film.png)
 
 ## Pagina Descriere Film
-Aici utilizatorii pot citi o descriere detaliată despre filmul  ales.
+
+Aici utilizatorii pot citi o descriere detaliată despre filmul ales.
 
 ![descriere-film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/descriere-film.png)
 
 ## Pagina Distribuție Film
+
 Această pagină oferă informații despre actorii din film și rolurile pe care le interpretează.
 
 ![cast-film](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/cast-film.png)
 
 # Testare Pytest
+
 Pentru a asigura funcționarea corectă a aplicației, au fost dezvoltate teste unitare folosind framework-ul `pytest`. Acestea sunt definite în fișierul `test_filme.py`, aflat în directorul `app/tests/`.
 
 Testele validează funcționalitățile cheie ale aplicației:
@@ -1459,6 +1523,7 @@ Testele validează funcționalitățile cheie ale aplicației:
 - **Afișarea distribuției actorilor**, verificată prin testul `test_cast_apare_corect`
 
 ### Ce face fiecare test:
+
 - Trimite o cerere HTTP `GET` către rutele dedicate (`/How-to-lose-a-guy-in-10-days-descriere` și `How-to-lose-a-guy-in-10-days-cast`)
 - Verifică dacă răspunsul are codul de stare `200 OK`
 - Compară conținutul HTML returnat cu rezultatul așteptat, generat de funcțiile `descriere_film.get_descriere()` și `cast_film.get_cast()`
@@ -1467,7 +1532,8 @@ Testele nu doar confirmă existența paginilor, ci și faptul că informațiile 
 
 ![testare-locala-pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/testare-locala-pytest.png)
 
-# Analiză statică a codului cu Pylint 
+# Analiză statică a codului cu Pylint
+
 Pentru analiza statică a codului sursă, este utilizat pylint, aplicat pe modulele cheie ale aplicației: funcțiile definite în app/lib, fișierul principal filme.py, precum și testele din app/tests.
 
 Această analiză ajută la identificarea unor probleme de stil și scriere a codului, precum:
@@ -1490,6 +1556,7 @@ pylint --exit-zero filme.py
 ```
 
 # Containerizare cu Docker
+
 Pentru a asigura portabilitatea și funcționarea unitară în diverse medii, aplicația a fost containerizată folosind Docker. Această abordare garantează că aplicația rulează cu toate dependențele sale, indiferent de sistemul pe care este implementată.
 
 Dockerfile – configurarea imaginii
@@ -1528,7 +1595,7 @@ COPY pytest.ini pytest.ini
 COPY quickrequirements.txt quickrequirements.txt
 COPY filme.py filme.py
 
-USER root   
+USER root
 RUN chmod -R 777 static
 
 RUN python3 -m venv .venv
@@ -1541,40 +1608,51 @@ RUN .venv/bin/pip install -r quickrequirements.txt
 # runtime configuration
 EXPOSE 5011
 ENTRYPOINT ["./dockerstart.sh"]
-#CMD sh 
+#CMD sh
 ```
+
 Prin rularea scriptului dockerstart.sh, se inițializează mediul virtual și se lansează serverul Flask în modul de producție, disponibil pe adresa 0.0.0.0:5011 din interiorul containerului.
 
 ## Construirea și rularea containerului
-Construire imagine: 
+
+Construire imagine:
+
 ```text
 docker build -t movieimage:v3 .
 ```
+
 Vizualizare imagine:
 
 ![creare-imagine](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/creare-imagine.png)
 
 ## Creare container:
+
 ```text
 docker create --name moviecontainer -p 8020:5011 movieimage:v3
 ```
+
 ## Pornire container:
+
 ```text
 docker start moviecontainer
 ```
+
 ## Listare containere:
+
 ```text
 docker ps -a
 ```
+
 Execuția aplicației :
 După pornirea containerului, aplicația devine disponibilă pe adresa:
 http://localhost:8020
 ![rulare-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/rulare-container.png)
 ![aplicatie-din-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/aplicatie-din-container.png)
 
-
 # Pipeline CI/CD cu Jenkins
+
 ## Integrare continuă cu Jenkins
+
 Aplicația este integrată cu Jenkins pentru implementarea unui proces de tip CI (Continuous Integration). Astfel, la fiecare commit sau push în repository-ul remote, se declanșează automat un pipeline care:
 
 Activează mediul virtual
@@ -1586,6 +1664,7 @@ Execută testele unitare cu pytest
 Construiește și pornește aplicația într-un container Docker
 
 ## Jenkinsfile
+
 Fișierul Jenkinsfile descrie etapele acestui pipeline și gestionează întregul proces automat:
 
 Build: Pregătirea mediului pentru execuție
@@ -1596,13 +1675,16 @@ Testare: Rulare teste unitare
 
 Deploy: Construirea și lansarea containerului Docker
 Comanda pentru lansarea Jenkins:
+
 ```text
 jenkins
 ```
- Execuție vizuală în Jenkins (Blue Ocean):
- ![Blue-ocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/Blue-ocean.png)
+
+Execuție vizuală în Jenkins (Blue Ocean):
+![Blue-ocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/Blue-ocean.png)
 
 # Procedura Pull Request
+
 Modificările realizate în branch-ul de dezvoltare (dev_Dumitrache_Denisa) au fost propuse pentru integrare în ramura principală (main_Dumitrache_Denisa) printr-un Pull Request (PR):
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Dumitrache_Denisa/static/capturi/pull-request.png)
 
@@ -1615,25 +1697,364 @@ Modificările realizate în branch-ul de dezvoltare (dev_Dumitrache_Denisa) au f
 - [Python Documentation](https://docs.python.org/3/) – Documentația oficială Python.
 - [Pylint Documentation](https://pylint.pycqa.org/en/latest/) – Documentația pentru instrumentul de analiză statică a codului Python, Pylint.
 - [Git Documentation](https://git-scm.com/doc) – Manualul oficial pentru sistemul de control al versiunilor Git.
---------------------------------------------------------------------
+
+---
+
 # Eftimie Albert Gabriele
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Gorcea Cristina
-(insereaza readme)
---------------------------------------------------------------------
+
+---
+
+# Cuprins
+
+1. [Prezentare generala a aplicatiei](#prezentare-generala-a-aplicatiei)
+1. [Versiune si funcționalitati disponibile](#versiune-si-functionalitati-disponibile)
+1. [Tehnologii utilizate in dezvoltare](#tehnologii-utilizate-in-dezvoltare)
+1. [Organizarea proiectului](#organizarea-proiectului)
+1. [Instructiuni de instalare si configurare](#instructiuni-de-instalare-si-configurare)
+1. [Prezentarea interfetei web](#prezentarea-interfetei-web)
+1. [Testarea aplicatiei cu Pytest](#testarea-aplicatiei-cu-pytest)
+1. [Analiza calitatii codului cu Pylint](#analiza-calitatii-codului-cu-pylint)
+1. [Containerizarea aplicatiei cu Docker](#containerizarea-aplicatiei-cu-docker)
+1. [Automatizarea prin Jenkins Pipeline](#automatizarea-prin-jenkins-pipeline)
+1. [Flux de lucru colaborativ - Pull Request](#flux-de-lucru-colaborativ-pull-request)
+1. [Bibliografie](#bibliografie)
+
+# Prezentare generala a aplicatiei
+
+Aplicația „filme” este dezvoltată pentru a oferi utilizatorilor posibilitatea de a vizualiza o colecție de filme și seriale, fiecare având pagini dedicate cu detalii precum descrierea și distribuția. Interfața aplicației este gândită pentru a fi simplă și ușor de utilizat.
+
+Pagina principală facilitează navigarea către paginile secundare, iar acestea includ butoane de întoarcere către homepage, pentru o experiență intuitivă.
+
+Aplicația este compatibilă cu rularea în containere Docker, include teste unitare scrise cu pytest și se integrează cu Jenkins pentru rularea automată a verificărilor și testelor.
+
+# Versiune si functionalitati disponibile
+
+v0 - Afișarea a două informatii per film/serial (descriere și distribuție). Navigare bidirecțională între pagini.
+
+Funcția principală a aplicației constă în redarea unei liste cu producții, iar fiecare are o pagină de detaliu. Interfața permite o explorare facilă a conținutului, cu linkuri clare între secțiuni.Navigarea se face prin linkuri bidirecționale între pagina principală și pagina cu detalii despre film/serial, asigurând o experiență de utilizare fluidă și plăcută.
+
+# Tehnologii utilizate in dezvoltare
+
+Aplicația utilizează următoarele tehnologii:
+
+- Flask – framework-ul web principal;
+
+- HTML & CSS – pentru dezvoltarea și stilizarea interfeței grafice;
+
+- Pytest – pentru validare automată a funcționalităților;
+
+- Pylint – pentru analiza stilului codului;
+
+- Docker – pentru ambalarea și rularea aplicației în containere;
+
+- Jenkins – pentru implementarea CI (Continuous Integration) -> pipeline-uri de integrare continuă.
+
+Datele aplicației sunt hardcodate în codul sursă, fără folosirea unei baze de date externe.
+
+# Organizarea proiectului
+
+Structura proiectului este organizată în următorul mod:
+
+- `app/` – conține codul principal al aplicației:
+
+  - `lib/` – conține funcțiile Python pentru detalii legate de descrierea și distribuția filmelor/serialelor;
+
+  - `tests/` – conține testele unitare pentru lib/;
+
+- `static/` – resurse statice:
+
+  - `images/` – imagini folosite în interfa;
+
+  - `styles/` – fișiere CSS pentru stilizarea interfeței web;
+
+- `templates/` – șabloanele HTML pentru paginile aplicației: homepage, film, descriere și distribuție;
+
+- Fișiere de configurare:
+
+  - `filme.py` – aplicația principală;
+
+  - `Dockerfile`, `dockerstart` – configurare Docker;
+
+  - `jenkinsfile` – definirea pipeline-ului Jenkins;
+
+  - `pytest.ini` – configurare testare cu Pytest;
+
+  - `quickrequirements` – lista cu pachetele necesare;
+
+  - `ruleaza_app`, `activeaza_venv`, `activeaza_venv_jenkins` – scripturi auxiliare de pornire și configurare a mediului virtual.
+
+![organizarea-proiectului]()
+
+# Instructiuni de instalare si configurare
+
+## Navigare în Desktop
+
+```text
+   cd Desktop/
+```
+
+## Clonare repository și configurare inițială
+
+```text
+   git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
+
+   ********
+   NOTA: INSTALARE dependințe (dacă lipsesc)
+
+   sudo apt update
+   sudo apt upgrade
+   sudo apt install -y net-tools git python3 python3-pip python3.10-venv
+
+```
+
+## Navigare în proiect
+
+```text
+   cd curs_vcgj_2025_filme
+   git checkout <branch_dorit>
+```
+
+## Configurare .venv și instalare pachete
+
+Pentru activarea virtual environment (mediului virtual), se rulează următoarele script-uri bash, în folder-ul 'curs_vcgj_2025_filme':
+
+1. `activeaza_venv` - Acest script verifică dacă există un mediu virtual Python în directorul (`.venv`). Dacă îl găsește, îl activează și afișează un mesaj de confirmare. În cazul în care mediul virtual nu este prezent, scriptul apelează automat (`activeaza_venv_jenkins`), care creează un nou mediu virtual și instalează toate dependințele necesare din fișierul de requirements.
+
+2. `ruleaza_app` - Acest script se folosește numai după ce mediul virtual a fost activat. El pornește aplicația Flask, care va rula pe IP-ul local 127.0.0.1 și portul 5011. Aplicația poate fi accesată în browser la adresa: http://127.0.0.1:5011 sau http://localhost:5011.
+
+### Comenzi de activare și rulare
+
+```text
+# Activarea mediului virtual (virtual environment)
+. ./activeaza_venv.sh
+
+# Pornire aplicație
+. ./ruleaza_app.sh
+```
+
+![venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/venv.png)
+
+# Prezentarea interfetei web
+
+## Pagină principală (Homepage)
+
+Afișează lista cu filmele disponibile, cu acces rapid prin link-uri către pagina cu detalii a fiecărui film/serial.
+![stranger-things-homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/home%20page.png)
+
+## Pagină film
+
+Include o scurtă prezentarea despre film/serial și două butoane către paginile de descriere și distribuție.
+![stranger-things_serial_home](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/serial_home.png)
+
+## Pagină descriere film
+
+Oferă detalii extinse despre filmul/serialul ales.
+![stranger-things-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/descriere.png)
+
+## Pagină distribuție film
+
+Prezintă actorii principali și personajele interpretate.
+![stranger-things-distributie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/distributie.png)
+
+# Testarea aplicatiei cu Pytest
+
+Pentru validarea aplicației au fost implementate teste unitare utilizând framework-ul pytest. Aceste teste sunt definite în fișierul `test_filme.py`, aflat în directorul `app/tests/`.
+
+Testele vizează funcțiile esentțiale din logica aplicației, anume:
+
+- Afișarea descrierii filmului/serialului - verificată de funcția `test_descriere_st`
+
+- Afișarea distribuției - verificată de funcția `test_distributie_st`
+
+## Scopul testelor
+
+Scopul testelor este de a verifica nu doar existența paginilor, ci și corectitudinea conținutului HTML generat. Fiecare test:
+
+- Trimite un request GET la ruta `/descriere` (respectiv `/distributie`)
+- Verifică dacă răspunsul are statusul HTTP `200 OK`.
+- Compară conținutul returnat cu valoarea generată de funcțiile descriere_st.get_descriere() și respectiv descriere_st.get_distributie().
+- Afișează în consolă un mesaj corespunzător în funcție de rezultat (succes sau eroare)
+
+Aceste teste sunt incluse atât în procesul de rulare locală, cât și în pipeline-ul de integrare continuă configurat prin Jenkins.
+
+## Testare locală
+
+![pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/pytest.png)
+
+# Analiza calitatii codului cu Pylint
+
+Pentru evaluarea calității codului sursă, aplicația utilizează instrumentul Pylint, care analizează fișierele esențiale ale proiectului: modulele din app/lib (responsabile pentru afișarea descrierii și distribuției), fișierul principal filme.py și testele din app/tests.
+
+Analiza statică urmărește aspecte precum:
+
+- Respectarea convențiilor PEP8,
+
+- Utilizarea corectă a spațiilor și indentării,
+
+- Denumirea sugestivă a variabilelor,
+
+- Evitarea variabilelor neutilizate sau redundante.
+
+Verificările sunt automatizate în cadrul pipeline-ului Jenkins, într-o etapă special destinată verificării stilului de cod (pylint - calitate cod). În această etapă sunt executate următoarele comenzi:
+
+```text
+    pylint --exit-zero app/lib/*.py
+    pylint --exit-zero app/tests/*.py
+    pylint --exit-zero filme.py
+
+```
+
+Utilizarea opțiunii --exit-zero permite ca pipeline-ul să continue execuția chiar și atunci când Pylint identifică probleme sau avertismente, fără a opri procesul de integrare continuă.
+
+# Containerizarea aplicatiei cu Docker
+
+Aplicația a fost containerizată cu ajutorul Docker pentru a asigura portabilitate, independență față de mediul local și o rulare uniformă pe orice sistem. Procesul de containerizare constă în ambalarea aplicației împreună cu toate dependințele necesare într-o imagine Docker, astfel încât aceasta să poată fi executată oriunde, fără a necesita configurări suplimentare ale mediului. În cazul de față, aplicația Python este complet containerizată utilizând un fișier Dockerfile dedicat.
+
+## Configurări necesare pentru containerizare. Fișierul Dockerfile
+
+Fișierul Dockerfile descrie pașii necesari pentru construirea imaginii Docker a aplicației. Acesta utilizează ca bază imaginea python:3.10-alpine, după care instalează toate pachetele specificate în quickrequirements.txt, creează un mediu virtual în directorul .venv, și configurează permisiunile corespunzătoare pentru directoarele aplicației. De asemenea, sunt definite variabilele de mediu esențiale pentru rularea aplicației. La final, portul 5011 este expus, iar fișierul dockerstart.sh este desemnat ca script de inițializare pentru container.
+
+```text
+FROM python:3.12-alpine
+
+ENV FLASK_APP filme
+#ENV FLASK_CONFIG = docker
+
+#3.10 alpine
+RUN adduser -D filme
+
+USER filme
+
+WORKDIR /home/filme/
+
+COPY app app
+COPY static static
+COPY templates templates
+COPY dockerstart.sh dockerstart.sh
+COPY pytest.ini pytest.ini
+COPY quickrequirements.txt quickrequirements.txt
+COPY filme.py filme.py
+
+USER root
+RUN chmod -R 777 static
+
+RUN python3 -m venv .venv
+RUN chmod -R g+x .venv
+RUN chmod +x dockerstart.sh
+
+RUN .venv/bin/pip install -r quickrequirements.txt
+
+
+# runtime configuration
+EXPOSE 5011
+ENTRYPOINT ["./dockerstart.sh"]
+#CMD sh
+```
+
+Scriptul dockerstart.sh are rolul de a activa mediul virtual și de a inițializa aplicația Flask. Acesta activează mai întâi environment-ul virtual, configurează variabila de mediu FLASK_APP, iar ulterior lansează serverul Flask pe adresa 0.0.0.0, utilizând portul 5011.
+
+## Creare imagine container
+
+După crearea Dockerfile, este necesară crearea unei imagini de container, folosind comanda:
+
+```text
+docker build -t movieimage:v1 .
+```
+
+Imaginea creată poate fi vizualizată astfel:
+
+![docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/docker_images.png)
+
+## Creare container
+
+Pentru generarea unui container din fișierul imagine, trebuie utilizată comanda:
+
+```text
+docker create --name moviecontainer -p 8020:5011 movieimage:v1
+```
+
+## Execuție container
+
+Pentru pornirea containerul, se utilizează comanda:
+
+```text
+docker start moviecontainer
+```
+
+Containerele (atât active cât și oprite) pot fi vizualizate astfel:
+
+```text
+docker ps -a
+```
+
+![docker-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/container.png)
+
+## Rularea aplicației din container
+
+![rulare-din-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/home%20page.png)
+
+# Automatizarea prin Jenkins Pipeline
+
+Jenkins a fost utilizat pentru implementarea procesului de integrare continuă (CI), astfel încât, la fiecare modificare adusă codului sursă, testele automate și verificările de calitate sunt executate automat. Acest mecanism contribuie la identificarea rapidă a erorilor și la menținerea funcționalității corecte a aplicației pe parcursul dezvoltării.
+
+## Jenkinsfile
+
+Fișierul Jenkinsfile descrie pașii necesari pentru executarea pipeline-ului de integrare continuă. Acesta automatizează procesul de testare și verificare a aplicației la fiecare actualizare a codului sursă. Pipeline-ul este structurat în mai multe etape distincte:
+
+- Build: Inițializează și activează mediul virtual pentru a pregăti rularea comenzilor necesare.
+
+- Analiză cu Pylint: Verifică stilul și calitatea codului în modulele din `app/lib`, testele din `app/tests` și în fișierul principal `filme.py`.
+
+- Testare unitară cu Pytest: Rulează testele definite pentru funcțiile aplicației pentru a valida comportamentul corect al logicii implementate.
+
+-Deploy într-un container Docker: Creează o imagine Docker etichetată cu numărul build-ului curent și lansează un container care expune aplicația pe portul 8020.
+
+Comanda pentru pornirea Jenkins:
+
+```text
+jenkins
+```
+
+Execuția pipeline-ului este vizibilă și într-o altă interfață grafică prin extensia Blue Ocean a Jenkins.
+
+## Exemplu execuție pipeline Jenkins (interfață Blue Ocean)
+
+![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/blue-ocean.png)
+
+# Flux de lucru colaborativ - Pull Request
+
+Am creat un PR(Pull Request) din branch-ul de dezvoltare (`dev_Gorcea_Cristina`) către branch-ul main (`main_Gorcea_Cristina`)
+![PR](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/b7a37ef1d518c0db1a3444fa2d5008cb6d79f122/static/screenshots_README/Pull%20Request.png)
+
+# Bibliografie
+
+- [HTML Documentation ](https://www.w3schools.com/html/html_intro.asp)
+- [CSS Documentation ](https://www.w3schools.com/CSSref/index.php)
+- [Flask Documentation](https://flask.palletsprojects.com/en/stable/)
+- [Pytest Documentation](https://docs.pytest.org/en/stable/contents.html)
+- [Docker Documentation](https://docs.docker.com/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+
+---
+
 # Ichim Alexandru Ionut
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Mihalcea Larisa Maria
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Mirica Elena Ernestina
 
-Această aplicație web a fost creată în cadrul cursului SCC și permite gestionarea unei colecții de filme/seriale, oferind funcționalități de bază. 
+Această aplicație web a fost creată în cadrul cursului SCC și permite gestionarea unei colecții de filme/seriale, oferind funcționalități de bază.
 Se urmărește punerea în practică a noțiunilor esențiale învățate în cadrul disciplinei, de dezvoltare web, testare automată și integrare continuă.
 
-Operațiile aplicației sunt gestionate prin rute bine definite în Flask. Docker a fost folosit pentru a crea un mediu de rulare consistent  indiferent de sistemul folosit. Jenkins a avut rolul de a automatiza testarea și integrarea continuă.
+Operațiile aplicației sunt gestionate prin rute bine definite în Flask. Docker a fost folosit pentru a crea un mediu de rulare consistent indiferent de sistemul folosit. Jenkins a avut rolul de a automatiza testarea și integrarea continuă.
 
 Pentru exemplificare, a fost prezentat serialul Bridgerton, realizat de Netflix.
 
@@ -1663,23 +2084,23 @@ Pentru exemplificare, a fost prezentat serialul Bridgerton, realizat de Netflix.
 
 ## Setup
 
-A fost creat un director pe mașina virtuală  locală (Ubuntu 22.04) pentru dezvoltarea proiectului. Fișierele au fost editate în Visual Studio Code, descărcat de pe pagina lor oficială (https://code.visualstudio.com/?wt.mc_id=vscom_downloads).
-
+A fost creat un director pe mașina virtuală locală (Ubuntu 22.04) pentru dezvoltarea proiectului. Fișierele au fost editate în Visual Studio Code, descărcat de pe pagina lor oficială (https://code.visualstudio.com/?wt.mc_id=vscom_downloads).
 
 ## Aducerea proiectului pe local
 
-Pentru a lucra local la proiect, este necesară clonarea acestuia de pe serverul GitHub și accesarea ramurii de dezvoltare relevante. Comenzile de mai jos realizează descărcarea codului și comutarea pe ramura dev_Mirica_Elena, unde se află implementarea in progress. 
+Pentru a lucra local la proiect, este necesară clonarea acestuia de pe serverul GitHub și accesarea ramurii de dezvoltare relevante. Comenzile de mai jos realizează descărcarea codului și comutarea pe ramura dev_Mirica_Elena, unde se află implementarea in progress.
 
 Numai după testarea aplicației se pot adăuga modificările în main_Mirica_Elena.
 
- ```bash
+```bash
 git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 cd curs_vcgj_2025_filme
 git checkout dev_Mirica_Elena
 ```
 
 ## Alte pachete folosite
- ```bash
+
+```bash
 sudo apt install git
 sudo apt install python3
 sudo apt install python3-pip
@@ -1706,9 +2127,8 @@ sudo apt install python3.12-venv
 - **`bridgerton_description.py`** – Script care conține descrierea serialului.
 - **`README.md`** – Acest fișier, conținând descrierea proiectului și modul de realizare.
 
-
-
 ## Interfața web
+
 Homepage
 
 ![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/homepage.png)
@@ -1727,9 +2147,10 @@ Cast Bridgerton
 
 ## Testare pytest
 
-Aceste teste au rolul de a garanta stabilitatea logicii aplicației și de a semnala din timp orice eroare apărută în manipularea datelor filmelor. 
+Aceste teste au rolul de a garanta stabilitatea logicii aplicației și de a semnala din timp orice eroare apărută în manipularea datelor filmelor.
 
 - **Structura descrierii (`bridgerton_description`)**
+
   - Verifică dacă textul returnat este împărțit în paragrafe corecte.
   - Asigură că fiecare paragraf are o lungime minimă pentru a evita conținutul gol sau superficial.
   - Confirmă că tagurile HTML `<p>` și `</p>` sunt corect închise.
@@ -1742,14 +2163,12 @@ Aceste teste au rolul de a garanta stabilitatea logicii aplicației și de a sem
 Ele pot fi rulate folosind comanda:
 
 ```bash
-pytest 
+pytest
 ```
 
 ![Testare pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/pytest.png)
 
 Testele au trecut cu succes.
-
-
 
 ## Testare pylint
 
@@ -1781,6 +2200,7 @@ In Dockerfile se definesc:
 Script-ul dockerstart.sh activează mediul virtual și pornește aplicația Flask. De asemenea, setează variabila de mediu `FLASK_APP` necesară pentru inițializarea corectă a aplicației.
 
 Comenzi utilizate:
+
 ```bash
 docker build -t elena_docker:latest .
 sudo docker run --name elena_docker -p 8020:5011 elena_docker:latest
@@ -1797,10 +2217,10 @@ La accesarea link-ului se va ajunge la aceeași pagină web, dar containerizată
 ## Jenkins
 
 Pipeline-ul definit rulează în orice agent disponibil (`agent any`) și conține următoarele etape principale:
+
 - Se clonează automat codul sursă din branch-ul `main_Mirica_Elena` al repository-ului
 - Se actualizează pip și se instalează toate pachetele necesare definite în requirements.txt, precum și instrumentele de testare pytest și pylint
 - Se rulează automat testele din fișierele aflate în app/tests/, iar dacă unele teste eșuează, pipeline-ul continuă. Tot aici se rulează analiza statică pylint pe codul sursă și pe testele scrise
-
 
 După rularea tuturor etapelor, Jenkins va afișa mesajul final Pipeline finished, indiferent de rezultatul testelor sau al analizei pylint.
 
@@ -1816,14 +2236,17 @@ Am solocitat aprobarea unui coleg pentru a adăuga modificări în main_Mirica_E
 
 ![Pull Request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mirica_Elena/static/images/pull_request.png)
 
---------------------------------------------------------------------
+---
+
 # Mitrea Bogdan Gabriel
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Mologani Adil
 
 # curs_vcgj_2025_filme
-# 🎬 Cars Movie App 
+
+# 🎬 Cars Movie App
 
 Aplicație web scrisă în Flask care afișează detalii despre filmul **Cars (2006)**: descriere, distribuție și un trailer integrat. Proiectul include infrastructură de testare, containerizare Docker și CI cu Jenkins.
 
@@ -1840,7 +2263,6 @@ Aplicație web scrisă în Flask care afișează detalii despre filmul **Cars (2
 
 ---
 
-
 # 1. Clonează proiectul
 
 ```bash
@@ -1849,6 +2271,7 @@ cd curs_vcgj_2025_filme
 ```
 
 # 2. Rulează în Docker
+
 ```
 docker build -t flask-cars .
 docker run -p 5000:5000 flask-cars
@@ -1861,7 +2284,6 @@ Accesează în browser:
 # 3. Testarea aplicatiei
 
 pytest app/tests/test_filme.py
-
 
 Testele validează:
 
@@ -1893,6 +2315,7 @@ Jenkinsfile execută:
 - build Docker image
 
 # 5.Structura
+
 ```
 .
 ├── filme.py                # Aplicația principală Flask
@@ -1919,31 +2342,37 @@ Jenkinsfile execută:
 # Interfata Web
 
 ## Pagina principală (Homepage)
+
 Reprezintă punctul de plecare al aplicației, oferind utilizatorului o primă interacțiune vizuală și acces rapid către informațiile esențiale despre filmul Cars (2006). De aici, utilizatorul poate naviga către secțiunea de descriere sau către distribuția filmului, în funcție de interes.
 
 ![Movie](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mologani_Adil/static/images/captures/Home_page.png)
 
 ## 🎬 Pagina film (Movie)
-Această pagină oferă o prezentare succintă a filmului, incluzând titlul, anul lansării, genul și durata, alături de trailerul integrat. De asemenea, conține două butoane de navigare care permit utilizatorului să acceseze fie secțiunea de descriere detaliată, fie distribuția completă.
 
+Această pagină oferă o prezentare succintă a filmului, incluzând titlul, anul lansării, genul și durata, alături de trailerul integrat. De asemenea, conține două butoane de navigare care permit utilizatorului să acceseze fie secțiunea de descriere detaliată, fie distribuția completă.
 
 ![Home_page](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mologani_Adil/static/images/captures/movie_page.png)
 
 ## 📝 Secțiunea de descriere (Description)
+
 Prezintă în mod detaliat subiectul filmului, personajul principal, conflictul narativ și temele abordate. Textul este extras dintr-un modul Python și afișat împreună cu o imagine ilustrativă specifică, într-un layout optimizat pentru lizibilitate și impact vizual.
 
 ![Description](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mologani_Adil/static/images/captures/description.png)
 
 ## 👥 Secțiunea de distribuție (Cast)
+
 Afișează actorii principali ai filmului împreună cu imaginile acestora, organizate într-o grilă responsive. Sub grilă, este afișată și o listă completă cu numele actorilor, generată automat dintr-un script Python. Această secțiune oferă utilizatorului o imagine completă asupra distribuției filmului.
 
 ![Cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mologani_Adil/static/images/captures/cast.png)
 
---------------------------------------------------------------------
+---
+
 # Mortoiu Larisa Maria
--------------------------
+
+---
 
 # Cuprins
+
 1. [Descriere aplicatie](#descriere-aplicatie)
 1. [Versiune si functionalitati](#versiune-si-functionalitati)
 1. [Tehnologii folosite](#tehnologii-folosite)
@@ -1964,7 +2393,6 @@ Aplicația "filme" constă într-o platformă web ce are ca scop principal afiș
 Pentru o navigare ușoară în browser, pagina principală conține rute către toate celelalte pagini. La rândul lor, paginile conțin un link înapoi către pagina principală.
 
 Aplicația include suport pentru containerizare printr-un Dockerfile, testare cu Pytest pentru funcțiile din `app/lib`, precum și integrare continuă prin Jenkins. Pipeline-urile automatizează instalarea dependințelor, activarea mediului virtual și rularea testelor și verificărilor statice cu Pylint.
-
 
 # Versiune si functionalitati
 
@@ -2058,22 +2486,25 @@ Pentru activarea virtual environment, în folder-ul 'curs_vcgj_2025_filme' trebu
 
 ![config-venv](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/config-venv.png)
 
-
 # Prezentare interfata web
 
 ## Pagină principală (Homepage)
+
 Afișează o listă cu filmele disponibile, cu link-uri către pagina detaliată a fiecărui film/serial.
 ![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-homepage.png)
 
 ## Pagină film
+
 Conține câteva informații despre film/serial și link-urile spre paginile de descriere și distribuție.
 ![dynasty](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-dynasty.png)
 
 ## Pagină descriere film
+
 Afișează o descriere detaliată a filmului/serialului selectat.
 ![dynasty-descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-descriere.png)
 
 ## Pagină distribuție film
+
 Afișează informații despre actorii din film/serial și personajele pe care aceștia le portretizează.
 ![dynasty-cast](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/interfata-cast.png)
 
@@ -2087,7 +2518,6 @@ Testele acoperă funcțiile principale din biblioteca aplicației, cum ar fi:
 
 - Afișarea distribuției - este realizată de funcția `test_dynasty_cast`
 
-
 Cele două teste validează corectitudinea conținutului generat pentru pagini, nu doar existența lor, astfel:
 
 - Trimite un request GET la ruta `/dynasty/description` (respectiv `/dynasty/cast`)
@@ -2097,10 +2527,12 @@ Cele două teste validează corectitudinea conținutului generat pentru pagini, 
 
 Testele sunt integrate atât în rulările locale, cât și în pipeline-urile automate (Jenkins).
 
-## Testare locală 
+## Testare locală
+
 ![testare-locala](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/testare-locala.png)
 
 # Verificare statica cu pylint
+
 Pentru analiza statică a codului, se folosește Pylint, aplicat pe modulele principale ale aplicației: fișierele ce conțin funcțiile pentru cele două atribute din `app/lib`, fișierul principal `filme.py` și testele din `app/tests`.
 Astfel, este evaluată calitatea scrierii codului (spații, nume de variabile, variabile declarate și neutilizate, etc.)
 
@@ -2112,14 +2544,16 @@ Verificările sunt integrate automat în pipeline-ul Jenkins, într-un stage ded
     pylint --exit-zero filme.py
 
 ```
+
 Opțiunea `--exit-zero` asigură continuarea execuției pipeline-ului chiar dacă sunt găsite probleme de stil sau avertismente, fără a opri procesul de CI.
 
 # Utilizare Docker si containerizare aplicatie
 
-Aplicația a fost containerizată folosind Docker pentru a asigura portabilitate și consistență între diferite sisteme. Containerizarea 
+Aplicația a fost containerizată folosind Docker pentru a asigura portabilitate și consistență între diferite sisteme. Containerizarea
 presupune „împachetarea” aplicației cu toate dependințele necesare, astfel încât să poată rula pe orice sistem, fără a depinde de configurațiile locale. În acest caz, aplicația Python este containerizată folosind Docker.
 
 ## Configurări necesare pentru containerizare. Fișierul Dockerfile
+
 Fișierul Dockerfile definește pașii necesari pentru a construi o imagine Docker a aplicației. Folosește imaginea de bază `python:3.12-alpine`, instalează dependințele din `quickrequirements.txt`, configurează mediul virtual `(.venv)`, setează permisiuni pentru directoare și definirea variabilelor de mediu necesare. La final, expune portul 5011 și setează dockerstart.sh ca script de pornire pentru aplicație.
 
 ```text
@@ -2143,7 +2577,7 @@ COPY pytest.ini pytest.ini
 COPY quickrequirements.txt quickrequirements.txt
 COPY filme.py filme.py
 
-USER root   
+USER root
 RUN chmod -R 777 static
 
 RUN python3 -m venv .venv
@@ -2162,15 +2596,19 @@ ENTRYPOINT ["./dockerstart.sh"]
 Fișierul dockerstart.sh este responsabil cu activarea mediului virtual și pornirea aplicației Flask. Mai întâi, activează mediul virtual, setează variabila de mediu `FLASK_APP`, iar apoi pornește serverul Flask pe `0.0.0.0` și portul `5011`.
 
 ## Creare imagine container
+
 După crearea Dockerfile, trebuie creată o imagine de container, folosind comanda:
+
 ```text
 docker build -t movieimage:v1 .
 ```
+
 Aceasta poate fi vizualizată astfel:
 
 ![docker-image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/docker-image.png)
 
 ## Creare container
+
 Pentru a genera un container din fișierul imagine, trebuie executată comanda:
 
 ```text
@@ -2178,6 +2616,7 @@ docker create --name moviecontainer -p 8020:5011 movieimage:v1
 ```
 
 ## Execuție container
+
 Pentru a porni containerul, folosim comanda:
 
 ```text
@@ -2189,9 +2628,11 @@ Containerele (active și oprite) pot fi vizualizate astfel:
 ```text
 docker ps -a
 ```
+
 ![docker-container](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/docker-container.png)
 
 ## Rularea aplicației din container
+
 ![run-app-docker](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/run-app-docker.png)
 
 # Pipeline Jenkins
@@ -2211,15 +2652,19 @@ Fișierul Jenkinsfile definește pașii pipeline-ului de CI. Acesta automatizeaz
 - Deploy în container Docker: Creează o imagine Docker cu un tag pe baza build-ului curent și pornește un container care expune aplicația pe portul 8020.
 
 Comanda pentru pornirea Jenkins:
+
 ```text
 jenkins
 ```
+
 Execuția pipeline-ului este vizibilă și într-o interfață grafică prietenoasă, prin extensia Blue Ocean a Jenkins.
 
 ## Exemplu execuție pipeline Jenkins (interfață Blue Ocean)
+
 ![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/jenkins-blueocean.png)
 
 # Pull Request
+
 Am realizat un PR din branch-ul de dezvoltare (`dev_Mortoiu_Larisa`) către branch-ul main (`main_Mortoiu_Larisa`)
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mortoiu_Larisa/static/screenshots/pull-request.png)
 
@@ -2230,8 +2675,10 @@ Am realizat un PR din branch-ul de dezvoltare (`dev_Mortoiu_Larisa`) către bran
 - [Docker Documentation](https://docs.docker.com/)
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
 
---------------------------------------------------------------------
+---
+
 # Pham Nhat Hoang
+
 # Aplicatie Web "Filme" - Ali G Indahouse
 
 Aceasta aplicatie web este realizata in Flask si are ca scop afisarea detaliilor despre filmul Ali G Indahouse, inclusiv o pagina de descriere si o pagina cu distributia. Proiectul este organizat modular, foloseste testare automata cu Pytest, analiza statica cu Pylint, containerizare cu Docker si integrare continua prin Jenkins.
@@ -2338,6 +2785,7 @@ docker build -t filme-app .
 docker run --name filme-container -p 5011:5011 filme-app![docker](https://github.com/user-attachments/assets/d0e8ff32-fd53-4c9b-ae1f-532e36e1acc0)
 
 ```
+
 ![docker](https://github.com/user-attachments/assets/48ca0b67-d625-4d8d-a147-860e160ddd9e)
 
 ---
@@ -2355,9 +2803,11 @@ Pipeline-ul automatizat face urmatorii pasi:
 7. Create container - defineste container Docker cu portul expus
 
 ### Exemplu comanda pentru pornirea Jenkins:
+
 ```bash
 sudo systemctl start jenkins
 ```
+
 ![pipeline](https://github.com/user-attachments/assets/f8762feb-b3ab-47f8-9bb4-d68f4e01fd81)
 
 ---
@@ -2365,13 +2815,16 @@ sudo systemctl start jenkins
 ## Testare cu Pytest
 
 Testele se afla in app/tests/test_filme.py si verifica:
+
 - get_description() returneaza un dictionar valid
 - get_cast() returneaza o lista de actori cu atribute corecte
 
 Comanda rulare:
+
 ```bash
 pytest app/tests
 ```
+
 ![pytest](https://github.com/user-attachments/assets/6dfb509b-2d1e-4ccb-be42-16efdb46eefa)
 
 ---
@@ -2379,6 +2832,7 @@ pytest app/tests
 ## Verificare cod cu Pylint
 
 Analiza calitatii codului se face pe modulele:
+
 ```bash
 pylint app/lib/*.py
 pylint app/tests/*.py
@@ -2390,14 +2844,13 @@ pylint filme.py
 ## Interfata Web
 
 - Pagina principala - linkuri catre detalii film
-![homepage](https://github.com/user-attachments/assets/01324652-e84c-4dd7-ac45-911786f2dcbd)
+  ![homepage](https://github.com/user-attachments/assets/01324652-e84c-4dd7-ac45-911786f2dcbd)
 
 - Pagina Descriere - text generat din get_description()
-![description](https://github.com/user-attachments/assets/93be87d3-0866-4f2f-9fd9-3a4eaa206d5b)
+  ![description](https://github.com/user-attachments/assets/93be87d3-0866-4f2f-9fd9-3a4eaa206d5b)
 
 - Pagina Distributie - actorii si rolurile din get_cast(), afisate cu imagini si detalii
-![cast](https://github.com/user-attachments/assets/73556d18-92b9-4b13-82e3-93119c4b77cf)
-
+  ![cast](https://github.com/user-attachments/assets/73556d18-92b9-4b13-82e3-93119c4b77cf)
 
 ---
 
@@ -2406,11 +2859,12 @@ pylint filme.py
 Modificarile si Jenkinsfile-ul au fost adaugate pe branch-ul dev_Pham_Hoang, urmate de un PR catre main.
 ![merge](https://github.com/user-attachments/assets/3622b285-0fb5-40d8-8418-1eb09f9e2af3)
 
+---
 
---------------------------------------------------------------------
 # Popa Andreea Elena
 
 # Cuprins
+
 1. [Prezentarea generala a aplicatiei](#prezentarea-generala-a-aplicatiei)
 2. [Versiuni si functionalitati disponibile](#versiuni-si-functionalitati-disponibile)
 3. [Tehnologii utilizate](#tehnologii-utilizate)
@@ -2425,10 +2879,13 @@ Modificarile si Jenkinsfile-ul au fost adaugate pe branch-ul dev_Pham_Hoang, urm
 12. [Bibliografie](#bibliografie)
 
 # Prezentarea generala a aplicatiei
-Aplicația *MovieHub* este o aplicație web dezvoltată cu Flask, având ca scop afișarea detaliilor despre filmul *The Imitation Game (2014)*. Utilizatorii pot naviga printr-o interfață simplă și intuitivă pentru a vedea o descriere completă, distribuția actorilor (cu poze) și trailerul oficial.
+
+Aplicația _MovieHub_ este o aplicație web dezvoltată cu Flask, având ca scop afișarea detaliilor despre filmul _The Imitation Game (2014)_. Utilizatorii pot naviga printr-o interfață simplă și intuitivă pentru a vedea o descriere completă, distribuția actorilor (cu poze) și trailerul oficial.
 
 # Versiuni si functionalitati disponibile
+
 Versiunea curentă `v0` include:
+
 - afișarea unui film cu două atribute: descriere și distribuție
 - galerie actori cu imagini egale
 - trailer video embedded (YouTube)
@@ -2439,6 +2896,7 @@ Versiunea curentă `v0` include:
 - pipeline CI/CD cu Jenkins
 
 # Tehnologii utilizate
+
 - **Flask** – framework backend pentru rute și logică aplicație
 - **HTML + CSS** – interfață și stilizare web
 - **Pytest** – testare unitară
@@ -2447,6 +2905,7 @@ Versiunea curentă `v0` include:
 - **Jenkins** – CI/CD cu lint, test și build automat
 
 # Structura proiectului
+
 ```
 curs_vcgj_2025_filme/
 ├── app
@@ -2478,6 +2937,7 @@ curs_vcgj_2025_filme/
 ![structura-proiect](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/structura-proiect.png?raw=true)
 
 # Instructiuni de instalare si configurare
+
 ```bash
 # clonare repo
 cd ~/Desktop
@@ -2498,6 +2958,7 @@ pip install -r quickrequirements.txt
 Aplicația este accesibilă la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 
 # Interfata web prezentare
+
 - `/` – Pagina principală cu poster și buton
 - `/imitation-game` – Detalii film
 - `/imitation-game/descriere` – Descriere detaliată
@@ -2505,6 +2966,7 @@ Aplicația este accesibilă la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 - `/imitation-game/trailer` – Trailer embed din YouTube
 
 ## Capturi interfață
+
 ![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/homepage.png?raw=true)
 ![filmpage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/film-page.png?raw=true)
 ![descriere](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/descriere.png?raw=true)
@@ -2512,38 +2974,48 @@ Aplicația este accesibilă la: [http://127.0.0.1:5050](http://127.0.0.1:5050)
 ![trailer](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/trailer.png?raw=true)
 
 # Testare cu pytest
+
 ```bash
 pytest app/tests/
 ```
+
 Teste acoperite:
+
 - status 200 pentru fiecare rută
 - conținut `descriere` (cu „Turing” / „Enigma”)
 - conținut `actori` (cu „Cumberbatch” / „Knightley”)
 - import corect funcții din `app/lib`
 
 ## Rulare pytest
+
 ![testare-pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/testare-pytest.png?raw=true)
 
 # Verificare statica cu pylint
+
 ```bash
 pylint filme.py app/lib/*.py app/tests/*.py --exit-zero
 ```
+
 Se validează stilul și structurarea codului fără oprirea pipeline-ului (prin `--exit-zero`).
 
 ![verificare-pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/verificare-pylint.png?raw=true)
 
 # Utilizare Docker si containerizare aplicatie
+
 ```bash
 docker build -t filme-app .
 docker run -p 5050:5050 filme-app
 ```
+
 Aplicația devine accesibilă la [http://localhost:5050](http://localhost:5050)
 
 ![docker-build](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/docker-build.png?raw=true)
 ![docker-run](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/docker-run.png?raw=true)
 
 # Pipeline Jenkins
+
 Pipeline-ul definit în `Jenkinsfile` conține etape de:
+
 - build mediu virtual
 - rulare `pylint`
 - rulare `pytest`
@@ -2555,27 +3027,31 @@ Execuția este vizibilă în interfața Blue Ocean Jenkins.
 ![jenkins-blueocean](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/jenkins-blueocean.png?raw=true)
 
 # Pull Request
+
 PR creat din branch `dev_popa_andreea` către `main`, aprobat de reviewer și validat prin rularea testelor automate în Jenkins.
 
 ![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/main_Popa_Andreea/static/screenshots/pull-request.png?raw=true)
 
 # Bibliografie
+
 - [Flask](https://flask.palletsprojects.com)
 - [Pytest](https://docs.pytest.org)
 - [Docker](https://docs.docker.com)
 - [Jenkins](https://www.jenkins.io/doc)
 - [Pylint](https://pylint.pycqa.org)
 
+---
 
-
---------------------------------------------------------------------
 # Sandu Victor Codrin
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Simion Razvan Marian
-(insereaza readme)
---------------------------------------------------------------------
+
+## (insereaza readme)
+
 # Tofan Ionut Lucian
+
 # Proiect SCC – Interstellar WEB APP
 
 **Autor:** Tofan Ionut Lucian (Grupa 442D)
@@ -2601,6 +3077,7 @@ PR creat din branch `dev_popa_andreea` către `main`, aprobat de reviewer și va
 ## Descriere aplicație
 
 Această aplicație web este dedicată filmului "Interstellar” și oferă utilizatorilor o interfață simplă pentru a vizualiza:
+
 - o descriere generală a serialului,
 - personaje principale,
 - trailer oficial.
@@ -2611,23 +3088,23 @@ Aplicația este construită cu Flask și este modularizată astfel încât fieca
 
 ## Funcționalități & Versiuni
 
-* **v1.0** – versiune funcțională cu:
-  * pagină principală 
-  * pagină cu descriere 
-  * pagină cu personaje 
-  * pagină cu trailere
-  * integrare Jenkins + Docker + Pytest + Pylint
+- **v1.0** – versiune funcțională cu:
+  - pagină principală
+  - pagină cu descriere
+  - pagină cu personaje
+  - pagină cu trailere
+  - integrare Jenkins + Docker + Pytest + Pylint
 
 ---
 
 ## Tehnologii folosite
 
-* **Python 3.10** & **Flask** – backend web
-* **HTML/CSS** – afișare interfețe
-* **Pytest** – testare automată
-* **Pylint** – analiză statică
-* **Docker** – containerizare
-* **Jenkins** – CI/CD pipeline
+- **Python 3.10** & **Flask** – backend web
+- **HTML/CSS** – afișare interfețe
+- **Pytest** – testare automată
+- **Pylint** – analiză statică
+- **Docker** – containerizare
+- **Jenkins** – CI/CD pipeline
 
 ---
 
@@ -2702,6 +3179,7 @@ git checkout dev_Tofan_Lucian
 ```
 
 2. **Rulare cu venv**:
+
 ```bash
 source activeaza_venv
 python filme.py
@@ -2710,36 +3188,36 @@ python filme.py
 Acces aplicație: [http://localhost:5000](http://localhost:5000)
 
 ---
+
 ![image](https://github.com/user-attachments/assets/33267851-7989-48d6-bbba-ee10d596eeac)
-
-
 
 ## Prezentare interfață web
 
 ### 1. Homepage
+
 ![Home](https://github.com/user-attachments/assets/14d04971-b7c9-4ace-9632-f881791a8756)
 
-
 ### 2. Characters
+
 ![Characters](https://github.com/user-attachments/assets/fa65d1cf-094e-4d2d-99fb-14c8f452919a)
 
-
 ### 3. Trailer
-![Trailer](https://github.com/user-attachments/assets/538d544f-0017-4e2e-a44a-6d0bb7c3561c)
 
+![Trailer](https://github.com/user-attachments/assets/538d544f-0017-4e2e-a44a-6d0bb7c3561c)
 
 ---
 
 ## Testare cu Pytest
 
 Testele validează:
-- codul 200 pentru fiecare rută
 
+- codul 200 pentru fiecare rută
 
 ```bash
 pytest app/tests/
 
 ```
+
 ![test](https://github.com/user-attachments/assets/a50502f8-b3dd-4215-8ed7-fc09d0f83197)
 
 ---
@@ -2750,6 +3228,7 @@ pytest app/tests/
 PYTHONPATH=. pylint --exit-zero app/tests/test_filme.py
 PYTHONPATH=. pylint --exit-zero filme.py
 ```
+
 ![pylint](https://github.com/user-attachments/assets/3b753f26-3d3b-403b-99c4-492164d0dfdc)
 
 ---
@@ -2762,6 +3241,7 @@ sudo docker build -t interstellar-app .
 sudo docker run -it --rm interstellar-app:latest
 
 ```
+
 ![Docker](https://github.com/user-attachments/assets/1f1b00d0-ef65-4b04-b675-6a5cf2bc2780)
 
 Aplicația devine accesibilă la: [http://localhost:5011](http://localhost:5011)
@@ -2777,7 +3257,6 @@ Pipeline-ul include pașii:
 3. Testare unitară cu Pytest
 4. Deploy: Pornire container local (`flask-filme-container`)
 
-
 Exemplu rulare cu succes:
 
 ![Jenkins](https://github.com/user-attachments/assets/8d94eb34-279d-4511-88f8-6556ee7bd9f0)
@@ -2786,11 +3265,14 @@ Exemplu rulare cu succes:
 
 ## Pull Request & Mentenanță
 
-* Dezvoltarea se face pe branch `dev_Tofan_Lucian`
-* Se deschide PR către `main_Tofan_Lucian`
-* După review și succes pipeline, se face merge și build automat pe `main`
---------------------------------------------------------------------
+- Dezvoltarea se face pe branch `dev_Tofan_Lucian`
+- Se deschide PR către `main_Tofan_Lucian`
+- După review și succes pipeline, se face merge și build automat pe `main`
+
+---
+
 # Zarafin Radu Adrian
+
 # Proiect SCC – Breaking Bad Web App
 
 **Autor:** Zarafin Radu-Adrian (Grupa 442D)
@@ -2816,6 +3298,7 @@ Exemplu rulare cu succes:
 ## Descriere aplicație
 
 Această aplicație web este dedicată serialului „Breaking Bad” și oferă utilizatorilor o interfață simplă pentru a vizualiza:
+
 - o descriere generală a serialului,
 - personaje principale,
 - trailere oficiale.
@@ -2826,24 +3309,24 @@ Aplicația este construită cu Flask și este modularizată astfel încât fieca
 
 ## Funcționalități & Versiuni
 
-* **v1.0** – versiune funcțională cu:
-  * pagină principală `/`
-  * pagină cu descriere `/breaking-bad`
-  * pagină cu personaje `/breaking-bad/characters`
-  * pagină cu trailere `/breaking-bad/trailers`
-  * integrare Jenkins + Docker + Pytest + Pylint
+- **v1.0** – versiune funcțională cu:
+  - pagină principală `/`
+  - pagină cu descriere `/breaking-bad`
+  - pagină cu personaje `/breaking-bad/characters`
+  - pagină cu trailere `/breaking-bad/trailers`
+  - integrare Jenkins + Docker + Pytest + Pylint
 
 ---
 
 ## Tehnologii folosite
 
-* **Python 3.10** & **Flask** – backend web
-* **HTML/CSS** – afișare interfețe
-* **Jinja2** – motor de template-uri
-* **Pytest** – testare automată
-* **Pylint** – analiză statică
-* **Docker** – containerizare
-* **Jenkins** – CI/CD pipeline
+- **Python 3.10** & **Flask** – backend web
+- **HTML/CSS** – afișare interfețe
+- **Jinja2** – motor de template-uri
+- **Pytest** – testare automată
+- **Pylint** – analiză statică
+- **Docker** – containerizare
+- **Jenkins** – CI/CD pipeline
 
 ---
 
@@ -2921,11 +3404,15 @@ git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 cd curs_vcgj_2025_filme
 git checkout dev_Zarafin_Radu
 ```
+
 2. **Rulare directă** (fără venv):
- ```bash
- python3 filme.py
- ```
+
+```bash
+python3 filme.py
+```
+
 3. **Rulare cu venv**:
+
 ```bash
 source activeaza_venv
 source breaking_bad
@@ -2934,18 +3421,21 @@ source breaking_bad
 Acces aplicație: [http://localhost:5011](http://localhost:5011)
 
 ---
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
 
+![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/activare_venv_start_app.png)
 
 ## Prezentare interfață web
 
 ### 1. Homepage
+
 ![Homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/homepage.png)
 
 ### 2. Characters
+
 ![Characters](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/actori.png)
 
 ### 3. Trailers
+
 ![Trailers](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/trailers.png)
 
 ---
@@ -2953,14 +3443,15 @@ Acces aplicație: [http://localhost:5011](http://localhost:5011)
 ## Testare cu Pytest
 
 Testele validează:
+
 - codul 200 pentru fiecare rută
 - structura obiectului `trailers`
 
 ```bash
 python3 -m pytest app/tests/ -q
 ```
-![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_manuala.png)
----
+
+## ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_manuala.png)
 
 ## Analiză statică cu Pylint
 
@@ -2971,6 +3462,7 @@ PYTHONPATH=. pylint --exit-zero filme.py
 
 Se folosește `--exit-zero` în Jenkins pentru a nu întrerupe pipeline-ul la warning-uri.
 ![image](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/testare_pylint.png)
+
 ---
 
 ## Containerizare cu Docker
@@ -2993,7 +3485,6 @@ Pipeline-ul include pașii:
 3. Testare unitară cu Pytest
 4. Deploy: Pornire container local (`breakingbad-container`)
 
-
 Exemplu rulare cu succes:
 ![Pipeline](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Zarafin_Radu/static/screenshots/pipeline.png)
 
@@ -3001,12 +3492,10 @@ Exemplu rulare cu succes:
 
 ## Pull Request & Mentenanță
 
-* Dezvoltarea se face pe branch `dev_Zarafin_Radu`
-* Se deschide PR către `main_Zarafin_Radu`
-* După review și succes pipeline, se face merge și build automat pe `main`
+- Dezvoltarea se face pe branch `dev_Zarafin_Radu`
+- Se deschide PR către `main_Zarafin_Radu`
+- După review și succes pipeline, se face merge și build automat pe `main`
 
 ---
---------------------------------------------------------------------
 
-
-
+---
