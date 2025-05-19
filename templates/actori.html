@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Distribuție{% endblock %}
+
+{% block content %}
+<div class="uk-container uk-width-2xlarge">
+    <h2 class="uk-heading-small uk-text-center">Distribuția filmului</h2>
+
+    <img src="{{ url_for('static', filename='images/film_gallery_1.jpg') }}" 
+         alt="Distribuție" 
+         class="uk-border-rounded uk-box-shadow-small uk-align-center uk-width-2-3@s uk-margin-bottom">
+
+    <div class="uk-article uk-text-large">
+        {{ actori_html | safe }}
+    </div>
+</div>
+{% endblock %}
+

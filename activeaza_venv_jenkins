@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "🔧 [Jenkins] Inițializare mediu virtual..."
+
+# Creează mediul virtual într-un folder temporar (bun pentru Jenkins)
+VENV_DIR=".venv_jenkins"
+
+if [ ! -d "$VENV_DIR" ]; then
+    python3 -m venv $VENV_DIR
+    echo "✅ Mediu virtual creat în $VENV_DIR"
+fi
+
+# Activează mediul virtual
+source $VENV_DIR/bin/activate
+echo "✅ Mediu virtual activat."
+
+# Instalează Flask și pytest
+echo "📦 Instalare dependențe..."
+pip install --upgrade pip
+pip install flask pytest
+
+echo "🎉 Mediu Jenkins pregătit pentru rulare!"
+

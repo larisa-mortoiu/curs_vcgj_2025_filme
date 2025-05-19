@@ -1,0 +1,112 @@
+/* ===============================
+   Reset + General
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===============================
+   Layout
+   =============================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   Typography
+   =============================== */
+h1, h2 {
+    color: #1e2a38;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0b6fc2;
+}
+
+/* ===============================
+   Images – responsive și frumoase
+   =============================== */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Dacă vrei să limitezi înălțimea maximă a imaginilor mari */
+img.big-poster {
+    max-height: 500px;
+}
+
+/* ===============================
+   Lists
+   =============================== */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   Navigation (optional)
+   =============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e90ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+}
+
