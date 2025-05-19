@@ -53,7 +53,7 @@ pipeline {
                     docker build -t breakingbad-image:v${BUILD_NUMBER} .
 
                     echo "Pornire container pe portul 5011"
-                    docker run -d --name breakingbad-container -p 5011:5011 breakingbad-image:v${BUILD_NUMBER}
+                    docker run -d --name breakingbad-container -p 5000:5011 breakingbad-image:v${BUILD_NUMBER}
 
                     echo "Container running:"
                     docker ps | grep breakingbad

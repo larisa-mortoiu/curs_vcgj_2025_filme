@@ -18,13 +18,16 @@ COPY dockerstart.sh dockerstart.sh
 COPY pytest.ini pytest.ini
 COPY quickrequirements.txt quickrequirements.txt
 COPY filme.py filme.py
+
+USER root
+
 RUN mkdir static
 RUN mkdir static/imagini
 RUN chmod -R 777 static
 
 RUN python3 -m venv .venv
 RUN .venv/bin/pip install -r quickrequirements.txt
-
+RUN chmod +x dockerstart.sh
 
 # runtime configuration
 EXPOSE 5011
