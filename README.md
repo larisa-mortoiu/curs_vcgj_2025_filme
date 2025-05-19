@@ -1,6 +1,5 @@
 # Mitrea Bogdan-Gabriel
 
----
 
 # Cuprins
 1. [Descriere aplicație](#descriere-aplicație)
@@ -12,7 +11,7 @@
 7. [Testare cu Pytest](#testare-cu-pytest)
 8. [Analiză statică cu Pylint](#analiză-statică-cu-pylint)
 9. [Containerizare cu Docker](#containerizare-cu-docker)
-10. [Integrare continuă cu Jenkins](#integrare-continuă-cu-jenkins)
+10. [Pipeline Jenkins](#pipeline-jenkins)
 11. [Pull Request](#pull-request)
 12. [Bibliografie](#bibliografie)
 
@@ -22,7 +21,6 @@
 
 Aplicația este o platformă web construită cu Flask, care afișează informații despre serialul ales – „Dark”. Utilizatorul poate accesa o pagină de descriere și o pagină despre actori, fiecare organizată într-un mod vizual modern și interactiv. Aplicația este simplă, dar include toate funcționalitățile cerute: rutare, afișare de informații, containerizare, testare automată și integrare continuă.
 
----
 
 # Versiune și funcționalități
 
@@ -34,7 +32,6 @@ Versiunea curentă oferă următoarele funcționalități:
 - Navigare intuitivă prin butoane și linkuri
 - Interfață responsive (bazată pe CSS)
 
----
 
 # Tehnologii utilizate
 
@@ -45,7 +42,6 @@ Versiunea curentă oferă următoarele funcționalități:
 - **Docker** – containerizare și rulare multiplatformă
 - **Jenkins + Blue Ocean** – automatizare pipeline CI/CD
 
----
 
 # Structura proiectului
 Structura proiectului este organizată astfel:
@@ -78,7 +74,6 @@ curs_vcgj_2025_filme/
 └── README.md                     # documentația proiectului
 ```
 
----
 
 # Configurare și rulare locală
 
@@ -104,9 +99,8 @@ pip install flask pytest pylint
 python3 filme.py
 ```
 
-Accesează aplicația la: http://127.0.0.1:5000/
+Aplicația poate fi accesată la: http://127.0.0.1:5000/
 
----
 
 # Prezentare interfață web
 
@@ -116,7 +110,6 @@ Pagina principală conține un card vertical dedicat serialului **Dark**, care d
 
 ![homepage](static/screenshots/homepage.jpeg)
 
----
 
 ### Pagina „Dark”
 
@@ -128,14 +121,14 @@ Cardurile au efecte vizuale la hover și sunt centrate pe ecran.
 
 ![page-dark](static/screenshots/page-dark.jpeg)
 
----
 
 ### Pagina descriere
 
 Conține o imagine banner în partea de sus și un text informativ extins despre serial. Totul este centrat și responsive.
 
-![descriere-dark](static/screenshots/descriere-dark.jpeg)
+![descriere-dark-1](static/screenshots/descriere-dark-1.jpeg)
 
+![descriere-dark-2](static/screenshots/descriere-dark-2.jpeg)
 ---
 
 ### Pagina actori
@@ -146,9 +139,10 @@ Actorii principali sunt afișați în carduri verticale, alternând între stân
 - O scurtă descriere
 - Imagine reprezentativă
 
-![actori-dark](static/screenshots/actori-dark.jpeg)
+![actori-dark-1](static/screenshots/actori-dark-1.jpeg)
 
----
+![actori-dark-2](static/screenshots/actori-dark-2.jpeg)
+
 
 # Testare cu Pytest
 
@@ -165,6 +159,8 @@ Comandă rulare locală:
 pytest app/tests/
 ```
 
+![teste-pytest](static/screenshots/teste-pytest.jpeg)
+
 # Analiză statică cu Pylint
 
 Analiza codului a fost realizată folosind `pylint` asupra următoarelor fișiere:
@@ -174,16 +170,45 @@ PYTHONPATH=$(pwd) pylint --exit-zero app/lib/*.py
 PYTHONPATH=$(pwd) pylint --exit-zero app/tests/*.py
 PYTHONPATH=$(pwd) pylint --exit-zero filme.py
 ```
-Scor obținut: 10.00/10
+
+![pylint](static/screenshots/pylint.jpeg)
+
+Scor obținut: `10.00/10`
+
 Toate regulile de stil, structură și documentare au fost respectate.
 
----
 
 # Containerizare cu Docker
 
-### Build imagine
+Containerizarea este un proces prin care aplicația este „împachetată” împreună cu toate dependințele ei (biblioteci, configurări etc.) într-un mediu izolat – numit **container** – astfel încât să poată rula pe orice sistem, indiferent de configurația locală.
 
-Aplicația a fost containerizată folosind un `Dockerfile` simplu și eficient. Imaginea se construiește cu comanda:
+Prin folosirea Docker:
+- asigurăm portabilitatea aplicației (funcționează identic pe orice mașină)
+- evităm problemele de tipul „merge la mine, dar nu la tine”
+- putem construi imagini (versiuni exacte ale aplicației) care pot fi partajate ușor
+- rulăm aplicația într-un mod controlat, fără a ne baza pe sistemul de operare local
+
+### Structura fișierului `Dockerfile`
+
+Fișierul `Dockerfile` definește pas cu pas **cum se construiește imaginea** Docker. Conținutul complet al `Dockerfile` folosit:
+
+```text
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install flask pytest
+
+EXPOSE 5000
+
+CMD ["python3", "filme.py"]
+```
+
+### Creare imagine container
+
+După ce `Dockerfile` a fost scris și salvat în directorul principal al proiectului, putem construi imaginea rulând comanda:
 
 ```bash
 docker build -t darkimage:v1 .
@@ -191,37 +216,46 @@ docker build -t darkimage:v1 .
 
 ### Rulare container
 
-După build, aplicația poate fi rulată într-un container folosind:
+După ce imaginea a fost creată, putem porni aplicația într-un container folosind comanda:
 
 ```bash
 docker run -d --name darkcontainer -p 8020:5000 darkimage:v1
 ```
 Aplicația devine accesibilă la adresa: http://127.0.0.1:8020
 
----
+Containerele (active și oprite) pot fi vizualizate astfel:
 
-# Integrare continuă cu Jenkins
+```text
+docker ps -a
+```
 
-Fișierul `Jenkinsfile` definește un pipeline format din patru etape esențiale pentru asigurarea calității aplicației:
+# Pipeline Jenkins
+
+Pentru procesul de Continuous Integration (CI), fișierul `Jenkinsfile` definește un pipeline format din patru etape esențiale pentru asigurarea calității aplicației:
 
 1. **Build** – construiește imaginea Docker pe baza fișierului `Dockerfile`
 2. **Pylint** – rulează analiza statică a codului (cu `--exit-zero` pentru a nu opri pipeline-ul)
 3. **Pytest** – execută testele unitare definite în `app/tests/`
 4. **Deploy** – pornește containerul rezultat la final, pe portul 8020
 
-Acest pipeline este rulat într-un job de tip *Pipeline* și este configurat să ruleze direct din fișierul `Jenkinsfile` al proiectului. Interfața grafică Blue Ocean oferă o vizualizare clară a fiecărei etape.
+Acest pipeline este rulat într-un job de tip *Pipeline* și este configurat să ruleze direct din fișierul `Jenkinsfile` al proiectului. 
+Lansarea serverului Jenkins local se face prin comanda:
+
+```text
+systemctl start jenkins
+```
+
+Interfața grafică Blue Ocean oferă o vizualizare clară de ansamblu a fiecărei etape:
 
 ![jenkins](static/screenshots/jenkins-pipeline.jpeg)
 
----
 
 # Pull Request
 
-Am lucrat în branchul `dev_Mitrea_Bogdan`, integrat ulterior în `main_Mitrea_Bogdan`, iar în final în branchul principal `main`. Procesul de integrare a fost gestionat printr-un **Pull Request**, aprobat și finalizat conform cerințelor.
+Am realizat un PR din branch-ul de dezvoltare (dev_Mitrea_Bogdan) către branch-ul main (main_Mitrea_Bogdan)
 
 ![pull-request](static/screenshots/pull-request.jpeg)
 
----
 
 # Bibliografie
 
