@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Descriere Dark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/dark_logo.png') }}" alt="Dark Logo">
+    </div>
+    <div class="banner-image">
+        <img src="{{ url_for('static', filename='images/dark_banner.jpg') }}" alt="Dark Landscape Banner">
+    </div>
+    <p class="descriere">{{ descriere|replace('\n\n', '<br><br>')|safe }}</p>
+    <a class="back-btn" href="/dark">Înapoi</a>
+</body>
+</html>
