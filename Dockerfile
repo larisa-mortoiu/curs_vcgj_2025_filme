@@ -24,7 +24,7 @@ RUN chmod -R 777 static
 
 RUN python3 -m venv .venv
 RUN .venv/bin/pip install -r quickrequirements.txt
-
+RUN chmod +x dockerstart.sh
 
 # runtime configuration
 EXPOSE 5011
