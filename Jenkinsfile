@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo '🧪 Se rulează testele...'
                 sh """
-                    source ${VENV_PATH}/bin/activate
+                    . ${VENV_PATH}/bin/activate
                     pytest app/tests/test_file.py
                 """
             }
