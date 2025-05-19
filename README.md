@@ -1,51 +1,58 @@
-🎬 Bob Marley: One Love – Aplicație Web
-Aplicație web dezvoltată în cadrul cursului VCGJ 2025, dedicată filmului Bob Marley: One Love. Aceasta oferă informații despre film, actori și descrierea acestuia, într-o interfață modernă și responsivă.
+# Bob Marley: One Love – Aplicație Web
 
-📸 Capturi de ecran
-Pagina principală
+Aplicație web dezvoltată în cadrul cursului VCGJ 2025, dedicată filmului **Bob Marley: One Love**.  
+Aceasta oferă informații despre film, actori și descrierea acestuia, într-o interfață modernă și responsivă.
 
-Pagina cu descrierea filmului
+---
 
-Pagina cu actorii
+## Capturi de ecran
 
-Pagina detaliată a filmului
+### Pagina principală
+![Pagina principală](https://raw.githubusercontent.com/larisa-mortoiu/curs_vcgj_2025_filme/main_Sandu_Codrin/static/images/ss/home.png)
 
-🚀 Funcționalități
-Afișarea descrierii detaliate a filmului.
+### Pagina cu descrierea filmului
+![Descriere film](https://raw.githubusercontent.com/larisa-mortoiu/curs_vcgj_2025_filme/main_Sandu_Codrin/static/images/ss/descriere.png)
 
-Listarea actorilor principali.
+### Pagina cu actorii
+![Actori](https://raw.githubusercontent.com/larisa-mortoiu/curs_vcgj_2025_filme/main_Sandu_Codrin/static/images/ss/actori.png)
 
-Design responsiv utilizând UIkit.
+### Pagina detaliată a filmului
+![Detalii film](https://raw.githubusercontent.com/larisa-mortoiu/curs_vcgj_2025_filme/main_Sandu_Codrin/static/images/ss/film.png)
 
-Imagini optimizate pentru o experiență vizuală plăcută.
+---
 
-Testare automată cu pytest.
+## Funcționalități
 
-Integrare continuă cu Jenkins.
+- Afișarea descrierii detaliate a filmului
+- Listarea actorilor principali
+- Design responsiv utilizând [UIkit](https://getuikit.com/)
+- Imagini optimizate pentru o experiență vizuală plăcută
+- Testare automată cu `pytest`
+- Integrare continuă cu Jenkins
+- Containerizare cu Docker
 
-Containerizare cu Docker.
+---
 
-🛠️ Tehnologii utilizate
-Python 3.10
+## Tehnologii utilizate
 
-Flask
+- Python 3.10
+- Flask
+- UIkit
+- Docker
+- Jenkins
+- Pytest
 
-UIkit
+---
 
-Docker
+## Structura proiectului
 
-Jenkins
-
-pytest
-
-📦 Structura proiectului
-arduino
-Copiază
-Editează
-
+```text
 ├── app/
-│   ├── __init__.py
-│   ├── routes.py
+│   ├── lib/
+│   │   ├── actori.py
+│   │   └── descriere.py
+│   ├── tests/
+│   │   └── test_file.py
 │   ├── templates/
 │   │   ├── base.html
 │   │   ├── home.html
@@ -53,88 +60,77 @@ Editează
 │   │   ├── actori.html
 │   │   └── film.html
 │   └── static/
-│       ├── css/
+│       ├── styles/
 │       │   └── style.css
 │       └── images/
 │           └── ss/
 ├── Dockerfile
 ├── Jenkinsfile
-├── requirements.txt
+├── quickrequirements.txt
 ├── pytest.ini
-├── README.md
-└── run.py
-⚙️ Instrucțiuni de rulare
-Local
-Clonează repository-ul:
-Future of the Force
+├── filme.py
+├── activeaza_venv_jenkins
+├── ruleaza_app.sh
+└── README.md
+```
 
-bash
-Copiază
-Editează
+---
+
+## Instrucțiuni de rulare
+
+### Local
+
+```bash
 git clone https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git
 cd curs_vcgj_2025_filme
-Activează mediul virtual:
-clutchpoints.com
-+7
-Slice of SciFi
-+7
-niewmedia.com
-+7
-
-bash
-Copiază
-Editează
+python3 -m venv venv
 source venv/bin/activate
-Instalează dependențele:
+pip install -r quickrequirements.txt
+python filme.py
+```
 
-bash
-Copiază
-Editează
-pip install -r requirements.txt
-Rulează aplicația:
+Accesează aplicația la: [http://localhost:5000](http://localhost:5000)
 
-bash
-Copiază
-Editează
-python run.py
-Accesează aplicația la http://localhost:5000.
+---
 
-Cu Docker
-Construiește imaginea Docker:
+### Cu Docker
 
-bash
-Copiază
-Editează
+```bash
 docker build -t bobmarley_app .
-Rulează containerul:
-
-bash
-Copiază
-Editează
 docker run -d -p 5000:5000 bobmarley_app
-Accesează aplicația la http://localhost:5000.
+```
 
-Cu Jenkins
-Asigură-te că Jenkins este instalat și rulează.
+Accesează aplicația la: [http://localhost:5000](http://localhost:5000)
 
-Configurează un nou job de tip Pipeline.
+---
 
-În secțiunea Pipeline, selectează Pipeline script from SCM și introdu URL-ul repository-ului.
+### Cu Jenkins
 
-Salvează și rulează job-ul.
+1. Asigură-te că Jenkins este instalat și activ
+2. Creează un job de tip Pipeline
+3. Configurează:
+   - SCM: Git
+   - URL: `https://github.com/larisa-mortoiu/curs_vcgj_2025_filme.git`
+   - Branch: `main_Sandu_Codrin`
+4. Rulează jobul și urmărește rezultatele în consola Jenkins
 
-✅ Testare
-Pentru a rula testele automate:
+---
 
-bash
-Copiază
-Editează
-pytest
-📄 Licență
+## Testare
+
+Pentru a rula testele:
+
+```bash
+pytest app/tests/
+```
+
+---
+
+## Licență
+
 Acest proiect este licențiat sub MIT License.
-bobmarleyonelove.ie
-+1
-cine-techno.com
-+1
 
-Pentru mai multe informații și contribuții, vizitează repository-ul principal: curs_vcgj_2025_filme.
+---
+
+Pentru detalii suplimentare, accesează branch-ul:  
+[main_Sandu_Codrin](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/tree/main_Sandu_Codrin)
