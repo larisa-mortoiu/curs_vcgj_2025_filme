@@ -5,6 +5,10 @@ pipeline {
         VENV_PATH = '.venv_jenkins'
     }
 
+    parameters {
+        booleanParam(name: 'RUN_APP', defaultValue: false, description: 'Rulează aplicația Flask după testare?')
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -24,10 +28,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo '🧪 Se rulează testele...'
-                sh """
-                    . ${VENV_PATH}/bin/activate
-                    pytest app/tests/test_file.py
-                """
+                // Testează toate fișierele din folder
+                sh './.venv_jenkins/bin/pytest app/tests/'
             }
         }
 
@@ -36,11 +38,8 @@ pipeline {
                 expression { return params.RUN_APP == true }
             }
             steps {
-                echo '🚀 Se pornește aplicația...'
-                sh """
-                    source ${VENV_PATH}/bin/activate
-                    nohup python filme.py &
-                """
+                echo '🚀 Se pornește aplicația Flask...'
+                sh 'nohup ./.venv_jenkins/bin/python3 filme.py &'
             }
         }
     }
