@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descriere - Twilight</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            font-family: 'Georgia', serif;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+        }
+        h2, h3 {
+            color: #d4af37;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 15px;
+            background-color: #d4af37;
+            color: #1c1c1c;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #bfa334;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Descriere</h2>
+        <div>{{ descriere | safe }}</div>
+        <a href="/twilight" class="back-button">Înapoi</a>
+    </div>
+</body>
+</html>
