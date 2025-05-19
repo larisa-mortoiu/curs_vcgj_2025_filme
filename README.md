@@ -108,7 +108,7 @@ Aplicația poate fi accesată la: http://127.0.0.1:5000/
 
 Pagina principală conține un card vertical dedicat serialului **Dark**, care direcționează utilizatorul spre pagina dedicată serialului.
 
-![homepage](static/screenshots/homepage.jpeg)
+![homepage](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/homepage.jpeg)
 
 
 ### Pagina „Dark”
@@ -119,16 +119,17 @@ Această pagină afișează titlul serialului și două carduri verticale:
 
 Cardurile au efecte vizuale la hover și sunt centrate pe ecran.
 
-![page-dark](static/screenshots/page-dark.jpeg)
+![page-dark](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/page-dark.jpeg)
 
 
 ### Pagina descriere
 
 Conține o imagine banner în partea de sus și un text informativ extins despre serial. Totul este centrat și responsive.
 
-![descriere-dark-1](static/screenshots/descriere-dark-1.jpeg)
+![descriere-dark-1](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/descriere-dark-1.jpeg)
 
-![descriere-dark-2](static/screenshots/descriere-dark-2.jpeg)
+![descriere-dark-2](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/descriere-dark-2.jpeg)
+
 ---
 
 ### Pagina actori
@@ -139,9 +140,9 @@ Actorii principali sunt afișați în carduri verticale, alternând între stân
 - O scurtă descriere
 - Imagine reprezentativă
 
-![actori-dark-1](static/screenshots/actori-dark-1.jpeg)
+![actori-dark-1](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/actori-dark-1.jpeg)
 
-![actori-dark-2](static/screenshots/actori-dark-2.jpeg)
+![actori-dark-2](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/actori-dark-2.jpeg)
 
 
 # Testare cu Pytest
@@ -159,7 +160,7 @@ Comandă rulare locală:
 pytest app/tests/
 ```
 
-![teste-pytest](static/screenshots/teste-pytest.jpeg)
+![teste-pytest](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/teste-pytest.jpeg)
 
 # Analiză statică cu Pylint
 
@@ -171,7 +172,7 @@ PYTHONPATH=$(pwd) pylint --exit-zero app/tests/*.py
 PYTHONPATH=$(pwd) pylint --exit-zero filme.py
 ```
 
-![pylint](static/screenshots/pylint.jpeg)
+![pylint](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/pylint.jpeg)
 
 Scor obținut: `10.00/10`
 
@@ -247,14 +248,14 @@ systemctl start jenkins
 
 Interfața grafică Blue Ocean oferă o vizualizare clară de ansamblu a fiecărei etape:
 
-![jenkins](static/screenshots/jenkins-pipeline.jpeg)
+![jenkins](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/jenkins-pipeline.jpeg)
 
 
 # Pull Request
 
 Am realizat un PR din branch-ul de dezvoltare (dev_Mitrea_Bogdan) către branch-ul main (main_Mitrea_Bogdan)
 
-![pull-request](static/screenshots/pull-request.jpeg)
+![pull-request](https://github.com/larisa-mortoiu/curs_vcgj_2025_filme/blob/dev_Mitrea_Bogdan/static/screenshots/pull-request.jpeg)
 
 
 # Bibliografie
