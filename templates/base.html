@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Walking Dead</title>
+    <style>
+        body { font-family: Arial; background: #111; color: #eee; padding: 20px; }
+        nav a { margin: 10px; color: #7df; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Prezentare</a>
+        <a href="/descriere">Descriere</a>
+        <a href="/actori">Actori</a>
+        <a href="/trailer">Trailer</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
+
