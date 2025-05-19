@@ -114,7 +114,7 @@ Accesează aplicația la: http://127.0.0.1:5000/
 
 Pagina principală conține un card vertical dedicat serialului **Dark**, care direcționează utilizatorul spre pagina dedicată serialului.
 
-![homepage](static/screenshots/homepage.png)
+![homepage](static/screenshots/homepage.jpeg)
 
 ---
 
@@ -126,7 +126,7 @@ Această pagină afișează titlul serialului și două carduri verticale:
 
 Cardurile au efecte vizuale la hover și sunt centrate pe ecran.
 
-![page-dark](static/screenshots/page-dark.png)
+![page-dark](static/screenshots/page-dark.jpeg)
 
 ---
 
@@ -134,7 +134,7 @@ Cardurile au efecte vizuale la hover și sunt centrate pe ecran.
 
 Conține o imagine banner în partea de sus și un text informativ extins despre serial. Totul este centrat și responsive.
 
-![descriere-dark](static/screenshots/descriere-dark.png)
+![descriere-dark](static/screenshots/descriere-dark.jpeg)
 
 ---
 
@@ -146,7 +146,7 @@ Actorii principali sunt afișați în carduri verticale, alternând între stân
 - O scurtă descriere
 - Imagine reprezentativă
 
-![actori-dark](static/screenshots/actori-dark.png)
+![actori-dark](static/screenshots/actori-dark.jpeg)
 
 ---
 
@@ -211,7 +211,7 @@ Fișierul `Jenkinsfile` definește un pipeline format din patru etape esențiale
 
 Acest pipeline este rulat într-un job de tip *Pipeline* și este configurat să ruleze direct din fișierul `Jenkinsfile` al proiectului. Interfața grafică Blue Ocean oferă o vizualizare clară a fiecărei etape.
 
-![jenkins](static/screenshots/jenkins-pipeline.png)
+![jenkins](static/screenshots/jenkins-pipeline.jpeg)
 
 ---
 
@@ -219,7 +219,7 @@ Acest pipeline este rulat într-un job de tip *Pipeline* și este configurat să
 
 Am lucrat în branchul `dev_Mitrea_Bogdan`, integrat ulterior în `main_Mitrea_Bogdan`, iar în final în branchul principal `main`. Procesul de integrare a fost gestionat printr-un **Pull Request**, aprobat și finalizat conform cerințelor.
 
-![pull-request](static/screenshots/pull-request.png)
+![pull-request](static/screenshots/pull-request.jpeg)
 
 ---
 
